@@ -1,18 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Hieroglyphic package.
+# This file is distributed under the same license as the hieroglyphic package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Hieroglyphic\n"
+"Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-06 22:52+0100\n"
-"PO-Revision-Date: 2024-03-05 15:19+0100\n"
-"Last-Translator: FineFindus <FineFindus@proton.me>\n"
+"POT-Creation-Date: 2024-03-06 22:53+0100\n"
+"PO-Revision-Date: 2024-03-06 23:10+0100\n"
+"Last-Translator: Brage <bragefuglseth@gnome.org>\n"
 "Language-Team: \n"
-"Language: de\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,16 +26,16 @@ msgstr "Hieroglyphic"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
 msgid "Search through over 1000 different LaTeX symbols by sketching"
-msgstr "Durchsuche über 1000 verschiedene LaTeX-Symbole durch Skizzieren"
+msgstr "Finn riktig spesialtegn"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;Tools;LaTeX;TeX;Symbole;"
+msgstr "LaTeX;tegn;spesialtegn;symbol;sett inn;innsetting;TeX;"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX symbols"
-msgstr "Finde LaTeX symbole"
+msgstr "Finn riktig spesialtegn"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:19
 msgid ""
@@ -43,35 +43,36 @@ msgid ""
 "the symbols. Hieroglyphic allows you to search through over 1000 different "
 "LaTeX symbols by sketching."
 msgstr ""
-"LaTeX-Nutzer wissen, wie herausfordernd es sein kann, sich die Namen aller "
-"Symbole zu merken. Mit Hieroglyphic ist es möglich in über 1000 verschiedene "
-"LaTeX-Symbole durch Skizzieren suchen."
+"Hieroglyphic lar deg jobbe med LaTeX uten å måtte pugge en endeløs rekke "
+"med navn. Bare strek opp tegnet du trenger på skjermen, og la Hieroglyphic "
+"søke etter det i en imponerende samling på over 1000 forskjellige "
+"spesialtegn."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:25
 msgid "Main Window"
-msgstr "Hauptfenster"
+msgstr "Hovedvindu"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:29
 msgid "Main Window (Adwaita-Dark)"
-msgstr "Hauptfenster (Dunkel)"
+msgstr "Hovedvindu i mørk modus"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:45
 msgid "Initial release"
-msgstr "Erste Veröffentlichung"
+msgstr "Første utgivelse"
 
 #: data/resources/ui/window.ui:28
 msgid "About"
-msgstr "Info"
+msgstr "Om Hieroglyphic"
 
 #: data/resources/ui/window.ui:85
 msgid "_Clear"
-msgstr "_Löschen"
+msgstr "_Tøm"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/about_window.rs:39
 msgid "translator-credits"
-msgstr "FineFindus https://github.com/FineFindus"
+msgstr "Brage Fuglseth https://bragefuglseth.dev"
 
 #: src/window.rs:315
 msgid "Copied “{}”"
-msgstr "„{}” kopiert"
+msgstr "«{}» kopiert til utklippstavlen"
