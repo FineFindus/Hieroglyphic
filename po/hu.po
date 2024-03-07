@@ -1,0 +1,77 @@
+# Hungarian translations for hieroglyphic package.
+# Copyright (C) 2024 THE hieroglyphic'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# Dévényi Benedek <rdbende@proton.me>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-06 22:53+0100\n"
+"PO-Revision-Date: 2024-03-07 22:12+0100\n"
+"Last-Translator: Dévényi Benedek <rdbende@proton.me>\n"
+"Language-Team: Hungarian <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Gtranslator 45.3\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8
+#: src/about_window.rs:33 src/main.rs:23
+msgid "Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Böngéssz több mint 1000 különböző LaTeX szimbólumot skicceléssel"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Tools;LaTeX;TeX;szimbólumok;"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "LaTeX szimbólumok keresése"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:19
+msgid ""
+"If you work with LaTeX, you know its difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Ha LaTeX-szel dolgozol, tudhatod, milyen nehéz megjegyezni az összes "
+"szimbólum nevét. A Hieroglyphic segítségével több mint 1000 különböző LaTeX "
+"szimbólumot böngészhetsz skicceléssel."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:25
+msgid "Main Window"
+msgstr "Fő ablak"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:29
+msgid "Main Window (Adwaita-Dark)"
+msgstr "Fő ablak (sötét mód)"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:45
+msgid "Initial release"
+msgstr "Első kiadás"
+
+#: data/resources/ui/window.ui:28
+msgid "About"
+msgstr "Névjegy"
+
+#: data/resources/ui/window.ui:85
+msgid "_Clear"
+msgstr "_Törlés"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/about_window.rs:39
+msgid "translator-credits"
+msgstr "Dévényi Benedek <rdbende@proton.me>"
+
+#: src/window.rs:315
+msgid "Copied “{}”"
+msgstr "“{}” vágólapra másolva"
