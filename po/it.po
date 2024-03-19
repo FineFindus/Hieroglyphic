@@ -1,0 +1,75 @@
+# ITALIAN TRANSLATION.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# ALBANO BATTISTELLA <ALBANOBATTISTELLA@GMAIL.COM>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-06 22:53+0100\n"
+"PO-Revision-Date: 2024-03-19 19:30+0100\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8
+#: src/about_window.rs:33 src/main.rs:23
+msgid "Hieroglyphic"
+msgstr "Geroglifico"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Cerca tra oltre 1000 simboli LaTeX diversi disegnando"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Strumenti;LaTeX;TeX;Simboli;"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "Trova simboli LaTeX"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:19
+msgid ""
+"If you work with LaTeX, you know its difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Se lavori con LaTeX, sai che è difficile memorizzare i nomi di tutti "
+"i simboli. Geroglifico ti permette di cercare tra oltre 1000 diversi "
+"simboli LaTeX mediante schizzi."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:25
+msgid "Main Window"
+msgstr "Finestra principale"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:29
+msgid "Main Window (Adwaita-Dark)"
+msgstr "Finestra principale" (Adwaita-Scuro)
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:45
+msgid "Initial release"
+msgstr "Versione iniziale"
+
+#: data/resources/ui/window.ui:28
+msgid "About"
+msgstr "Informazioni"
+
+#: data/resources/ui/window.ui:85
+msgid "_Clear"
+msgstr "_Pulisci"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/about_window.rs:39
+msgid "translator-credits"
+msgstr "Albano Battistella"
+
+#: src/window.rs:315
+msgid "Copied “{}”"
+msgstr "Copiato “{}”"
