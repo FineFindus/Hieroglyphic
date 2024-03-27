@@ -67,8 +67,8 @@
   </custom>
 
   <branding>
-      <color type="primary" scheme_preference="light">#7EE0B4</color>
-      <color type="primary" scheme_preference="dark">#26A169</color>
+    <color type="primary" scheme_preference="light">#f7f29d</color>
+    <color type="primary" scheme_preference="dark">#865e3c</color>
   </branding>
 
 </component>
