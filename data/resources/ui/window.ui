@@ -25,8 +25,8 @@
                                                 <child type="end">
                                                     <object class="GtkButton">
                                                         <property name="action-name">app.about</property>
-                                                        <property name="icon-name">about-symbolic</property>
-                                                        <property name="tooltip-text" translatable="yes">About</property>
+                                                        <property name="icon-name">info-outline-symbolic</property>
+                                                        <property name="tooltip-text" translatable="yes">About Hieroglyphic</property>
                                                     </object>
                                                 </child>
                                             </object>

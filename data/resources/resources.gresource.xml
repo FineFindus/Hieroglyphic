@@ -9,7 +9,7 @@
 </gresource>
 <gresource prefix="/io/github/finefindus/Hieroglyphic/icons/scalable/actions">
     <file preprocess="xml-stripblanks" alias="eraser-symbolic.svg">icons/eraser5-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="about-symbolic.svg">icons/about-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="info-outline-symbolic.svg">icons/info-outline-symbolic.svg</file>
     <!-- Generated preview of the latex symbols -->
     <file compressed="true" alias="M5SW443ZNVRC2T2UGEWV633INU-symbolic.svg">icons/M5SW443ZNVRC2T2UGEWV633INU-symbolic.svg</file>
     <file compressed="true" alias="M5SW443ZNVRC2T2UGEWV6Y3FNRZWS5LT-symbolic.svg">icons/M5SW443ZNVRC2T2UGEWV6Y3FNRZWS5LT-symbolic.svg</file>
