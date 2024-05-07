@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-12 21:20+0200\n"
+"PO-Revision-Date: 2024-05-07 20:22+0530\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 46.1\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
+#: src/main.rs:23
+msgid "Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "रेखाचित्रण द्वारा 1000 से अधिक विभिन्न LaTeX प्रतीकों को खोजें"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;औजार;LaTeX;TeX;प्रतीक;"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "LaTeX प्रतीक खोजें"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:11
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:13
+msgid "FineFindus"
+msgstr "FineFindus"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"यदि आप LaTeX के साथ काम करते हैं, तो आप जानते हैं कि सभी प्रतीकों के नाम याद रखना "
+"मुश्किल है। Hieroglyphic आपको रेखाचित्रण द्वारा 1000 से अधिक विभिन्न LaTeX प्रतीकों को "
+"खोजने की अनुमति देता है।"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:32
+msgid "Main Window"
+msgstr "मुख्य विंडो"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:36
+msgid "Placeholder"
+msgstr "स्थानधारक"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:52
+msgid "This update refines the user interface:"
+msgstr "यह अद्यतन UI को परिष्कृत करता है:"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:54
+msgid "New icon"
+msgstr "नया चिह्न"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:55
+msgid "Updated to the latest GNOME components"
+msgstr "नवीनतम GNOME घटकों में अद्यतन किया गया"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:56
+msgid "Improved recognition speed and overall application responsiveness"
+msgstr "बेहतर पहचान गति और समग्र अनुप्रयोग प्रतिक्रियाशीलता"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:57
+msgid "Shortcut to quickly delete the drawn symbol"
+msgstr "खींचे गए प्रतीक को तुरंत हटाने के लिए शॉर्टकट"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:58
+msgid "Various minor UI improvements and tweaks"
+msgstr "कई छोटे UI सुधार और बदलाव"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:64
+msgid "Fixed failing appstream metadata"
+msgstr "असफल ऐपस्ट्रीम मेटाडेटा को ठीक किया गया"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:69
+msgid "Initial release"
+msgstr "प्रारंभिक रिलीज़"
+
+#: data/resources/ui/window.ui:29
+msgid "About Hieroglyphic"
+msgstr "Hieroglyphic के बारे में"
+
+#: data/resources/ui/window.ui:43
+msgid "No Symbols"
+msgstr "कोई प्रतीक नहीं"
+
+#: data/resources/ui/window.ui:44
+msgid "Start by drawing a symbol"
+msgstr "एक प्रतीक बनाकर प्रारंभ करें"
+
+#: data/resources/ui/window.ui:111
+msgid "_Clear"
+msgstr "साफ करे (_C)"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/about.rs:26
+msgid "translator-credits"
+msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
+
+#: src/window.rs:317
+msgid "Copied “{}”"
+msgstr "“{}” कॉपी किया गया"
