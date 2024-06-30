@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-12 21:20+0200\n"
+"PO-Revision-Date: 2024-06-30 12:51+0200\n"
+"Last-Translator: Milo Ivir <mail@mivirtype.de>\n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
+#: src/main.rs:23
+msgid "Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Pretražite više od 1000 različitih LaTeX znakova skiciranjem"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;alati;LaTeX;TeX;znakovi;"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "Pronađi LaTeX znakove"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:11
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:13
+msgid "FineFindus"
+msgstr "FineFindus"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Korisnici LaTeX-a znaju da je teško zapamtiti imena svih znakova. "
+"Hieroglyphic omogućuje pretraživanje preko 1000 različitih LaTeX znakova "
+"skiciranjem."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:32
+msgid "Main Window"
+msgstr "Glavni prozor"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:36
+msgid "Placeholder"
+msgstr "Mjesto za crtanje"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:52
+msgid "This update refines the user interface:"
+msgstr "Ova verzija poboljšava korisničko sučelje:"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:54
+msgid "New icon"
+msgstr "Nova ikona"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:55
+msgid "Updated to the latest GNOME components"
+msgstr "Ažurirano na najnovije GNOME komponente"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:56
+msgid "Improved recognition speed and overall application responsiveness"
+msgstr "Poboljšana brzina prepoznavanja i ukupna reakcija aplikacije"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:57
+msgid "Shortcut to quickly delete the drawn symbol"
+msgstr "Prečac za brzo brisanje nacrtanog simbola"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:58
+msgid "Various minor UI improvements and tweaks"
+msgstr "Razna manja poboljšanja i podešavanja korisničkog sučelja"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:64
+msgid "Fixed failing appstream metadata"
+msgstr "Popravljeni appstream metapodaci"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:69
+msgid "Initial release"
+msgstr "Prvo izdanje"
+
+#: data/resources/ui/window.ui:29
+msgid "About Hieroglyphic"
+msgstr "O Hieroglyphic"
+
+#: data/resources/ui/window.ui:43
+msgid "No Symbols"
+msgstr "Nema znakova"
+
+#: data/resources/ui/window.ui:44
+msgid "Start by drawing a symbol"
+msgstr "Započni crtanjem znaka"
+
+#: data/resources/ui/window.ui:111
+msgid "_Clear"
+msgstr "_Izbriši"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/about.rs:26
+msgid "translator-credits"
+msgstr "Milo Ivir <mail@milotype.de>"
+
+#: src/window.rs:317
+msgid "Copied “{}”"
+msgstr "„{}“ kopirano"
