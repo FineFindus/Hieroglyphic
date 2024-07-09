@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-12 21:20+0200\n"
-"PO-Revision-Date: 2024-03-06 23:10+0100\n"
+"POT-Creation-Date: 2024-07-10 00:56+0200\n"
+"PO-Revision-Date: 2024-07-10 00:58+0200\n"
 "Last-Translator: Brage <bragefuglseth@gnome.org>\n"
 "Language-Team: \n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
@@ -41,10 +41,9 @@ msgstr "Finn riktig spesialtegn"
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:11
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:13
 msgid "FineFindus"
-msgstr ""
+msgstr "FineFindus"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
-#, fuzzy
 msgid ""
 "If you work with LaTeX, you know it's difficult to memorize the names of all "
 "the symbols. Hieroglyphic allows you to search through over 1000 different "
@@ -62,7 +61,7 @@ msgstr "Hovedvindu"
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:36
 msgid "Placeholder"
-msgstr ""
+msgstr "Plassholder"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:52
 msgid "This update refines the user interface:"
@@ -97,17 +96,16 @@ msgid "Initial release"
 msgstr "Første utgivelse"
 
 #: data/resources/ui/window.ui:29
-#, fuzzy
 msgid "About Hieroglyphic"
-msgstr "Hieroglyphic"
+msgstr "Om Hieroglyphic"
 
 #: data/resources/ui/window.ui:43
 msgid "No Symbols"
-msgstr ""
+msgstr "Ingen symboler"
 
 #: data/resources/ui/window.ui:44
 msgid "Start by drawing a symbol"
-msgstr ""
+msgstr "Start med å tegne et symbol"
 
 #: data/resources/ui/window.ui:111
 msgid "_Clear"
