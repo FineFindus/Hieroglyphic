@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# Ser82-png <asvmail.as@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-12 21:20+0200\n"
+"PO-Revision-Date: 2024-08-08 18:32+1000\n"
+"Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
+#: src/main.rs:23
+msgid "Hieroglyphic"
+msgstr "Иероглифика"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr ""
+"Выполняйте поиск по более чем 1000 различным символам LaTeX с помощью "
+"простых зарисовок"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Tools;LaTeX;TeX;Symbols;символы;инструменты;"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "Поиск символов LaTeX"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:11
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:13
+msgid "FineFindus"
+msgstr "FineFindus"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Если вы работаете с LaTeX, то знаете, что запомнить названия всех символов "
+"непросто. Иероглифика позволяет выполнять поиск по более чем 1000 различным "
+"символам LaTeX с помощью простых зарисовок."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:32
+msgid "Main Window"
+msgstr "Главное окно"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:36
+msgid "Placeholder"
+msgstr "Заполнитель"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:52
+msgid "This update refines the user interface:"
+msgstr "Это обновление улучшает пользовательский интерфейс:"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:54
+msgid "New icon"
+msgstr "Новый значок"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:55
+msgid "Updated to the latest GNOME components"
+msgstr "Обновлены до последних версий компонентов GNOME"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:56
+msgid "Improved recognition speed and overall application responsiveness"
+msgstr "Улучшена скорость распознавания и общая отзывчивость приложения"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:57
+msgid "Shortcut to quickly delete the drawn symbol"
+msgstr "Комбинация клавиш для быстрого удаления нарисованного символа"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:58
+msgid "Various minor UI improvements and tweaks"
+msgstr ""
+"Различные незначительные улучшения пользовательского интерфейса и настроек"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:64
+msgid "Fixed failing appstream metadata"
+msgstr "Исправлен сбой в метаданных appstream"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:69
+msgid "Initial release"
+msgstr "Первый выпуск"
+
+#: data/resources/ui/window.ui:29
+msgid "About Hieroglyphic"
+msgstr "О приложении"
+
+#: data/resources/ui/window.ui:43
+msgid "No Symbols"
+msgstr "Нет символов"
+
+#: data/resources/ui/window.ui:44
+msgid "Start by drawing a symbol"
+msgstr "Начните с зарисовки символа"
+
+#: data/resources/ui/window.ui:111
+msgid "_Clear"
+msgstr "_Очистить"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/about.rs:26
+msgid "translator-credits"
+msgstr "Ser82-png <asvmail.as@gmail.com>, 2024"
+
+#: src/window.rs:317
+msgid "Copied “{}”"
+msgstr "Скопировано «{}»"
