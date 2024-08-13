@@ -23,7 +23,7 @@ msgstr ""
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
 #: src/main.rs:23
 msgid "Hieroglyphic"
-msgstr "Иероглифика"
+msgstr "Hieroglyphic"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
 msgid "Search through over 1000 different LaTeX symbols by sketching"
@@ -118,7 +118,7 @@ msgstr "_Очистить"
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/about.rs:26
 msgid "translator-credits"
-msgstr "Ser82-png <asvmail.as@gmail.com>, 2024"
+msgstr "Ser82-png <asvmail.as@gmail.com>"
 
 #: src/window.rs:317
 msgid "Copied “{}”"
