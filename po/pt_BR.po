@@ -1,0 +1,101 @@
+# Brazilian Portuguese translation for hieroglyphic.
+# Copyright (C) 2024 hieroglyphic's COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2024-09-19 15:26+0000\n"
+"PO-Revision-Date: 2024-09-19 21:35-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 46.1\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
+#: src/main.rs:25
+msgid "Hieroglyphic"
+msgstr "Hieróglifo"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Pesquise mais de 1000 símbolos LaTeX diferentes esboçando"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Tools;LaTeX;TeX;Symbols;Ferramentas;Símbolos;"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr ""
+"Se deve mostrar um pequeno empurrão em direção ao diálogo de contribuição"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+msgid "Whether to contribute recognized strokes"
+msgstr "Se deve contribuir com traços reconhecidos"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "Encontre símbolos de LaTeX"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Se você trabalha com LaTeX, sabe que é difícil memorizar os nomes de todos "
+"os símbolos. O Hieróglifo permite que você pesquise mais de 1000 símbolos "
+"LaTeX diferentes por meio de esboços."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+msgid "Main Window"
+msgstr "Janela principal"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+msgid "Placeholder"
+msgstr "Espaço reservado"
+
+#: data/resources/ui/contribution-dialog.ui:31 data/resources/ui/window.ui:24
+msgid "Improve Hieroglyphic"
+msgstr "Melhore o Hieróglifo"
+
+#: data/resources/ui/contribution-dialog.ui:32
+msgid ""
+"Help improve Hieroglyphic by automatically contributing recognized symbols"
+msgstr ""
+"Ajude a melhorar o Hieróglifo contribuindo automaticamente com símbolos "
+"reconhecidos"
+
+#: data/resources/ui/window.ui:36
+msgid "About Hieroglyphic"
+msgstr "Sobre Hieróglifo"
+
+#: data/resources/ui/window.ui:50
+msgid "No Symbols"
+msgstr "Nenhum símbolo"
+
+#: data/resources/ui/window.ui:51
+msgid "Start by drawing a symbol"
+msgstr "Comece desenhando um símbolo"
+
+#: data/resources/ui/window.ui:118
+msgid "_Clear"
+msgstr "_Limpar"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/about.rs:26
+msgid "translator-credits"
+msgstr "Rafael Fontenelle <rafaelff@gnome.org>"
+
+#: src/window.rs:378
+msgid "Copied “{}”"
+msgstr "Copiado “{}”"
