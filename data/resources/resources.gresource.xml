@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
     <gresource prefix="/io/github/finefindus/Hieroglyphic/">
-    <file compressed="true" alias="shattered-picker.svg">illustrations/shattered-picker.svg</file>
+    <file compressed="true" alias="pen-broadcast.svg">illustrations/pen-broadcast.svg</file>
     <file compressed="true" preprocess="xml-stripblanks">ui/window.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">ui/symbol-item.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">ui/contribution-dialog.ui</file>
