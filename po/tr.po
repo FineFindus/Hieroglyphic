@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.finefindus.Hieroglyphic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-12 21:20+0200\n"
+"POT-Creation-Date: 2024-09-27 21:46+0200\n"
 "PO-Revision-Date: 2024-07-13 01:55+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:23
+#: src/main.rs:25
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
@@ -33,6 +33,14 @@ msgstr "Çizerek 1000ʼden fazla LaTeX simgesi arasında arama yapın"
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;Tools;LaTeX;TeX;Symbols;Araçlar;Simgeler;"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr ""
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+msgid "Whether to contribute recognized strokes"
+msgstr ""
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX symbols"
@@ -55,60 +63,98 @@ msgstr ""
 "yaparak arama yapmanızı sağlar."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:32
 msgid "Main Window"
 msgstr "Ana Pencere"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:36
 msgid "Placeholder"
 msgstr "Yer tutucu"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:52
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:44
+msgid ""
+"This update brings significant improvements to the classification system:"
+msgstr ""
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:46
+msgid "Powered by a new machine learning model"
+msgstr ""
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:47
+msgid "Faster classification speed"
+msgstr ""
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:48
+msgid "Reduced application size"
+msgstr ""
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:49
+msgid "Improved overall accuracy"
+msgstr ""
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:50
+msgid ""
+"Option to contribute recognized symbols to improve future model performance"
+msgstr ""
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:56
 msgid "This update refines the user interface:"
 msgstr "Bu güncelleme kullanıcı arayüzünü iyileştiriyor:"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:54
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:58
 msgid "New icon"
 msgstr "Yeni simge"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:55
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:59
 msgid "Updated to the latest GNOME components"
 msgstr "En son GNOME bileşenlerine güncellendi"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:56
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:60
 msgid "Improved recognition speed and overall application responsiveness"
 msgstr "Tanıma hızı ve genel uygulama duyarlılığı iyileştirildi"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:57
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:61
 msgid "Shortcut to quickly delete the drawn symbol"
 msgstr "Çizilen simgeyi hızlıca silmek için kısayol"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:58
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:62
 msgid "Various minor UI improvements and tweaks"
 msgstr "Çeşitli küçük kullanıcı arayüzü iyileştirmeleri ve ince ayarlar"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:64
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:68
 msgid "Fixed failing appstream metadata"
 msgstr "appstream üst verileri düzeltildi"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:69
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:73
 msgid "Initial release"
 msgstr "İlk sürüm"
 
-#: data/resources/ui/window.ui:29
+#: data/resources/ui/contribution-dialog.ui:61
+#, fuzzy
+msgid "Contribute Symbols"
+msgstr "Sembol Yok"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr ""
+
+#: data/resources/ui/window.ui:24
+#, fuzzy
+msgid "Improve Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/resources/ui/window.ui:36
 msgid "About Hieroglyphic"
 msgstr "Hieroglyphic Hakkında"
 
-#: data/resources/ui/window.ui:43
+#: data/resources/ui/window.ui:50
 msgid "No Symbols"
 msgstr "Sembol Yok"
 
-#: data/resources/ui/window.ui:44
+#: data/resources/ui/window.ui:51
 msgid "Start by drawing a symbol"
 msgstr "Bir simge çizerek başlayın"
 
-#: data/resources/ui/window.ui:111
+#: data/resources/ui/window.ui:118
 msgid "_Clear"
 msgstr "_Temizle"
 
@@ -117,6 +163,6 @@ msgstr "_Temizle"
 msgid "translator-credits"
 msgstr "Sabri Ünal <yakushabb@gmail.com>"
 
-#: src/window.rs:317
+#: src/window.rs:378
 msgid "Copied “{}”"
 msgstr "“{}” kopyalandı!"
