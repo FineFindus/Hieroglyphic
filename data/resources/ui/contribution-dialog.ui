@@ -36,7 +36,7 @@
                            </child>
                            <child>
                             <object class="GtkLabel">
-                              <property name="label">Improve Hieroglyphic</property>
+                              <property name="label" translatable="yes">Improve Hieroglyphic</property>
                               <property name="justify">center</property>
                               <property name="wrap">true</property>
                               <property name="margin-top">24</property>
@@ -47,7 +47,7 @@
                            </child>
                            <child>
                             <object class="GtkLabel">
-                              <property name="label">Help make Hieroglyphic better at identifying symbols for everyone</property>
+                              <property name="label" translatable="yes">Help make Hieroglyphic better at identifying symbols for everyone</property>
                               <property name="justify">center</property>
                               <property name="wrap">true</property>
                               <property name="margin-top">12</property>

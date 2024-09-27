@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 21:46+0200\n"
+"POT-Creation-Date: 2024-09-27 21:53+0200\n"
 "PO-Revision-Date: 2024-07-12 11:12-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -128,6 +128,15 @@ msgstr "Se corrigieron los metadatos de appstream"
 msgid "Initial release"
 msgstr "Versión inicial"
 
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#, fuzzy
+msgid "Improve Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:50
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr ""
+
 #: data/resources/ui/contribution-dialog.ui:61
 #, fuzzy
 msgid "Contribute Symbols"
@@ -136,11 +145,6 @@ msgstr "Sin símbolo"
 #: data/resources/ui/contribution-dialog.ui:62
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr ""
-
-#: data/resources/ui/window.ui:24
-#, fuzzy
-msgid "Improve Hieroglyphic"
-msgstr "Hieroglyphic"
 
 #: data/resources/ui/window.ui:36
 msgid "About Hieroglyphic"

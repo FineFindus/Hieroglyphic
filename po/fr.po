@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 21:46+0200\n"
+"POT-Creation-Date: 2024-09-27 21:53+0200\n"
 "PO-Revision-Date: 2024-04-21 21:33+0200\n"
 "Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: \n"
@@ -129,6 +129,15 @@ msgstr "Correction des métadonnées appstream"
 msgid "Initial release"
 msgstr "Première version"
 
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#, fuzzy
+msgid "Improve Hieroglyphic"
+msgstr "Hiéroglyphe"
+
+#: data/resources/ui/contribution-dialog.ui:50
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr ""
+
 #: data/resources/ui/contribution-dialog.ui:61
 #, fuzzy
 msgid "Contribute Symbols"
@@ -137,11 +146,6 @@ msgstr "Aucun symbole"
 #: data/resources/ui/contribution-dialog.ui:62
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr ""
-
-#: data/resources/ui/window.ui:24
-#, fuzzy
-msgid "Improve Hieroglyphic"
-msgstr "Hiéroglyphe"
 
 #: data/resources/ui/window.ui:36
 msgid "About Hieroglyphic"

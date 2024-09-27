@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 21:46+0200\n"
+"POT-Creation-Date: 2024-09-27 21:53+0200\n"
 "PO-Revision-Date: 2024-04-27 11:56+0200\n"
 "Last-Translator: twlvnn <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <dict-notifications@fsa-bg.org>\n"
@@ -130,6 +130,15 @@ msgstr "Поправени са „AppStream“ метаданните"
 msgid "Initial release"
 msgstr "Първоначално издание"
 
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#, fuzzy
+msgid "Improve Hieroglyphic"
+msgstr "Йероглифен"
+
+#: data/resources/ui/contribution-dialog.ui:50
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr ""
+
 #: data/resources/ui/contribution-dialog.ui:61
 #, fuzzy
 msgid "Contribute Symbols"
@@ -138,11 +147,6 @@ msgstr "Няма знаци"
 #: data/resources/ui/contribution-dialog.ui:62
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr ""
-
-#: data/resources/ui/window.ui:24
-#, fuzzy
-msgid "Improve Hieroglyphic"
-msgstr "Йероглифен"
 
 #: data/resources/ui/window.ui:36
 msgid "About Hieroglyphic"
