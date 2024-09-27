@@ -3,7 +3,7 @@
    <object class="AdwDialog" id="contribution_dialog">
       <property name="content-width">500</property>
       <property name="content-height">500</property>
-     <property name="title">Improve Hieroglyphic</property>
+      <property name="title" translatable="yes">Improve Hieroglyphic</property>
       <child>
          <object class="AdwToolbarView">
             <child type="top">

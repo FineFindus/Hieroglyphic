@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hieroglyphic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 21:53+0200\n"
+"POT-Creation-Date: 2024-04-12 21:20+0200\n"
 "PO-Revision-Date: 2024-04-12 21:21+0200\n"
 "Last-Translator: FineFindus <FineFindus@proton.me>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:25
+#: src/main.rs:23
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
@@ -32,14 +32,6 @@ msgstr "Durchsuche über 1000 verschiedene LaTeX-Symbole durch Skizzieren"
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;Tools;LaTeX;TeX;Symbole;"
-
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
-msgid "Whether to show a small nudge towards the contribution dialog"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
-msgid "Whether to contribute recognized strokes"
-msgstr ""
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX symbols"
@@ -62,105 +54,63 @@ msgstr ""
 "LaTeX-Symbole durch Skizzieren suchen."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:32
 msgid "Main Window"
 msgstr "Hauptfenster"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:36
 msgid "Placeholder"
 msgstr "Platzhalter"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:44
-msgid ""
-"This update brings significant improvements to the classification system:"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:46
-msgid "Powered by a new machine learning model"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:47
-msgid "Faster classification speed"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:48
-msgid "Reduced application size"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:49
-msgid "Improved overall accuracy"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:50
-msgid ""
-"Option to contribute recognized symbols to improve future model performance"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:56
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:52
 msgid "This update refines the user interface:"
 msgstr "Mit dieser Aktualisierung wird die Benutzeroberfläche verbessert:"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:58
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:54
 msgid "New icon"
 msgstr "Neues Icon"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:59
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:55
 msgid "Updated to the latest GNOME components"
 msgstr "Aktualisiert auf die neuesten GNOME-Komponenten"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:60
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:56
 msgid "Improved recognition speed and overall application responsiveness"
 msgstr ""
 "Verbesserte Erkennungsgeschwindigkeit und allgemeine Reaktionsfähigkeit der "
 "Anwendung"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:61
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:57
 msgid "Shortcut to quickly delete the drawn symbol"
 msgstr "Tastenkürzel zum schnellen Löschen des gezeichneten Symbols"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:62
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:58
 msgid "Various minor UI improvements and tweaks"
 msgstr ""
 "Verschiedene kleinere Verbesserungen und Optimierungen der Benutzeroberfläche"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:68
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:64
 msgid "Fixed failing appstream metadata"
 msgstr "Fehlerhafte Appstream-Metadaten behoben"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:73
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:69
 msgid "Initial release"
 msgstr "Erste Veröffentlichung"
 
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
-#, fuzzy
-msgid "Improve Hieroglyphic"
-msgstr "Hieroglyphic"
-
-#: data/resources/ui/contribution-dialog.ui:50
-msgid "Help make Hieroglyphic better at identifying symbols for everyone"
-msgstr ""
-
-#: data/resources/ui/contribution-dialog.ui:61
-#, fuzzy
-msgid "Contribute Symbols"
-msgstr "Keine Symbole"
-
-#: data/resources/ui/contribution-dialog.ui:62
-msgid "Submit recognized drawings to Hieroglyphic’s dataset"
-msgstr ""
-
-#: data/resources/ui/window.ui:36
+#: data/resources/ui/window.ui:29
 msgid "About Hieroglyphic"
 msgstr "Info zu Hieroglyphic"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:43
 msgid "No Symbols"
 msgstr "Keine Symbole"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:44
 msgid "Start by drawing a symbol"
 msgstr "Beginne mit dem Zeichnen eines Symbols"
 
-#: data/resources/ui/window.ui:118
+#: data/resources/ui/window.ui:111
 msgid "_Clear"
 msgstr "_Löschen"
 
@@ -169,7 +119,7 @@ msgstr "_Löschen"
 msgid "translator-credits"
 msgstr "FineFindus https://github.com/FineFindus"
 
-#: src/window.rs:378
+#: src/window.rs:317
 msgid "Copied “{}”"
 msgstr "„{}” kopiert"
 
