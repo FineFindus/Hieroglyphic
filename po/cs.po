@@ -1,0 +1,106 @@
+# Czech translation for hieroglyphic.
+# Copyright (C) 2024 FineFindus
+# This file is distributed under the same license as the hieroglyphic package.
+# Dagobert Janota <janotadag@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2024-09-28 03:26+0000\n"
+"PO-Revision-Date: 2024-09-30 12:36+0200\n"
+"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
+"Language-Team: Czech <Czech>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
+#: src/main.rs:25
+msgid "Hieroglyphic"
+msgstr "Hieroglyfy"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Objevujte více než 1000 různých LaTeXových symbolů jejich črtáním"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Nástroje;LaTeX;TeX;Symboly;"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "Zda zobrazit malé pošťouchnutí směrem k dialogou příspěvku"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+msgid "Whether to contribute recognized strokes"
+msgstr "Zda přispět rozpoznanými znaky"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "Najděte LaTeX symboly"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Pokud pracujete s LaTeXem, víte, že je těžké si zapamatovat názvy všech "
+"symbolů. Hieroglyfy umožňují prohledat přes 1000 různých LaTeX symbolů podle "
+"náčrtů."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+msgid "Main Window"
+msgstr "Hlavní okno"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+msgid "Placeholder"
+msgstr "Žádný symbol"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+msgid "Improve Hieroglyphic"
+msgstr "Vylepšit Hieroglyfy"
+
+#: data/resources/ui/contribution-dialog.ui:50
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr "Pomozte vylepšit Hieroglyfy v identifikaci symbolů pro každého"
+
+#: data/resources/ui/contribution-dialog.ui:61
+msgid "Contribute Symbols"
+msgstr "Přispět symboly"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Odešlete rozpoznané náčrty do datové sady Hieroglyfů"
+
+#: data/resources/ui/window.ui:36
+msgid "About Hieroglyphic"
+msgstr "O _aplikaci Hieroglyfy"
+
+#: data/resources/ui/window.ui:50
+msgid "No Symbols"
+msgstr "Žádné symboly"
+
+#: data/resources/ui/window.ui:51
+msgid "Start by drawing a symbol"
+msgstr "Začněte načrtnutím symbolu"
+
+#: data/resources/ui/window.ui:118
+msgid "_Clear"
+msgstr "Vy_mazat"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/about.rs:26
+msgid "translator-credits"
+msgstr "Dagobert Janota <janotadag@gmail.com>"
+
+#: src/window.rs:378
+msgid "Copied “{}”"
+msgstr "Zkopírováno „{}“"
