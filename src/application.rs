@@ -13,6 +13,7 @@ mod imp {
     use super::*;
     use adw::subclass::application::AdwApplicationImpl;
     use glib::WeakRef;
+    use itertools::Itertools;
     use std::cell::OnceCell;
 
     #[derive(Debug, Default)]
@@ -60,6 +61,29 @@ mod imp {
             app.setup_css();
             app.setup_gactions();
             app.setup_accels();
+        }
+
+        fn command_line(&self, command_line: &gio::ApplicationCommandLine) -> glib::ExitCode {
+            if command_line
+                .arguments()
+                .get(1)
+                .is_some_and(|arg| arg != "--show-only")
+            {
+                return glib::ExitCode::FAILURE;
+            }
+
+            self.activate();
+            let window = self.window.get().unwrap().upgrade().unwrap();
+            window.imp().symbol_filter.replace(
+                command_line
+                    .arguments()
+                    .into_iter()
+                    .skip(2)
+                    .filter_map(|arg| arg.into_string().ok())
+                    .collect_vec(),
+            );
+
+            glib::ExitCode::SUCCESS
         }
     }
 
@@ -133,6 +157,7 @@ impl Default for HieroglyphicApplication {
     fn default() -> Self {
         glib::Object::builder()
             .property("application-id", config::APP_ID)
+            .property("flags", gio::ApplicationFlags::HANDLES_COMMAND_LINE)
             .property("resource-base-path", "/io/github/finefindus/Hieroglyphic/")
             .build()
     }
