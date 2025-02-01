@@ -1,0 +1,114 @@
+# Interlingua translation for hieroglyphic.
+# Copyright (C) 2025 hieroglyphic's COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FULL NAME <EMAIL@ADDRESS>, 2025.
+# Emilio Sepúlveda <emism.translations@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2025-02-01 15:27+0000\n"
+"PO-Revision-Date: 2025-02-01 20:17-0300\n"
+"Last-Translator: Emilio Sepúlveda <emism.translations@gmail.com>\n"
+"Language-Team: Interlingua <softinterlingua@gmail.com>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-DL-Lang: ia\n"
+"X-DL-Module: hieroglyphic\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
+"X-Generator: Gtranslator 47.1\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: src/widgets/about.rs:20
+msgid "Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Cerca inter plus de 1000 symbolos LaTeX differente per designos"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Instrumentos;LaTeX;TeX;Symbolos;"
+
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "Si monstrar un parve susurration verso le dialogo de contribution"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
+msgid "Whether to contribute recognized strokes"
+msgstr "Si contribuer designos recognoscite"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "Trova symbolos LaTeX"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Si tu travalia con LaTeX, tu sape le difficultate de memorisar le nomine de "
+"tote le symbolos. Hieroglyphic te permitte cercar per plus de 1000 symbolos "
+"LaTeX differente facente designos"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+msgid "Main Window"
+msgstr "Fenestra principal"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+msgid "Placeholder"
+msgstr "Marcator de position"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+msgid "Improve Hieroglyphic"
+msgstr "Meliorar Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:50
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr ""
+"Adjuta a meliorar Hieroglyphic con le identification de symbolos pro totos"
+
+#: data/resources/ui/contribution-dialog.ui:61
+msgid "Contribute Symbols"
+msgstr "Contribuer symbolos"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Invia designos recognoscite al collection de datos de Hieroglyphic"
+
+#: data/resources/ui/window.ui:36
+msgid "About Hieroglyphic"
+msgstr "A proposito de Hieroglyphic"
+
+#: data/resources/ui/window.ui:50
+msgid "No Symbols"
+msgstr "Necun symbolos"
+
+#: data/resources/ui/window.ui:51
+msgid "Start by drawing a symbol"
+msgstr "Comencia con le designo de un symbolo"
+
+#: data/resources/ui/window.ui:108
+msgid "_Clear"
+msgstr "_Nettar"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr "Emilio Sepúlveda <emism.translations@gmail.com>"
+
+#: src/window.rs:272
+msgid "Copied “{}”"
+msgstr "Copiate “{}”"
