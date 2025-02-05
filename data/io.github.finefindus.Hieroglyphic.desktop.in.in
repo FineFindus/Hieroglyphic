@@ -4,7 +4,7 @@ Comment=Search through over 1000 different LaTeX symbols by sketching
 Type=Application
 Exec=hieroglyphic
 Terminal=false
-Categories=Utility;GTK;
+Categories=GNOME;GTK;Utility;Science;Math;
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 Keywords=GTK;Tools;LaTeX;TeX;Symbols;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
