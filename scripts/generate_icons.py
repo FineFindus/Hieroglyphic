@@ -3,6 +3,7 @@
 import yaml
 import os
 import base64
+import tempfile
 
 scripts_folder = os.path.dirname(os.path.abspath(__file__))
 symbols_file = os.path.join(scripts_folder, "../symbols.yaml")
@@ -11,6 +12,9 @@ parsed_symbols = []
 
 def add_symbol(symbol, package="latex2e", fontenc="OT1", textmode=True, mathmode=False):
     parsed_symbols.append((symbol, package, fontenc, textmode, mathmode))
+
+
+temp_dir = tempfile.mkdtemp()
 
 with open(symbols_file) as file:
     symbols = yaml.load(file, Loader=yaml.FullLoader)
@@ -37,7 +41,7 @@ with open(symbols_file) as file:
 
 for (symbol, package, fontenc, textmode, mathmode) in parsed_symbols:
     print("{:30} {:10} {:4} {} {}".format(symbol, package, fontenc, textmode, mathmode))
-    
+
     command = ""
     if mathmode:
         command = "$" + symbol + "$"
@@ -62,11 +66,11 @@ for (symbol, package, fontenc, textmode, mathmode) in parsed_symbols:
 
         \\end{{document}}
     """.format(fontenc, p, command)
-    
+
     f = open("temp.latex", "w")
     f.write(latex)
     f.close()
-    
+ 
     # latex to svg
     os.system("pdflatex temp.latex")
     os.system("pdf2svg temp.pdf temp.svg")
@@ -77,11 +81,13 @@ for (symbol, package, fontenc, textmode, mathmode) in parsed_symbols:
     os.system("sed -i 's/width\=\\\"[0-9]*.[0-9]*pt\\\"/width=\\\"64px\\\"/g' temp2.svg")
 
     id = package + "-" + fontenc + "-" + symbol.replace("\\", "_")
-    id = base64.b32encode(id.encode("utf-8"))
+    id = base64.b64encode(id.encode("utf-8"))
     id = str(id, "utf-8")
     id = id.rstrip("=")
-    
-    os.system("mv temp2.svg symbols/{}.svg".format(id))
-    
+
+    os.system(f"mv temp2.svg {temp_dir}/{id}.svg")
+
+print(f"Created symbols in {temp_dir}")
+
 # cleanup files
 os.system("rm temp.*")
