@@ -289,7 +289,9 @@ impl HieroglyphicWindow {
 
     fn try_upload_data(&self, label: String, strokes: Vec<classify::Stroke>) {
         // skip uploads always on debug mode, to avoid accidental uploads
-        if SETTINGS.with(|s| !s.boolean("contribute-data")) || config::PROFILE == "Devel" {
+        if SETTINGS.with(|s| !s.boolean("contribute-data")) {
+            //FIXME: re-enable for release, this should only be enabled for collecting new symbols
+            // || config::PROFILE == "Devel" {
             tracing::debug!("Skipping data upload: user has not opted into data contribution");
             return;
         }

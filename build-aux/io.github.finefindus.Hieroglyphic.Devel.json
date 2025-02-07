@@ -1,5 +1,5 @@
 {
-    "id": "io.github.finefindus.Hieroglyphic",
+    "id": "io.github.finefindus.Hieroglyphic.Devel",
     "runtime": "org.gnome.Platform",
     "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
