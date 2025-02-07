@@ -4,7 +4,6 @@ use adw::prelude::*;
 use gettextrs::gettext;
 use gtk::glib;
 use gtk::subclass::prelude::*;
-use itertools::Itertools;
 
 use crate::application::HieroglyphicApplication;
 use crate::widgets::{BoxedStrokes, SymbolItem};
@@ -47,7 +46,7 @@ mod imp {
         pub symbols: OnceCell<gio::ListStore>,
         pub symbol_strokes: RefCell<Option<Vec<classify::Stroke>>>,
         pub classifier: OnceCell<Sender<Vec<classify::Stroke>>>,
-        pub symbol_filter: RefCell<Vec<String>>,
+        pub symbol_filter: RefCell<Vec<&'static str>>,
     }
 
     #[glib::object_subclass]
@@ -179,6 +178,7 @@ impl HieroglyphicWindow {
         let (req_tx, req_rx) = std::sync::mpsc::channel();
         let (res_tx, res_rx) = async_channel::bounded(1);
         imp.classifier.set(req_tx).expect("Failed to set tx");
+
         gio::spawn_blocking(move || {
             tracing::info!("Classifier thread started");
             let classifier = classify::Classifier::new().expect("Failed to setup classifier");
@@ -214,27 +214,12 @@ impl HieroglyphicWindow {
             }
         });
 
-        let filter_symbols = imp.symbol_filter.borrow();
-        if !filter_symbols.is_empty() {
-            // if `--show-only` symbols are set, show only those symbols
-            // this is intended, for development/debug to directly improve new/less recognized
-            // symbols
-            imp.stack.set_visible_child_name("symbols");
-            imp.symbols.get().cloned().unwrap().extend(
-                filter_symbols
-                    .iter()
-                    .map(|s| s.as_str())
-                    .map(&gtk::StringObject::new),
-            );
-            return;
-        }
-
         glib::spawn_future_local(glib::clone!(
             #[weak(rename_to = window)]
             self,
             async move {
                 tracing::debug!("Listening for classifications");
-                while let Ok(Some(classifications)) = res_rx.recv().await {
+                while let Ok(Some(mut classifications)) = res_rx.recv().await {
                     window.imp().stack.set_visible_child_name("symbols");
                     let mut symbols = window
                         .imp()
@@ -242,6 +227,14 @@ impl HieroglyphicWindow {
                         .get()
                         .cloned()
                         .expect("`symbols` should be initialized in `setup_symbol_list`");
+
+                    let filter_symbols = window.imp().symbol_filter.borrow();
+                    if !filter_symbols.is_empty() {
+                        // if `--show-only` symbols are set, show only those symbols
+                        // this is intended, for development/debug to directly improve new/less recognized
+                        // symbols
+                        classifications = filter_symbols.clone();
+                    }
 
                     symbols.remove_all();
                     // switching out all 1k symbols takes too long, so only display the first 25

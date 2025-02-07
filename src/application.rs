@@ -10,6 +10,8 @@ use crate::widgets::about;
 use crate::window::HieroglyphicWindow;
 
 mod imp {
+    use crate::classify;
+
     use super::*;
     use adw::subclass::application::AdwApplicationImpl;
     use glib::WeakRef;
@@ -79,7 +81,8 @@ mod imp {
                     .arguments()
                     .into_iter()
                     .skip(2)
-                    .filter_map(|arg| arg.into_string().ok())
+                    .filter_map(|arg| classify::Symbol::from_id(arg.to_str()?))
+                    .map(|symbol| symbol.id())
                     .collect_vec(),
             );
 
