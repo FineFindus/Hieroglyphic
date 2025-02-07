@@ -40,7 +40,7 @@ jobs:
         run: |
           flatpak --user remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
           flatpak install --user -y flathub-beta org.freedesktop.Sdk.Extension.rust-stable//24.08beta org.freedesktop.Sdk.Extension.llvm18//24.08beta
-      - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v6
+      - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
           bundle: Hieroglyphic.flatpak
           # repository-name: flathub-beta
