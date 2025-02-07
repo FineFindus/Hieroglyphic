@@ -68,7 +68,7 @@ mod tests {
 
     #[test]
     fn test_iterate_symbols() {
-        assert_eq!(SYMBOL_TABLE.len(), 1098);
+        assert_eq!(SYMBOL_TABLE.len(), 1124);
     }
 
     #[test]
