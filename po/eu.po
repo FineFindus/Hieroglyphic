@@ -1,13 +1,13 @@
 # Basque translation for hieroglyphic.
 # Copyright (C) 2024 hieroglyphic's COPYRIGHT HOLDER
 # This file is distributed under the same license as the hieroglyphic package.
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>,  2024.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>,  2024, 2025.
 #
 msgid ""
 msgstr "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2024-09-21 03:26+0000\n"
-"PO-Revision-Date: 2024-09-21 03:26+0000\n"
+"POT-Creation-Date: 2025-01-18 18:13+0000\n"
+"PO-Revision-Date: 2025-02-15 03:26+0000\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "Language: eu\n"
@@ -57,14 +57,22 @@ msgstr "Leiho nagusia"
 msgid "Placeholder"
 msgstr "Leku-marka"
 
-#: data/resources/ui/contribution-dialog.ui:31 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
 msgid "Improve Hieroglyphic"
 msgstr "Hobetu Hieroglyphic"
 
-#: data/resources/ui/contribution-dialog.ui:32
-msgid ""
-"Help improve Hieroglyphic by automatically contributing recognized symbols"
-msgstr "Laguntzu Hieroglyphic aplikazioa hobetzen ikur ezagunen ekarpena eginez"
+#: data/resources/ui/contribution-dialog.ui:50
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr "Lagundu Hieroglyphic aplikazioa hobetzen ikur ezagunak hobeto identifikatu ditzan"
+
+#: data/resources/ui/contribution-dialog.ui:61
+msgid "Contribute Symbols"
+msgstr "Gehitu ikurrak"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Bidali ikur ezagunak Hieroglyphic-en datu multzora"
 
 #: data/resources/ui/window.ui:36
 msgid "About Hieroglyphic"
@@ -90,3 +98,8 @@ msgstr "Asier Sarasua Garmendia <asiersarasua@ni.eus>"
 #: src/window.rs:378
 msgid "Copied “{}”"
 msgstr "“{}” kopiatu da"
+
+#~ msgid ""
+#~ "Help improve Hieroglyphic by automatically contributing recognized symbols"
+#~ msgstr ""
+#~ "Laguntzu Hieroglyphic aplikazioa hobetzen ikur ezagunen ekarpena eginez"
