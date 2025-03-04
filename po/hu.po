@@ -1,129 +1,113 @@
-# Hungarian translations for hieroglyphic package.
-# Copyright (C) 2024 THE hieroglyphic'S COPYRIGHT HOLDER
+# Hungarian translations for Hieroglyphic.
+# Copyright (C) 2024, 2025 Free Software Foundation, Inc.
 # This file is distributed under the same license as the hieroglyphic package.
-# Dévényi Benedek <rdbende@proton.me>, 2024.
 #
+# Dévényi Benedek <rdbende at proton dot me>, 2024.
+# Balázs Meskó <mesko.balazs at fsf dot hu>, 2025.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-12 21:20+0200\n"
-"PO-Revision-Date: 2024-03-07 22:12+0100\n"
-"Last-Translator: Dévényi Benedek <rdbende@proton.me>\n"
-"Language-Team: Hungarian <>\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2024-09-28 03:26+0000\n"
+"PO-Revision-Date: 2025-03-04 07:34+0100\n"
+"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
+"Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 45.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:23
+#: src/main.rs:25
 msgid "Hieroglyphic"
-msgstr "Hieroglyphic"
+msgstr "Hieroglifák"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
 msgid "Search through over 1000 different LaTeX symbols by sketching"
-msgstr "Böngéssz több mint 1000 különböző LaTeX szimbólumot skicceléssel"
+msgstr "Keressen több mint 1000 különböző LaTeX szimbólum között skicceléssel"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;Tools;LaTeX;TeX;szimbólumok;"
+msgstr "GTK;eszközök;LaTeX;TeX;szimbólumok;"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "Megjelenítsen-e egy apró felhívást a közreműködési párbeszédablakra"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+msgid "Whether to contribute recognized strokes"
+msgstr "Közre legyenek-e adva a felismert vonalrajzolatok"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX symbols"
 msgstr "LaTeX szimbólumok keresése"
 
-#. developer_name tag deprecated with Appstream 1.0
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:11
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:13
-msgid "FineFindus"
-msgstr ""
-
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
-#, fuzzy
 msgid ""
 "If you work with LaTeX, you know it's difficult to memorize the names of all "
 "the symbols. Hieroglyphic allows you to search through over 1000 different "
 "LaTeX symbols by sketching."
 msgstr ""
-"Ha LaTeX-szel dolgozol, tudhatod, milyen nehéz megjegyezni az összes "
-"szimbólum nevét. A Hieroglyphic segítségével több mint 1000 különböző LaTeX "
-"szimbólumot böngészhetsz skicceléssel."
+"Ha LaTeX-hel dolgozik, akkor tudhatja, hogy milyen nehéz megjegyezni az"
+" összes szimbólum nevét. A Hieroglifák segítségével több mint 1000 különböző"
+" LaTeX szimbólum között kereshet skicceléssel."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:32
 msgid "Main Window"
-msgstr "Fő ablak"
+msgstr "Főablak"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:36
 msgid "Placeholder"
+msgstr "Helykitöltő"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#| msgid "Hieroglyphic"
+msgid "Improve Hieroglyphic"
+msgstr "A Hieroglifák tökéletesítése"
+
+#: data/resources/ui/contribution-dialog.ui:50
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr ""
+"Segítsen a Hieroglifák szimbólum-azonosításának jobbá tételében mindenki"
+" számára"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:52
-msgid "This update refines the user interface:"
-msgstr ""
+#: data/resources/ui/contribution-dialog.ui:61
+msgid "Contribute Symbols"
+msgstr "Szimbólumok közreadása"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:54
-msgid "New icon"
-msgstr ""
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Küldjön be felismert rajzokat a Hieroglifák adatkészletéhez"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:55
-msgid "Updated to the latest GNOME components"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:56
-msgid "Improved recognition speed and overall application responsiveness"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:57
-msgid "Shortcut to quickly delete the drawn symbol"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:58
-msgid "Various minor UI improvements and tweaks"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:64
-msgid "Fixed failing appstream metadata"
-msgstr ""
-
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:69
-msgid "Initial release"
-msgstr "Első kiadás"
-
-#: data/resources/ui/window.ui:29
-#, fuzzy
+#: data/resources/ui/window.ui:36
 msgid "About Hieroglyphic"
-msgstr "Hieroglyphic"
+msgstr "A Hieroglifák névjegye"
 
-#: data/resources/ui/window.ui:43
+#: data/resources/ui/window.ui:50
 msgid "No Symbols"
-msgstr ""
+msgstr "Nincsenek szimbólumok"
 
-#: data/resources/ui/window.ui:44
+#: data/resources/ui/window.ui:51
 msgid "Start by drawing a symbol"
-msgstr ""
+msgstr "Kezdje egy szimbólum lerajzolásával"
 
-#: data/resources/ui/window.ui:111
+#: data/resources/ui/window.ui:118
 msgid "_Clear"
 msgstr "_Törlés"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/about.rs:26
 msgid "translator-credits"
-msgstr "Dévényi Benedek <rdbende@proton.me>"
+msgstr ""
+"Dévényi Benedek <rdbende@proton.me>\n"
+"Meskó Balázs <mesko.balazs@fsf.hu>"
 
-#: src/window.rs:317
+#: src/window.rs:378
 msgid "Copied “{}”"
-msgstr "“{}” vágólapra másolva"
-
-#~ msgid "Main Window (Adwaita-Dark)"
-#~ msgstr "Fő ablak (sötét mód)"
-
-#~ msgid "About"
-#~ msgstr "Névjegy"
+msgstr "A(z) „{}” másolva"
