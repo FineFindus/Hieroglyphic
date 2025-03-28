@@ -1,5 +1,4 @@
 use adw::prelude::AdwDialogExt;
-use tracing::{debug, info};
 
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
@@ -34,7 +33,7 @@ mod imp {
 
     impl ApplicationImpl for HieroglyphicApplication {
         fn activate(&self) {
-            debug!("Hieroglyphic<HieroglyphicApplication>::activate");
+            tracing::debug!("Hieroglyphic<HieroglyphicApplication>::activate");
             self.parent_activate();
             let app = self.obj();
 
@@ -53,7 +52,7 @@ mod imp {
         }
 
         fn startup(&self) {
-            debug!("Hieroglyphic<HieroglyphicApplication>::startup");
+            tracing::debug!("Hieroglyphic<HieroglyphicApplication>::startup");
             self.parent_startup();
             let app = self.obj();
 
@@ -148,9 +147,9 @@ impl HieroglyphicApplication {
     }
 
     pub fn run(&self) -> glib::ExitCode {
-        info!("Hieroglyphic ({})", config::APP_ID);
-        info!("Version: {} ({})", config::VERSION, config::PROFILE);
-        info!("Datadir: {}", config::PKGDATADIR);
+        tracing::info!("Hieroglyphic ({})", config::APP_ID);
+        tracing::info!("Version: {} ({})", config::VERSION, config::PROFILE);
+        tracing::info!("Datadir: {}", config::PKGDATADIR);
 
         ApplicationExtManual::run(self)
     }
