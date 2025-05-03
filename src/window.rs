@@ -42,7 +42,6 @@ mod imp {
         pub stack: TemplateChild<gtk::Stack>,
         #[template_child]
         pub indicator_button: TemplateChild<IndicatorButton>,
-        pub toast: RefCell<Option<adw::Toast>>,
         pub symbols: OnceCell<gio::ListStore>,
         pub symbol_strokes: RefCell<Option<Vec<classify::Stroke>>>,
         pub classifier: OnceCell<Sender<Vec<classify::Stroke>>>,
@@ -141,12 +140,13 @@ impl HieroglyphicWindow {
 
     /// Shows a basic toast with the given text.
     fn show_toast(&self, text: impl AsRef<str>) {
-        let toast = adw::Toast::new(text.as_ref());
-        toast.set_use_markup(false);
-        // dismiss and replace the previous toast if it exists
-        if let Some(prev_toast) = self.imp().toast.replace(Some(toast.clone())) {
-            prev_toast.dismiss();
-        }
+        let toast = adw::Toast::builder()
+            .title(text.as_ref())
+            .use_markup(false)
+            .build();
+        // dismiss and replace the previous toasts if they exists
+        // this ensures that the user only sees the most recent copy toast
+        self.imp().toast_overlay.dismiss_all();
         self.imp().toast_overlay.add_toast(toast);
     }
 
