@@ -1,4 +1,6 @@
+use gio::glib::variant::ToVariant;
 use glib::Object;
+use gtk::prelude::WidgetExt;
 use gtk::subclass::prelude::*;
 use gtk::{glib, prelude::ObjectExt};
 
@@ -44,10 +46,6 @@ mod imp {
 
     #[glib::derived_properties]
     impl ObjectImpl for SymbolItem {
-        fn constructed(&self) {
-            self.parent_constructed();
-        }
-
         fn dispose(&self) {
             self.dispose_template();
         }
@@ -70,7 +68,7 @@ impl SymbolItem {
             .property("id", symbol.id())
             .property(
                 "icon",
-                // icon file names do not contain ending '='
+                // icon filenames do not contain ending '='
                 format!("{}-symbolic", symbol.id().trim_end_matches('=')),
             )
             .property("command", symbol.command)
@@ -88,5 +86,11 @@ impl SymbolItem {
                 },
             )
             .build()
+    }
+
+    #[template_callback]
+    pub fn on_copy(&self) {
+        self.activate_action("win.copy-symbol", Some(&self.id().to_variant()))
+            .expect("Failed to copy symbol");
     }
 }

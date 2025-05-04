@@ -38,5 +38,16 @@
                 </child>
             </object>
         </child>
+        <child type="end">
+            <object class="GtkButton">
+                <signal name="clicked" handler="on_copy" swapped="true" />
+                <property name="tooltip-text" translatable="true">Copy</property>
+                <property name="valign">center</property>
+                <property name="icon-name">copy-symbolic</property>
+                <style>
+                    <class name="flat"/>
+                </style>
+            </object>
+        </child>
     </template>
 </interface>

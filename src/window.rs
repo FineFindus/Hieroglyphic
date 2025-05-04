@@ -23,6 +23,7 @@ mod imp {
     use adw::subclass::application_window::AdwApplicationWindowImpl;
 
     use crate::{
+        classify::Symbol,
         config,
         widgets::{self, IndicatorButton},
     };
@@ -77,6 +78,21 @@ mod imp {
             klass.install_action("win.clear", None, move |win, _, _| {
                 win.imp().drawing_area.clear();
             });
+
+            klass.install_action(
+                "win.copy-symbol",
+                Some(glib::VariantTy::STRING),
+                move |win, _, var| {
+                    let Some(symbol) = var
+                        .and_then(|v| v.get::<String>())
+                        .and_then(|id| Symbol::from_id(&id))
+                    else {
+                        return;
+                    };
+
+                    win.copy_symbol(&SymbolItem::new(symbol));
+                },
+            );
         }
 
         fn instance_init(obj: &glib::subclass::InitializingObject<Self>) {
@@ -277,6 +293,11 @@ impl HieroglyphicWindow {
             return;
         };
 
+        self.copy_symbol(symbol);
+    }
+
+    #[template_callback]
+    pub fn copy_symbol(&self, symbol: &SymbolItem) {
         let command = symbol.command();
         self.clipboard().set_text(&command);
         tracing::debug!("Selected: {} ({})", &command, symbol.id());
