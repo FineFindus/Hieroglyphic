@@ -14,16 +14,16 @@ mod imp {
     #[template(resource = "/io/github/finefindus/Hieroglyphic/ui/symbol-item.ui")]
     #[properties(wrapper_type = super::SymbolItem)]
     pub struct SymbolItem {
-        #[property(get, set)]
-        pub(super) id: RefCell<String>,
-        #[property(get, set)]
-        pub(super) icon: RefCell<String>,
-        #[property(get, set)]
-        pub(super) package: RefCell<String>,
-        #[property(get, set)]
-        pub(super) command: RefCell<String>,
-        #[property(get, set)]
-        pub(super) mode: RefCell<String>,
+        #[property(construct_only, get)]
+        id: RefCell<String>,
+        #[property(construct_only, get)]
+        icon: RefCell<String>,
+        #[property(construct_only, get)]
+        package: RefCell<String>,
+        #[property(construct_only, get)]
+        command: RefCell<String>,
+        #[property(construct_only, get)]
+        mode: RefCell<String>,
     }
 
     #[glib::object_subclass]
