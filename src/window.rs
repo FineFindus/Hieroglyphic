@@ -234,17 +234,17 @@ impl HieroglyphicWindow {
             #[weak(rename_to = window)]
             self,
             async move {
+                let imp = window.imp();
                 tracing::debug!("Listening for classifications");
                 while let Ok(Some(mut classifications)) = res_rx.recv().await {
-                    window.imp().stack.set_visible_child_name("symbols");
-                    let mut symbols = window
-                        .imp()
+                    imp.stack.set_visible_child_name("symbols");
+                    let mut symbols = imp
                         .symbols
                         .get()
                         .cloned()
                         .expect("`symbols` should be initialized in `setup_symbol_list`");
 
-                    let filter_symbols = window.imp().symbol_filter.borrow();
+                    let filter_symbols = imp.symbol_filter.borrow();
                     if !filter_symbols.is_empty() {
                         // if `--show-only` symbols are set, show only those symbols
                         // this is intended, for development/debug to directly improve new/less recognized
@@ -262,9 +262,7 @@ impl HieroglyphicWindow {
                     );
                     // scroll to top after updating symbols, so that the most likely symbols are
                     // visible first
-                    window
-                        .imp()
-                        .symbol_list
+                    imp.symbol_list
                         .adjustment()
                         .expect("Failed to get symbol list adjustment")
                         .set_value(0.0);
