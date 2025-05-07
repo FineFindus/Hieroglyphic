@@ -42,6 +42,25 @@ impl Symbol {
         // from the symbol table
         SYMBOL_TABLE.get_key(&key).unwrap()
     }
+
+    /// Textual representation of the mode in which the symbol can be used.
+    ///
+    /// # Examples
+    /// ```rust
+    /// let symbol = Symbol::from_id("bGF0ZXgyZS1PVDEtX2JpZ2N1cA==").unwrap();
+    /// assert_eq!("mathmode", symbol.mode());
+    /// ```
+    pub fn mode_description(&self) -> &'static str {
+        match (self.math_mode, self.text_mode) {
+            (true, true) => "mathmode & textmode",
+            (false, true) => "textmode",
+            (true, false) => "mathmode",
+            (false, false) => {
+                // a symbol has to be either math mode or textmode
+                unreachable!("Symbol {} is neither math nor textmode", self.id())
+            }
+        }
+    }
 }
 
 #[cfg(test)]

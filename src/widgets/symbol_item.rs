@@ -73,18 +73,7 @@ impl SymbolItem {
             )
             .property("command", symbol.command)
             .property("package", symbol.package)
-            .property(
-                "mode",
-                match (symbol.math_mode, symbol.text_mode) {
-                    (true, true) => "mathmode & textmode",
-                    (false, true) => "textmode",
-                    (true, false) => "mathmode",
-                    (false, false) => {
-                        // a symbol has to be either math mode or textmode
-                        unreachable!("Symbol {} is neither math nor textmode", symbol.id())
-                    }
-                },
-            )
+            .property("mode", symbol.mode_description())
             .build()
     }
 
