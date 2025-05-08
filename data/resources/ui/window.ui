@@ -39,7 +39,8 @@
                                             </object>
                                         </child>
                                         <property name="content">
-                                            <object class="GtkStack" id="stack">
+                                            <object class="GtkStack">
+                                                <property name="visible-child-name" bind-source="HieroglyphicWindow" bind-property="stack_page"/>
                                                 <property name="transition-type">crossfade</property>
                                                 <child>
                                                     <object class="GtkStackPage">

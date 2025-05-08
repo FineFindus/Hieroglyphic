@@ -30,8 +30,9 @@ mod imp {
 
     use super::*;
 
-    #[derive(Debug, Default, gtk::CompositeTemplate)]
+    #[derive(Debug, Default, gtk::CompositeTemplate, glib::Properties)]
     #[template(resource = "/io/github/finefindus/Hieroglyphic/ui/window.ui")]
+    #[properties(wrapper_type = super::HieroglyphicWindow)]
     pub struct HieroglyphicWindow {
         #[template_child]
         pub toast_overlay: TemplateChild<adw::ToastOverlay>,
@@ -40,9 +41,9 @@ mod imp {
         #[template_child]
         pub symbol_list: TemplateChild<gtk::ListBox>,
         #[template_child]
-        pub stack: TemplateChild<gtk::Stack>,
-        #[template_child]
         pub indicator_button: TemplateChild<IndicatorButton>,
+        #[property(get, set)]
+        pub stack_page: RefCell<String>,
         pub symbols: OnceCell<gio::ListStore>,
         pub symbol_strokes: RefCell<Option<Vec<classify::Stroke>>>,
         pub classifier: OnceCell<Sender<Vec<classify::Stroke>>>,
@@ -100,6 +101,7 @@ mod imp {
         }
     }
 
+    #[glib::derived_properties]
     impl ObjectImpl for HieroglyphicWindow {
         fn constructed(&self) {
             self.parent_constructed();
@@ -237,7 +239,7 @@ impl HieroglyphicWindow {
                 let imp = window.imp();
                 tracing::debug!("Listening for classifications");
                 while let Ok(Some(mut classifications)) = res_rx.recv().await {
-                    imp.stack.set_visible_child_name("symbols");
+                    window.set_stack_page("symbols");
                     let mut symbols = imp
                         .symbols
                         .get()
