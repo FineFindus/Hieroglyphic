@@ -1,3 +1,4 @@
+use gio::glib::property::PropertySet;
 use gio::glib::variant::ToVariant;
 use glib::Object;
 use gtk::prelude::WidgetExt;
@@ -7,25 +8,23 @@ use gtk::{glib, prelude::ObjectExt};
 use crate::classify;
 
 mod imp {
-
-    use std::cell::RefCell;
-
     use super::*;
+    use std::cell::RefCell;
 
     #[derive(Debug, Default, gtk::CompositeTemplate, glib::Properties)]
     #[template(resource = "/io/github/finefindus/Hieroglyphic/ui/symbol-item.ui")]
     #[properties(wrapper_type = super::SymbolItem)]
     pub struct SymbolItem {
         #[property(construct_only, get)]
-        id: RefCell<String>,
+        pub(super) id: RefCell<String>,
         #[property(construct_only, get)]
-        icon: RefCell<String>,
+        pub(super) icon: RefCell<String>,
         #[property(construct_only, get)]
-        package: RefCell<String>,
+        pub(super) package: RefCell<String>,
         #[property(construct_only, get)]
-        command: RefCell<String>,
+        pub(super) command: RefCell<String>,
         #[property(construct_only, get)]
-        mode: RefCell<String>,
+        pub(super) mode: RefCell<String>,
     }
 
     #[glib::object_subclass]
@@ -75,6 +74,22 @@ impl SymbolItem {
             .property("package", symbol.package)
             .property("mode", symbol.mode_description())
             .build()
+    }
+
+    /// Sets the displayed symbol to the given symbol.
+    pub fn set_symbol(&self, symbol: classify::Symbol) {
+        let imp = self.imp();
+        imp.id.replace(symbol.id().to_string());
+        imp.icon
+            // icon filenames do not contain ending '='
+            .set(format!("{}-symbolic", symbol.id().trim_end_matches('=')));
+        imp.command.set(symbol.command.to_string());
+        imp.package.set(symbol.package.to_string());
+        imp.mode.set(symbol.mode_description().to_string());
+
+        for property_name in ["id", "icon", "command", "package", "mode"] {
+            self.notify(property_name);
+        }
     }
 
     #[template_callback]

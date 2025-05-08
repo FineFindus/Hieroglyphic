@@ -42,6 +42,8 @@ mod imp {
         pub symbol_list: TemplateChild<gtk::ListBox>,
         #[template_child]
         pub indicator_button: TemplateChild<IndicatorButton>,
+        #[template_child]
+        pub preview_symbol: TemplateChild<SymbolItem>,
         #[property(get, set)]
         pub stack_page: RefCell<String>,
         pub symbols: OnceCell<gio::ListStore>,
@@ -252,6 +254,15 @@ impl HieroglyphicWindow {
                         // this is intended, for development/debug to directly improve new/less recognized
                         // symbols
                         classifications = filter_symbols.clone();
+                    }
+
+                    // use the first symbol as the symbol displayed in the bottom bar in
+                    // bottom-sheet mode
+                    if let Some(symbol) = classifications
+                        .first()
+                        .and_then(|id| classify::Symbol::from_id(id))
+                    {
+                        imp.preview_symbol.set_symbol(symbol);
                     }
 
                     symbols.remove_all();

@@ -15,6 +15,7 @@
     <file preprocess="xml-stripblanks" alias="edit-symbolic.svg">icons/edit-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="document-send-symbolic.svg">icons/document-send-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="copy-symbolic.svg">icons/copy-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="up-symbolic.svg">icons/up-symbolic.svg</file>
     <!-- Generated preview of the latex symbols -->
 	<file compressed="true" alias="bGF0ZXgyZS1PVDEtfA-symbolic.svg">icons/bGF0ZXgyZS1PVDEtfA-symbolic.svg</file>
 	<file compressed="true" alias="bGF0ZXgyZS1PVDEtIWA-symbolic.svg">icons/bGF0ZXgyZS1PVDEtIWA-symbolic.svg</file>
