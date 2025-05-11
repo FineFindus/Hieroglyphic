@@ -2,13 +2,13 @@
 # Copyright (C) 2024 hieroglyphic's COPYRIGHT HOLDER
 # This file is distributed under the same license as the hieroglyphic package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>,  2024.
+# Yuri Chornoivan <yurchor@ukr.net>,  2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2024-09-28 03:26+0000\n"
-"PO-Revision-Date: 2024-09-28 20:58+0300\n"
+"POT-Creation-Date: 2025-05-11 15:26+0000\n"
+"PO-Revision-Date: 2025-05-11 20:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:25
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Ієрогліфік"
 
@@ -36,11 +36,12 @@ msgstr ""
 "GTK;Tools;LaTeX;TeX;Symbols;жетека;інструменти;засоби;лейтех;латех;тех;"
 "символи;"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
 msgid "Whether to show a small nudge towards the contribution dialog"
 msgstr "Визначає, чи слід показувати невеличке посилання на вікно внесків"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
 msgid "Whether to contribute recognized strokes"
 msgstr "Визначає, чи слід надсилати розпізнані риски"
 
@@ -67,7 +68,7 @@ msgid "Placeholder"
 msgstr "Замінник"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Удосконалити «Ієрогліфік»"
 
@@ -76,7 +77,6 @@ msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr "Допомогти зробити «Ієрогліфік» кращим для усіх у визначення символів"
 
 #: data/resources/ui/contribution-dialog.ui:61
-#| msgid "No Symbols"
 msgid "Contribute Symbols"
 msgstr "Надіслати символи"
 
@@ -84,28 +84,37 @@ msgstr "Надіслати символи"
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Надіслати розпізнані малюнки до набору даних «Ієрогліфіка»"
 
-#: data/resources/ui/window.ui:36
-msgid "About Hieroglyphic"
-msgstr "Про «Ієрогліфік»"
+#: data/resources/ui/symbol-item.ui:44
+msgid "Copy"
+msgstr "Копіювати"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
 msgid "No Symbols"
 msgstr "Немає символів"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
 msgid "Start by drawing a symbol"
 msgstr "Розпочніть з малювання символу"
 
-#: data/resources/ui/window.ui:118
+#: data/resources/ui/window.ui:162
+#| msgid "No Symbols"
+msgid "All Symbols"
+msgstr "Усі символи"
+
+#: data/resources/ui/window.ui:197
 msgid "_Clear"
 msgstr "О_чистити"
 
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "Про «Ієрогліфік»"
+
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
-#: src/about.rs:26
+#: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2024"
 
-#: src/window.rs:378
+#: src/window.rs:315
 msgid "Copied “{}”"
 msgstr "Скопійовано «{}»"
 
