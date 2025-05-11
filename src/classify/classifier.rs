@@ -1,7 +1,7 @@
-use std::io::BufReader;
-
+use gio::glib;
 use itertools::Itertools;
-use tract_onnx::{prelude::*, tract_core::ndarray::Array4};
+use ndarray::Array4;
+use ort::session::InMemorySession;
 
 use super::{
     point::{ONE_POINT, ZERO_POINT},
@@ -9,37 +9,36 @@ use super::{
     Point, Stroke,
 };
 
-type OnnxModel = SimplePlan<TypedFact, Box<dyn TypedOp>, Graph<TypedFact, Box<dyn TypedOp>>>;
-
 /// Classifier to classify a LaTeX symbol based on hand-drawn strokes.
-#[derive(Debug)]
 pub struct Classifier {
     /// ML-Model used for finding the symbol
-    model: OnnxModel,
+    model: InMemorySession<'static>,
 }
 
 impl Classifier {
     /// Create a new Classifier.
     ///
-    /// This includes setting up and optimizing the model used for classifiction.
-    pub fn new() -> TractResult<Self> {
-        let model = tract_onnx::onnx()
-            .model_for_read(&mut BufReader::new(
-                &include_bytes!("../../data/model.onnx")[..],
-            ))?
-            .into_optimized()?
-            .into_runnable()?;
+    /// This includes setting up and optimizing the model used for classification.
+    pub fn new() -> ort::Result<Self> {
+        let model = ort::session::Session::builder()?
+            .with_optimization_level(ort::session::builder::GraphOptimizationLevel::Level3)?
+            .with_intra_threads(glib::num_processors() as usize)?
+            .commit_from_memory_directly(&include_bytes!("../../data/model.onnx")[..])?;
+
         Ok(Self { model })
     }
 
     /// Tries to classify the given strokes into a symbol.
     pub fn classify(&self, sample: Vec<Stroke>) -> Option<Vec<&'static str>> {
-        let input_tensor: Tensor = self.prepate_input(sample).into();
+        let input_tensor = self.prepate_input(sample);
 
-        let result = self.model.run(tvec!(input_tensor.into())).ok()?;
+        let result = self
+            .model
+            .run(ort::inputs![input_tensor.view()].ok()?)
+            .ok()?;
 
         // convert output indices to detexify ids
-        let output = result[0].to_array_view::<f32>().ok()?;
+        let output = result[0].try_extract_tensor().ok()?;
         let top_indices = top_k_indices(output.as_slice().unwrap(), 25);
         let top_labels: Vec<&'static str> = top_indices.iter().map(|&i| LABELS[i]).collect();
         Some(top_labels)
@@ -80,7 +79,7 @@ impl Classifier {
         array
     }
 
-    /// Draws a line from `(x0, y0)` to  `(x1, y1)` using
+    /// Draws a line from `(x0, y0)` to `(x1, y1)` using
     /// [Bresenham's line algorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm?useskin=vector#Algorithm_for_integer_arithmetic)
     fn draw_line(&self, array: &mut Array4<f32>, x0: i32, y0: i32, x1: i32, y1: i32) {
         let dx = (x1 - x0).abs();
