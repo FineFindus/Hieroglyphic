@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2024-09-28 03:26+0000\n"
-"PO-Revision-Date: 2024-10-12 14:50+0300\n"
+"POT-Creation-Date: 2025-05-11 15:26+0000\n"
+"PO-Revision-Date: 2025-05-13 10:11+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
 "2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:25
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "הירוגליפי"
 
@@ -34,11 +34,12 @@ msgstr "חיפוש מתוך למעלה מ־1000 סמלי LaTeX שונים באמ
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;כלים;לאטך;לטקס;לטך;LaTeX;TeX;סמלים;מתמטיקה;"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
 msgid "Whether to show a small nudge towards the contribution dialog"
 msgstr "האם להציג סימון מפנה קטן לעבר חלונית התרומה"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
 msgid "Whether to contribute recognized strokes"
 msgstr "האם לתרום את הצורות שזוהו"
 
@@ -65,7 +66,7 @@ msgid "Placeholder"
 msgstr "ממלא מקום"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "שיפור הירוגליפי"
 
@@ -81,28 +82,36 @@ msgstr "תרומת סמלים"
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "הגשת הציורים המזוהים לערכת הנתונים של הירוגליפי"
 
-#: data/resources/ui/window.ui:36
-msgid "About Hieroglyphic"
-msgstr "על הירוגליפי"
+#: data/resources/ui/symbol-item.ui:44
+msgid "Copy"
+msgstr "העתקה"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
 msgid "No Symbols"
 msgstr "אין סמלים"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
 msgid "Start by drawing a symbol"
 msgstr "התחלה על ידי ציור סמל"
 
-#: data/resources/ui/window.ui:118
+#: data/resources/ui/window.ui:162
+msgid "All Symbols"
+msgstr "כל הסמלים"
+
+#: data/resources/ui/window.ui:197
 msgid "_Clear"
 msgstr "_ניקוי"
 
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "על הירוגליפי"
+
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
-#: src/about.rs:26
+#: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "יוסף אור בוצ׳קו <yoseforb@gmail.com>"
 
-#: src/window.rs:378
+#: src/window.rs:315
 msgid "Copied “{}”"
 msgstr "‏‎„{}” הועתק"
 
