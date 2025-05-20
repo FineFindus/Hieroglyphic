@@ -5,7 +5,7 @@ mod classify;
 mod widgets;
 mod window;
 
-use gettextrs::{gettext, LocaleCategory};
+use gettextrs::{LocaleCategory, gettext};
 use gtk::{gio, glib};
 
 use self::application::HieroglyphicApplication;

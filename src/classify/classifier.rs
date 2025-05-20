@@ -4,9 +4,9 @@ use ndarray::Array4;
 use ort::session::InMemorySession;
 
 use super::{
+    Point, Stroke,
     point::{ONE_POINT, ZERO_POINT},
     rect::Rect,
-    Point, Stroke,
 };
 
 /// Classifier to classify a LaTeX symbol based on hand-drawn strokes.
