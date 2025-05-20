@@ -223,7 +223,7 @@ impl Stroke {
             self.points()
                 .tuple_windows()
                 //TODO: use >= or <=?
-                .filter(|(&p, &q, &r)| p.angle(q, r) <= alpha)
+                .filter(|&(&p, &q, &r)| p.angle(q, r) <= alpha)
                 .map(|(&_p, &q, &_r)| q),
         );
         new_stroke.push(*self.0.last().unwrap());
