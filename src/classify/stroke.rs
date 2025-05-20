@@ -6,7 +6,7 @@ use std::collections::VecDeque;
 // Original code from:
 // https://github.com/FineFindus/detexify-rust/blob/311002feb0519f483ef1f9cc8206648286128ff5/src/stroke.rs
 
-/// A list of connectect [`Point`]s.
+/// A list of connected [`Point`]s.
 #[derive(Clone, Debug, Default, PartialEq, Serialize)]
 pub struct Stroke(Vec<Point>);
 
