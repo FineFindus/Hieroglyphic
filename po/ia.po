@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-02-01 15:27+0000\n"
-"PO-Revision-Date: 2025-02-01 20:17-0300\n"
+"POT-Creation-Date: 2025-05-11 15:26+0000\n"
+"PO-Revision-Date: 2025-05-20 20:23-0400\n"
 "Last-Translator: Emilio Sepúlveda <emism.translations@gmail.com>\n"
 "Language-Team: Interlingua <softinterlingua@gmail.com>\n"
 "Language: ia\n"
@@ -21,8 +21,9 @@ msgstr ""
 "X-DL-Module: hieroglyphic\n"
 "X-DL-Branch: main\n"
 "X-DL-Domain: po\n"
-"X-DL-State: Translating\n"
-"X-Generator: Gtranslator 47.1\n"
+"X-DL-State: None\n"
+"X-Generator: Gtranslator 48.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
@@ -50,7 +51,7 @@ msgstr "Si contribuer designos recognoscite"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX symbols"
-msgstr "Trova symbolos LaTeX"
+msgstr "Cerca symbolos LaTeX"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
@@ -71,7 +72,7 @@ msgid "Placeholder"
 msgstr "Marcator de position"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Meliorar Hieroglyphic"
 
@@ -88,27 +89,35 @@ msgstr "Contribuer symbolos"
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Invia designos recognoscite al collection de datos de Hieroglyphic"
 
-#: data/resources/ui/window.ui:36
-msgid "About Hieroglyphic"
-msgstr "A proposito de Hieroglyphic"
+#: data/resources/ui/symbol-item.ui:44
+msgid "Copy"
+msgstr "Copiar"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
 msgid "No Symbols"
 msgstr "Necun symbolos"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
 msgid "Start by drawing a symbol"
 msgstr "Comencia con le designo de un symbolo"
 
-#: data/resources/ui/window.ui:108
+#: data/resources/ui/window.ui:162
+msgid "All Symbols"
+msgstr "Tote le symbolos"
+
+#: data/resources/ui/window.ui:197
 msgid "_Clear"
-msgstr "_Nettar"
+msgstr "_Rader"
+
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "A proposito de Hieroglyphic"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Emilio Sepúlveda <emism.translations@gmail.com>"
 
-#: src/window.rs:272
+#: src/window.rs:315
 msgid "Copied “{}”"
 msgstr "Copiate “{}”"
