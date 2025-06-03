@@ -1,0 +1,119 @@
+# Belarusian translation for hieroglyphic.
+# Copyright (C) 2025 hieroglyphic's COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# Yuras Shumovich <shumovichy@gmail.com>,  2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2025-05-25 15:27+0000\n"
+"PO-Revision-Date: 2025-06-03 18:07+0300\n"
+"Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
+"Language-Team: Belarusian <Belarusian>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: src/widgets/about.rs:20
+msgid "Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Пошук па абрысу сярод больш чым 1000 сімвалаў LaTeX"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Tools;LaTeX;TeX;Symbols;Сімвалы;"
+
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "Ці паказваць метку для акна з прапановай адпраўляць даныя"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
+msgid "Whether to contribute recognized strokes"
+msgstr "Ці адпраўляць распазнаныя абрысы"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "Пошук сімвалаў LaTeX"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Калі вы працавалі з LaTeX, ведаеце як складана помніць назвы ўсіх сімвалаў. "
+"З дапамогай Hieroglyphic можна знайсці па нарысаванаму абрысу больш за 1000 "
+"сімвалаў LaTeX."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+msgid "Main Window"
+msgstr "Галоўнае акно"
+
+# ?
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+msgid "Placeholder"
+msgstr "Запаўняльнік"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
+msgid "Improve Hieroglyphic"
+msgstr "Палепшыць Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:50
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr ""
+"Памажыце палепшыць распазнаванне сімвалаў Hieroglyphic для ўсіх "
+"карыстальнікаў"
+
+#: data/resources/ui/contribution-dialog.ui:61
+msgid "Contribute Symbols"
+msgstr "Адпраўляць сімвалы"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Адпраўляць распазнаныя абрысы ў набор даных для навучання Hieroglyphic"
+
+#: data/resources/ui/symbol-item.ui:44
+msgid "Copy"
+msgstr "Скапіяваць"
+
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+msgid "No Symbols"
+msgstr "Няма сімвалаў"
+
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+msgid "Start by drawing a symbol"
+msgstr "Пачніце рысаваць сімвал"
+
+#: data/resources/ui/window.ui:162
+msgid "All Symbols"
+msgstr "Усе сімвалы"
+
+#: data/resources/ui/window.ui:197
+msgid "_Clear"
+msgstr "_Ачысціць"
+
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "Аб праграме Hieroglyphic"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr "Юрась Шумовіч <shumovichy@gmail.com>"
+
+#: src/window.rs:315
+msgid "Copied “{}”"
+msgstr "Скапіявана «{}»"
