@@ -1,7 +1,7 @@
 use gio::glib;
 use itertools::Itertools;
 use ndarray::Array4;
-use ort::session::InMemorySession;
+use ort::{session::InMemorySession, value::TensorRef};
 
 use super::{
     Point, Stroke,
@@ -29,16 +29,18 @@ impl Classifier {
     }
 
     /// Tries to classify the given strokes into a symbol.
-    pub fn classify(&self, sample: Vec<Stroke>) -> Option<Vec<&'static str>> {
+    pub fn classify(&mut self, sample: Vec<Stroke>) -> Option<Vec<&'static str>> {
         let input_tensor = self.prepate_input(sample);
 
         let result = self
             .model
-            .run(ort::inputs![input_tensor.view()].ok()?)
+            .run(ort::inputs![
+                TensorRef::from_array_view(input_tensor.view()).ok()?
+            ])
             .ok()?;
 
         // convert output indices to detexify ids
-        let output = result[0].try_extract_tensor().ok()?;
+        let output = result[0].try_extract_array().ok()?;
         let top_indices = top_k_indices(output.as_slice().unwrap(), 25);
         let top_labels: Vec<&'static str> = top_indices.iter().map(|&i| LABELS[i]).collect();
         Some(top_labels)

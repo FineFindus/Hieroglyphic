@@ -201,7 +201,7 @@ impl HieroglyphicWindow {
 
         gio::spawn_blocking(move || {
             tracing::info!("Classifier thread started");
-            let classifier = classify::Classifier::new().expect("Failed to setup classifier");
+            let mut classifier = classify::Classifier::new().expect("Failed to setup classifier");
 
             loop {
                 let Some(strokes) = req_rx.iter().next() else {
