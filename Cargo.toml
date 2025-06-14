@@ -20,7 +20,7 @@ strip = true
 [dependencies]
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
 gtk = { version = "0.9", package = "gtk4", features = ["v4_14"] }
-adw = { package = "libadwaita", version = "0.7.2", features = ["v1_7"] }
+adw = { package = "libadwaita", version = "0.7", features = ["v1_7"] }
 tracing = "0.1"
 tracing-subscriber = "0.3"
 itertools = "0.14"
