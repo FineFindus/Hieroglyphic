@@ -349,6 +349,7 @@ impl HieroglyphicWindow {
                 "https://hieroglyphic-server-6g7a.shuttle.app/v1/upload/{}",
                 label
             ))
+            .header("User-Agent", format!("Hieroglyphic/{}", config::VERSION))
             .send_json(strokes)
             {
                 Ok(_) => {
