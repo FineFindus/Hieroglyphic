@@ -1,14 +1,14 @@
 # Swedish translation for hieroglyphic.
-# Copyright © 2024 hieroglyphic's COPYRIGHT HOLDER
+# Copyright © 2024-2025 hieroglyphic's COPYRIGHT HOLDER
 # This file is distributed under the same license as the hieroglyphic package.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>,  2024.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>,  2024, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2024-09-28 03:26+0000\n"
-"PO-Revision-Date: 2024-10-05 23:02+0200\n"
+"POT-Creation-Date: 2025-05-11 15:26+0000\n"
+"PO-Revision-Date: 2025-06-18 22:09+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:25
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
@@ -33,11 +33,12 @@ msgstr "Sök genom över 1000 olika LaTeX-symboler genom att skissa"
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;Verktyg;LaTeX;TeX;Symboler;"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
 msgid "Whether to show a small nudge towards the contribution dialog"
 msgstr "Huruvida en liten antydan till bidragsdialogen ska visas"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
 msgid "Whether to contribute recognized strokes"
 msgstr "Huruvida du ska bidra med igenkända streck"
 
@@ -64,7 +65,7 @@ msgid "Placeholder"
 msgstr "Platshållare"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Förbättra Hieroglyphic"
 
@@ -81,27 +82,35 @@ msgstr "Bidra med symboler"
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Skicka in igenkända teckningar till Hieroglyphics datamängd"
 
-#: data/resources/ui/window.ui:36
-msgid "About Hieroglyphic"
-msgstr "Om Hieroglyphic"
+#: data/resources/ui/symbol-item.ui:44
+msgid "Copy"
+msgstr "Kopiera"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
 msgid "No Symbols"
 msgstr "Inga symboler"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
 msgid "Start by drawing a symbol"
 msgstr "Starta genom att rita en symbol"
 
-#: data/resources/ui/window.ui:118
+#: data/resources/ui/window.ui:162
+msgid "All Symbols"
+msgstr "Alla symboler"
+
+#: data/resources/ui/window.ui:197
 msgid "_Clear"
 msgstr "_Töm"
 
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "Om Hieroglyphic"
+
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
-#: src/about.rs:26
+#: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Anders Jonsson <anders.jonsson@norsjovallen.se>, 2024"
 
-#: src/window.rs:378
+#: src/window.rs:315
 msgid "Copied “{}”"
 msgstr "Kopierade ”{}”"
