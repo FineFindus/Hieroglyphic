@@ -7,6 +7,7 @@
         <child>
             <object class="GtkImage">
                 <property name="icon-name" bind-source="SymbolItem" bind-property="icon" bind-flags="sync-create"/>
+                <property name="accessible-role">GTK_ACCESSIBLE_ROLE_PRESENTATION</property>
                 <property name="icon-size">GTK_ICON_SIZE_LARGE</property>
                 <property name="margin-end">4</property>
             </object>
