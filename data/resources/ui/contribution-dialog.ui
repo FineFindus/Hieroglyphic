@@ -28,6 +28,7 @@
                                <property name="halign">center</property>
                                <child>
                                  <object class="GtkPicture">
+                                    <property name="accessible-role">GTK_ACCESSIBLE_ROLE_PRESENTATION</property>
                                     <property name="can-shrink">false</property>
                                     <property name="file">resource:///io/github/finefindus/Hieroglyphic/pen-broadcast.svg</property>
                                  </object>
