@@ -67,7 +67,7 @@ fn generate_symbol(data: Yaml, mut symbol: Symbol, map: &mut phf_codegen::Map<St
             !symbol.command.is_empty(),
             "Symbol does not have an associated command"
         );
-        map.entry(symbol.id(), &format!("{:?}", symbol));
+        map.entry(symbol.id(), format!("{:?}", symbol));
         return;
     }
 
