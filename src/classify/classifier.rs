@@ -1,4 +1,4 @@
-use gio::glib;
+
 use itertools::Itertools;
 use ndarray::Array4;
 use ort::{session::InMemorySession, value::TensorRef};
@@ -20,9 +20,12 @@ impl Classifier {
     ///
     /// This includes setting up and optimizing the model used for classification.
     pub fn new() -> ort::Result<Self> {
+        let num_cpus = std::thread::available_parallelism()
+            .expect("# CPU cores should be available")
+            .get();
         let model = ort::session::Session::builder()?
             .with_optimization_level(ort::session::builder::GraphOptimizationLevel::Level3)?
-            .with_intra_threads(glib::num_processors() as usize)?
+            .with_intra_threads(num_cpus)?
             .commit_from_memory_directly(&include_bytes!("../../data/model.onnx")[..])?;
 
         Ok(Self { model })
