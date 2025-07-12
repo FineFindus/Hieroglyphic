@@ -1,4 +1,3 @@
-
 use itertools::Itertools;
 use ndarray::Array4;
 use ort::{session::InMemorySession, value::TensorRef};
