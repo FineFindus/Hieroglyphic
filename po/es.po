@@ -2,43 +2,44 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the hieroglyphic package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Julián Villodre <jvillodrede@gmail.com>, 2024.
+# Julián Villodre <jvillodrede@gmail.com>, 2024-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2024-09-28 03:26+0000\n"
-"PO-Revision-Date: 2024-10-26 10:22+0200\n"
+"POT-Creation-Date: 2025-08-10 03:29+0000\n"
+"PO-Revision-Date: 2025-08-10 13:57+0200\n"
 "Last-Translator: Julián Villodre <jvillodrede@gmail.com>\n"
-"Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
-"Language: es\n"
+"Language-Team: es_ES\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 47.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 48.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:25
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 msgid "Search through over 1000 different LaTeX symbols by sketching"
 msgstr "Busque entre más de 1.000 símbolos LaTeX diferentes dibujando"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;Tools;LaTeX;TeX;Símbolos;"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
 msgid "Whether to show a small nudge towards the contribution dialog"
 msgstr "Indica si se debería hacer más llamativo el diálogo de contribución"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
 msgid "Whether to contribute recognized strokes"
 msgstr "Indica si se desea contribuir con trazos familiares"
 
@@ -65,46 +66,54 @@ msgid "Placeholder"
 msgstr "Marcador de posición"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Ayude a mejorar Hieroglyphic"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr "Ayude a que Hieroglyphic sea mejor identificando símbolos para todos"
 
-#: data/resources/ui/contribution-dialog.ui:61
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "Contribuya con nuevos símbolos"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Envíe trazos familiares al conjunto de datos de Hieroglyphic"
 
-#: data/resources/ui/window.ui:36
-msgid "About Hieroglyphic"
-msgstr "Acerca de Hieroglyphic"
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Copiar"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
 msgid "No Symbols"
 msgstr "Sin símbolo"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
 msgid "Start by drawing a symbol"
 msgstr "Comience dibujando un símbolo"
 
-#: data/resources/ui/window.ui:118
+#: data/resources/ui/window.ui:162
+msgid "All Symbols"
+msgstr "Todos los símbolos"
+
+#: data/resources/ui/window.ui:197
 msgid "_Clear"
 msgstr "_Limpiar"
 
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "Acerca de Hieroglyphic"
+
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
-#: src/about.rs:26
+#: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr ""
-"Julián Villodre <jvillodrede@gmail.com>, 2024\n"
+"Julián Villodre <jvillodrede@gmail.com>, 2024 - 2025\n"
 "haggen88"
 
-#: src/window.rs:378
+#: src/window.rs:315
 msgid "Copied “{}”"
 msgstr "“{}” copiado"
 
