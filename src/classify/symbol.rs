@@ -21,6 +21,8 @@ pub struct Symbol {
     pub text_mode: bool,
     /// Whether the symbol is available in math mode.
     pub math_mode: bool,
+    /// Equivalent typst command (if available).
+    pub typst_command: Option<&'static str>,
 }
 
 impl Symbol {
@@ -80,7 +82,8 @@ mod tests {
                 package: "latex2e",
                 font_encoding: "OT1",
                 text_mode: true,
-                math_mode: false
+                math_mode: false,
+                typst_command: Some("\\^"),
             })
         );
     }
