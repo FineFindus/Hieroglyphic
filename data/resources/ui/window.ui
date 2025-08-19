@@ -152,9 +152,9 @@
 																	<object class="SymbolItem" id="preview_symbol">
 																		<property name="icon">bGF0ZXgyZS1PVDEtX2JpZ2N1cA-symbolic</property>
 																		<property name="id">bGF0ZXgyZS1PVDEtX2JpZ2N1cA==</property>
-																		<property name="command">\bigcup</property>
-																		<property name="package">latex2e</property>
-																		<property name="mode">mathmode</property>
+																		<property name="tex-command">\bigcup</property>
+																		<property name="tex-package-and-mode">latex2e</property>
+																		<property name="typst-command">\^</property>
 																	</object>
 																</child>
 																<child type="end">

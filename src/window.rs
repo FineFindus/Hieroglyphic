@@ -309,7 +309,7 @@ impl HieroglyphicWindow {
 
     #[template_callback]
     pub fn copy_symbol(&self, symbol: &SymbolItem) {
-        let command = symbol.command();
+        let command = symbol.tex_command();
         self.clipboard().set_text(&command);
         tracing::debug!("Selected: {} ({})", &command, symbol.id());
         self.show_toast(gettext("Copied “{}”").replace("{}", &command));

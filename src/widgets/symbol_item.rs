@@ -20,11 +20,11 @@ mod imp {
         #[property(construct_only, get)]
         pub(super) icon: RefCell<String>,
         #[property(construct_only, get)]
-        pub(super) package: RefCell<String>,
+        pub(super) tex_package_and_mode: RefCell<String>,
         #[property(construct_only, get)]
-        pub(super) command: RefCell<String>,
+        pub(super) tex_command: RefCell<String>,
         #[property(construct_only, get)]
-        pub(super) mode: RefCell<String>,
+        pub(super) typst_command: RefCell<String>,
     }
 
     #[glib::object_subclass]
@@ -70,9 +70,18 @@ impl SymbolItem {
                 // icon filenames do not contain ending '='
                 format!("{}-symbolic", symbol.id().trim_end_matches('=')),
             )
-            .property("command", symbol.command)
-            .property("package", symbol.package)
-            .property("mode", symbol.mode_description())
+            .property("tex-command", symbol.command)
+            .property(
+                "tex-package-and-mode",
+                format!("{} ({})", symbol.package, symbol.mode_description()),
+            )
+            .property(
+                "typst-command",
+                symbol
+                    .typst_command
+                    .map(|cmd| format!("Typst: {cmd}"))
+                    .unwrap_or_default(),
+            )
             .build()
     }
 
@@ -83,9 +92,19 @@ impl SymbolItem {
         imp.icon
             // icon filenames do not contain ending '='
             .set(format!("{}-symbolic", symbol.id().trim_end_matches('=')));
-        imp.command.set(symbol.command.to_string());
-        imp.package.set(symbol.package.to_string());
-        imp.mode.set(symbol.mode_description().to_string());
+        imp.tex_command.set(symbol.command.to_string());
+        imp.tex_package_and_mode.set(format!(
+            "{} ({})",
+            symbol.package,
+            symbol.mode_description()
+        ));
+        imp.typst_command.set(
+            symbol
+                .typst_command
+                .map(|cmd| format!("Typst: {cmd}"))
+                .unwrap_or_default()
+                .to_string(),
+        );
 
         for property_name in ["id", "icon", "command", "package", "mode"] {
             self.notify(property_name);
