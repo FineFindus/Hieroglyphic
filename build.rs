@@ -1,4 +1,7 @@
 use base64::Engine;
+use mitex::CommandSpecItem;
+use scraper::{Html, Selector};
+use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufWriter, Write};
 use std::path::Path;
@@ -14,6 +17,7 @@ struct Symbol {
     text_mode: bool,
     #[allow(dead_code)]
     math_mode: bool,
+    typst_command: Option<String>,
 }
 
 impl Symbol {
@@ -49,9 +53,11 @@ fn main() {
         font_encoding: "OT1".to_string(),
         text_mode: true,
         math_mode: false,
+        typst_command: None,
     };
+    let typst_symbols = get_typst_aliases();
     for data in doc.into_vec().unwrap() {
-        generate_symbol(data, symbol.clone(), &mut map);
+        generate_symbol(data, symbol.clone(), &mut map, &typst_symbols);
     }
 
     writeln!(
@@ -62,14 +68,79 @@ fn main() {
     .unwrap();
 }
 
-fn generate_symbol(data: Yaml, mut symbol: Symbol, map: &mut phf_codegen::Map<String>) {
+fn get_typst_aliases() -> HashMap<String, String> {
+    let body: String = ureq::get("https://typst.app/docs/reference/symbols/sym/")
+        .call()
+        .expect("failed to connect to typst.app.")
+        .body_mut()
+        .read_to_string()
+        .expect("failed to parse typst.app response.");
+
+    let doc = Html::parse_document(&body);
+
+    let mut commands: HashMap<String, String> = HashMap::new();
+    for li in doc.select(&Selector::parse(".symbol-grid li[id^=symbol-]").unwrap()) {
+        let Some(latex_command) = li.attr("data-latex-name") else {
+            continue;
+        };
+
+        let command = li
+            .value()
+            .id()
+            .expect("unreachable")
+            .strip_prefix("symbol-")
+            .expect("unreachable");
+
+        commands.insert(latex_command.to_string(), command.to_string());
+    }
+
+    for (latex_cmd, typst_cmd) in mitex_spec_gen::DEFAULT_SPEC.clone().items() {
+        if let CommandSpecItem::Cmd(cmd) = typst_cmd {
+            let latex_command = format!("\\{latex_cmd}");
+            let typst_command = cmd.alias.clone().unwrap_or_else(|| latex_cmd.to_string());
+
+            commands.entry(latex_command).or_insert(typst_command);
+        };
+    }
+
+    commands
+}
+
+fn get_equiv_typst_command(
+    latex_command: &str,
+    typst_symbols: &HashMap<String, String>,
+) -> Option<String> {
+    let re = regex::Regex::new(r"\\math(cal|frak|scr|ds)\{(\w)\}").unwrap();
+
+    // e.g. \mathfrak{B} -> math.frak(B)
+    if let Some((_, [mode, symbol])) = re.captures(latex_command).map(|c| c.extract()) {
+        let typst_mode = match mode {
+            "ds" => "bb",
+            _ => mode,
+        };
+        return Some(format!("math.{typst_mode}({symbol})"));
+    }
+
+    typst_symbols.get(latex_command).cloned()
+}
+
+fn generate_symbol(
+    data: Yaml,
+    mut symbol: Symbol,
+    map: &mut phf_codegen::Map<String>,
+    typst_symbols: &HashMap<String, String>,
+) {
     if let Some(cmd) = data.as_str() {
         cmd.clone_into(&mut symbol.command);
+        if let Some(typst_command) = get_equiv_typst_command(cmd, typst_symbols) {
+            symbol.typst_command = Some(typst_command);
+        }
+
         assert!(
             !symbol.command.is_empty(),
             "Symbol does not have an associated command"
         );
-        map.entry(symbol.id(), format!("{:?}", symbol));
+        map.entry(symbol.id(), format!("{symbol:?}"));
         return;
     }
 
@@ -98,7 +169,7 @@ fn generate_symbol(data: Yaml, mut symbol: Symbol, map: &mut phf_codegen::Map<St
             .and_then(|v| v.into_vec())
         {
             for mode_data in values {
-                generate_symbol(mode_data, symbol.clone(), map);
+                generate_symbol(mode_data, symbol.clone(), map, typst_symbols);
             }
         }
     }
