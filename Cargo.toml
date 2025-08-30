@@ -19,8 +19,8 @@ strip = true
 
 [dependencies]
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
-gtk = { version = "0.9", package = "gtk4", features = ["v4_14"] }
-adw = { package = "libadwaita", version = "0.7", features = ["v1_7"] }
+gtk = { version = "0.10", package = "gtk4", features = ["v4_18"] }
+adw = { package = "libadwaita", version = "0.8", features = ["v1_7"] }
 tracing = "0.1"
 tracing-subscriber = "0.3"
 itertools = "0.14"
@@ -28,13 +28,13 @@ async-channel = "2.2"
 ort = "2.0.0-rc.10"
 ndarray = "0.16"
 base64 = "0.22"
-phf = "0.12"
+phf = "0.13"
 ureq = { version = "3.0", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-gio = { version = "0.20", features = ["v2_70"] }
+gio = { version = "0.21", features = ["v2_70"] }
 
 [build-dependencies]
-phf_codegen = "0.12"
+phf_codegen = "0.13"
 yaml-rust2 = "0.10"
 base64 = "0.22"

@@ -142,7 +142,6 @@ impl HieroglyphicApplication {
         }
     }
 
-
     fn _backdoor(&self) {
         // Pretend here is a backdoor. Congratulations, you found it.
         // Please send me a message, or create an issue and write about how you stumbled about this

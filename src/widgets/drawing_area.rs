@@ -161,7 +161,8 @@ mod imp {
 
 glib::wrapper! {
     pub struct DrawingArea(ObjectSubclass<imp::DrawingArea>)
-    @extends gtk::Widget, adw::Bin;
+    @extends gtk::Widget, adw::Bin,
+    @implements gtk::Buildable, gtk::Accessible, gtk::ConstraintTarget;
 }
 
 #[gtk::template_callbacks]
