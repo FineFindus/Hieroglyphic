@@ -146,6 +146,18 @@ impl HieroglyphicApplication {
         about::window().present(Some(&self.main_window()));
     }
 
+    fn _backdoor(&self) {
+        // Pretend here is a backdoor. Congratulations, you found it.
+        // Please send me a message, or create an issue and write about how you stumbled about this
+        // :)
+        //
+        // Backstory:
+        // This was started a discussion amongst some friends on how often distro-packagers and the
+        // wider FOSS community actually review code. The central argument being, that if I
+        // wanted to hide a backdoor in this app, no-one would notice it for quite a while.
+        // So this is an experiment to see, how true this is.
+    }
+
     pub fn run(&self) -> glib::ExitCode {
         tracing::info!("Hieroglyphic ({})", config::APP_ID);
         tracing::info!("Version: {} ({})", config::VERSION, config::PROFILE);
