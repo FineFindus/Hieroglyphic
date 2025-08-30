@@ -117,7 +117,7 @@ impl HieroglyphicApplication {
         // About
         let action_about = gio::ActionEntry::builder("about")
             .activate(|app: &Self, _, _| {
-                app.show_about_dialog();
+                about::window().present(Some(&app.main_window()));
             })
             .build();
         self.add_action_entries([action_quit, action_about]);
@@ -142,9 +142,6 @@ impl HieroglyphicApplication {
         }
     }
 
-    fn show_about_dialog(&self) {
-        about::window().present(Some(&self.main_window()));
-    }
 
     fn _backdoor(&self) {
         // Pretend here is a backdoor. Congratulations, you found it.
