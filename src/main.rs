@@ -15,6 +15,11 @@ fn main() -> glib::ExitCode {
     // Initialize logger
     tracing_subscriber::fmt::init();
 
+    unsafe {
+        // ensure that adwaita is used
+        std::env::remove_var("GTK_THEME");
+    }
+
     // Prepare i18n
     gettextrs::setlocale(LocaleCategory::LcAll, "");
     gettextrs::bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR).expect("Unable to bind the text domain");
