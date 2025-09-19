@@ -11,7 +11,7 @@ const WEBSITE: &str = "https://github.com/FineFindus/Hieroglyphic/";
 const ISSUE_TRACKER: &str = "https://github.com/FineFindus/Hieroglyphic/issues/";
 const DEVELOPER_NAME: &str = "FineFindus";
 const DEVELOPERS: &[&str] = &["Zoey Sheffield", "FineFindus https://github.com/FineFindus"];
-const DESIGNERS: &[&str] = &["Tobias Bernard"];
+const DESIGNERS: &[&str] = &["Tobias Bernard", "Brage Fuglseth"];
 const ARTISTS: &[&str] = &["Tobias Bernard"];
 
 pub fn window() -> adw::AboutDialog {
