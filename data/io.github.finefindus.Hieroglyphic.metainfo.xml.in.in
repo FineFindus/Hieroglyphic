@@ -114,7 +114,7 @@
   </recommends>
 
   <requires>
-    <display_length compare="ge">700</display_length>
+    <display_length compare="ge">370</display_length>
   </requires>
 
   <custom>
