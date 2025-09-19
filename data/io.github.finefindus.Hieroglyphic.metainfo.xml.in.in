@@ -39,6 +39,16 @@
   <content_rating type="oars-1.1" />
 
   <releases>
+    <release version="2.2.0" date="2025-10-01">
+      <description>
+        <p>This update brings a adaptive redesign, improving the app on mobile devices.</p>
+        <ul>
+          <li>Added blackboard bold (mathbb) symbols</li>
+          <li>Accessibility improvements</li>
+          <li>Updated to newest GNOME styling</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.1.0" date="2025-01-25">
       <description>
         <p>This updates improves symbols classification, as fixing some bugs.</p>
