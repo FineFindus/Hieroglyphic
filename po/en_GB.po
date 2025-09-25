@@ -8,29 +8,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-02-08 03:27+0000\n"
-"PO-Revision-Date: 2025-02-24 12:12+0000\n"
+"POT-Creation-Date: 2025-09-25 03:30+0000\n"
+"PO-Revision-Date: 2025-09-25 10:25+0100\n"
 "Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
-"Language-Team: British English <en_GB@li.org>\n"
+"Language-Team: British English <en@li.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);;\n"
-"X-Generator: Poedit 3.4.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 49.0\n"
+"X-DL-VCS-Web: https://github.com/FineFindus/Hieroglyphic\n"
+"X-DL-Lang: en_GB\n"
+"X-DL-Module: hieroglyphic\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 msgid "Search through over 1000 different LaTeX symbols by sketching"
 msgstr "Search through over 1000 different LaTeX symbols by sketching"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;Tools;LaTeX;TeX;Symbols;"
 
@@ -66,38 +72,45 @@ msgid "Placeholder"
 msgstr "Placeholder"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Improve Hieroglyphic"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr "Help make Hieroglyphic better at identifying symbols for everyone"
 
-#: data/resources/ui/contribution-dialog.ui:61
-#| msgid "No Symbols"
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "Contribute Symbols"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Submit recognised drawings to Hieroglyphic’s dataset"
 
-#: data/resources/ui/window.ui:36
-msgid "About Hieroglyphic"
-msgstr "About Hieroglyphic"
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Copy"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
 msgid "No Symbols"
 msgstr "No Symbols"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
 msgid "Start by drawing a symbol"
 msgstr "Start by drawing a symbol"
 
-#: data/resources/ui/window.ui:108
+#: data/resources/ui/window.ui:162
+msgid "All Symbols"
+msgstr "All Symbols"
+
+#: data/resources/ui/window.ui:197
 msgid "_Clear"
 msgstr "_Clear"
+
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "About Hieroglyphic"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
@@ -106,11 +119,6 @@ msgstr ""
 "Andi Chandler <andi@gowling.com>\n"
 "Bruce Cowan <bruce@bcowan.me.uk>"
 
-#: src/window.rs:283
+#: src/window.rs:315
 msgid "Copied “{}”"
 msgstr "Copied “{}”"
-
-#~ msgid ""
-#~ "Help improve Hieroglyphic by automatically contributing recognized symbols"
-#~ msgstr ""
-#~ "Help improve Hieroglyphic by automatically contributing recognised symbols"
