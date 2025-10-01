@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-05-11 15:26+0000\n"
-"PO-Revision-Date: 2025-05-12 19:23+0800\n"
+"POT-Creation-Date: 2025-10-01 15:28+0000\n"
+"PO-Revision-Date: 2025-10-02 07:26+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -16,20 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Gtranslator 49.0\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 msgid "Search through over 1000 different LaTeX symbols by sketching"
 msgstr "通过草图搜索 1000 多种不同的 LaTeX 符号"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;Tools;LaTeX;TeX;Symbols;工具;符号;"
 
@@ -64,23 +64,32 @@ msgid "Placeholder"
 msgstr "占位符"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "提升 Hieroglyphic"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr "通过识别符号帮助所有人创造更好的 Hieroglyphic"
 
-#: data/resources/ui/contribution-dialog.ui:61
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "贡献符号"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "向 Hieroglyphic 数据集提交识别的绘制符号"
 
-#: data/resources/ui/symbol-item.ui:44
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"不会收集私人可识别信息。<a href=\"https://github.com/FineFindus/Hieroglyphic/"
+"blob/main/PRIVACY_POLICY.md\">隐私策略</a>"
+
+#: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
 msgstr "复制"
 
