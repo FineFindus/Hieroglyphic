@@ -68,7 +68,7 @@
                            <child>
                             <object class="GtkLabel">
                                <property name="margin-top">12</property>
-                               <property name="label" translatable="yes">No personal identifyable information is collected. &lt;a href="https://github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md"&gt;Privacy policy&lt;/a&gt;</property>
+                               <property name="label" translatable="yes">No personal identifiable information is collected. &lt;a href="https://github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md"&gt;Privacy policy&lt;/a&gt;</property>
                                <property name="use_markup">True</property>
                               <style>
                                 <class name="dim-label"/>
