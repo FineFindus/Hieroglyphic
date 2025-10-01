@@ -150,6 +150,7 @@ for root, dirs, files in os.walk(f"images{SIZE}"):
                 image_path, os.path.join(f"images_data{SIZE}/test/{label}", image_file)
             )
 
+print("Creating image archive")
 # combine directories in tar file, so it can easily be uploaded for training
 with tarfile.open("images.tar.xz", "w:xz") as tar:
     tar.add(f"images_data{SIZE}/train", arcname="train")
