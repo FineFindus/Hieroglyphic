@@ -21,42 +21,42 @@
     },
     "modules": [
         {
-            "name": "hieroglyphic",
-            "buildsystem": "meson",
-            "run-tests": false,
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/FineFindus/Hieroglyphic/releases/download/v2.0.0/hieroglyphic-2.0.0.tar.xz",
-                    "sha256": "1203626674aa7591f670fe55b8397f22cfd3aa0e5dfb8af5ac00f77f62156818"
-                }
-            ]
-        },
-        {
             "name": "onnxruntime",
             "buildsystem": "simple",
             "build-commands": [
-                "cp -r --no-target-directory ./lib /app/lib"
+                "cp -r --no-target-directory lib/ /app/lib/",
+                "cp -r --no-target-directory include/ /app/include/"
             ],
             "sources": [
                 {
                     "only-arches": [
                         "x86_64"
                     ],
-                    "sha256": "aa70d48b22e264b82e83f63245b51ddc9a47ae4a3a66903efaff1ba68b7b5930",
+                    "sha256": "b6deea7f2e22c10c043019f294a0ea4d2a6c0ae52a009c34847640db75ec5580",
                     "type": "archive",
-                    "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.20.0/onnxruntime-linux-x64-1.20.0.tgz"
+                    "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.23.0/onnxruntime-linux-x64-1.23.0.tgz"
                 },
                 {
                     "only-arches": [
                         "aarch64"
                     ],
-                    "sha256": "b4d7c6e2c45f8edabe5d28e9bc59ec8d5a4a4af36660cda16e94b2ad85f2a52a",
+                    "sha256": "0b9f47d140411d938e47915824d8daaa424df95a88b5f1fc843172a75168f7a0",
                     "type": "archive",
-                    "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.20.0/onnxruntime-linux-aarch64-1.20.0.tgz"
+                    "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.23.0/onnxruntime-linux-aarch64-1.23.0.tgz"
+                }
+            ]
+        },
+        {
+            "name": "hieroglyphic",
+            "buildsystem": "meson",
+            "run-tests": false,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/FineFindus/Hieroglyphic/releases/download/v2.2.0/hieroglyphic-2.2.0.tar.xz",
+                    "sha256": "5c55f507beb824baf76025532827a74b54192612579b81b0165b936dc169b93f"
                 }
             ]
         }
     ]
 }
-

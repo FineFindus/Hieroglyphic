@@ -36,6 +36,32 @@
     },
     "modules": [
         {
+            "name": "onnxruntime",
+            "buildsystem": "simple",
+            "build-commands": [
+                "cp -r --no-target-directory lib/ /app/lib/",
+                "cp -r --no-target-directory include/ /app/include/"
+            ],
+            "sources": [
+                {
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "sha256": "b6deea7f2e22c10c043019f294a0ea4d2a6c0ae52a009c34847640db75ec5580",
+                    "type": "archive",
+                    "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.23.0/onnxruntime-linux-x64-1.23.0.tgz"
+                },
+                {
+                    "only-arches": [
+                        "aarch64"
+                    ],
+                    "sha256": "0b9f47d140411d938e47915824d8daaa424df95a88b5f1fc843172a75168f7a0",
+                    "type": "archive",
+                    "url": "https://github.com/microsoft/onnxruntime/releases/download/v1.23.0/onnxruntime-linux-aarch64-1.23.0.tgz"
+                }
+            ]
+        },
+        {
             "name": "hieroglyphic",
             "buildsystem": "meson",
             "run-tests": false,
