@@ -17,7 +17,12 @@
         "--env=RUST_BACKTRACE=1"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin"
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "ORT_STRATEGY": "system",
+            "ORT_LIB_LOCATION": "/app/lib/",
+            "RUSTFLAGS": "-L /app/lib"
+        }
     },
     "modules": [
         {
