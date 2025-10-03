@@ -18,6 +18,12 @@
     <p>If you work with LaTeX, you know it's difficult to memorize the names of all the symbols. Hieroglyphic allows you to search through over 1000 different LaTeX symbols by sketching.</p>
   </description>
 
+  <categories>
+    <category>Math</category>
+    <category>Science</category>
+    <category>Utility</category>
+  </categories>
+
   <screenshots>
     <screenshot type="default">
         <image>https://raw.githubusercontent.com/FineFindus/Hieroglyphic/main/data/resources/screenshots/window.png</image>
