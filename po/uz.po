@@ -1,0 +1,125 @@
+# Uzbek (Latin) translation for hieroglyphic.
+# Copyright (C) 2025 hieroglyphic's COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# kHamidulloh <toxtayevhamidulloh6997@gmail.com>,  2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2025-10-05 15:30+0000\n"
+"PO-Revision-Date: 2025-10-10 15:35+0500\n"
+"Last-Translator: Baxrom Raxmatov <https://t.me/bahrom04>\n"
+"Language-Team: Uzbek (Latin) <Uzbek>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
+#: src/widgets/about.rs:20
+msgid "Hieroglyphic"
+msgstr "Iyeroglifik"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Chizma orqali 1000 dan ortiq turli Latex belgilarini eskizlash"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Asboblar;LaTeX;TeX;Belgilar;"
+
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
+#, fuzzy
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "Hissalar muloqot oynasiga kichik turtki ko‘rsatilsinmi"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
+msgid "Whether to contribute recognized strokes"
+msgstr "Aniqlangan shtrixlarga hissa qo‘shish/qoʻshmaslik"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX symbols"
+msgstr "LaTeX belgilarini topish"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different "
+"LaTeX symbols by sketching."
+msgstr ""
+"Agar siz Latex bilan ishlayotgan bo‘lsangiz, barcha belgilarning nomlarini "
+"eslab qolish qiyinligini bilasiz. Iyeroglifik eskizlash orqali 1000 dan "
+"ortiq turli Latex belgilarini qidirish imkonini beradi."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+msgid "Main Window"
+msgstr "Asosiy oyna"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Placeholder"
+msgstr "To‘ldirgich"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+msgid "Improve Hieroglyphic"
+msgstr "Iyeroglifni yaxshilash"
+
+#: data/resources/ui/contribution-dialog.ui:51
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr ""
+"Iyeroglifik yozish uslubini aniqlash qobiliyatini hamma uchun yaxshilashga "
+"o‘z hissangizni qo‘shing"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Contribute Symbols"
+msgstr "Hissa qo‘shish belgilari"
+
+#: data/resources/ui/contribution-dialog.ui:63
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Tanilgan chizmalarni Iyeroglifik ma’lumotlar to‘plamiga yuborish"
+
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://github."
+"com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy policy</a>"
+msgstr ""
+"Shaxsni tasdiqlovchi ma’lumotlar olinmaydi. <a href=\"https://github.com/"
+"FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Maxfiylik siyosati</a>"
+
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Nusxalash"
+
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+msgid "No Symbols"
+msgstr "Hech qanday belgi topilmadi"
+
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+msgid "Start by drawing a symbol"
+msgstr "Belgi chizishdan boshlang"
+
+#: data/resources/ui/window.ui:162
+msgid "All Symbols"
+msgstr "Barcha belgilar"
+
+#: data/resources/ui/window.ui:197
+msgid "_Clear"
+msgstr "Tozalash"
+
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "Iyeroglif haqida"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr "Hamidulloh To'xtayev <toxtayevhamidulloh6997@gmail.com>"
+
+#: src/window.rs:315
+msgid "Copied “{}”"
+msgstr "Nusxalangan \"{}\""
