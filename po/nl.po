@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-08-21 03:28+0000\n"
-"PO-Revision-Date: 2025-08-21 16:59+0200\n"
+"POT-Creation-Date: 2025-10-11 15:30+0000\n"
+"PO-Revision-Date: 2025-10-11 23:31+0200\n"
 "Last-Translator: Nathan Follens <nfollens@gnome.org>\n"
 "Language-Team: GNOME-NL https://matrix.to/#/#nl:gnome.org\n"
 "Language: nl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
@@ -59,11 +59,11 @@ msgstr ""
 "onthouden. Met Hieroglyphic kunt u meer dan 1.000 verschillende LaTeX-symbolen "
 "vinden door ze te schetsen."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "Hoofdvenster"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "Opvultekst"
 
@@ -85,6 +85,15 @@ msgstr "Symbolen bijdragen"
 #: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Zend herkende schetsen in naar de gegevensset van Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://github.com/"
+"FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy policy</a>"
+msgstr ""
+"Er wordt geen persoonlijk identificeerbare informatie verzameld. <a "
+"href=\"https://github.com/FineFindus/Hieroglyphic/blob/main/"
+"PRIVACY_POLICY.md\">Privacybeleid</a>"
 
 #: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
