@@ -8,19 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-08-10 03:29+0000\n"
-"PO-Revision-Date: 2025-08-10 13:57+0200\n"
+"POT-Creation-Date: 2025-10-12 15:30+0000\n"
+"PO-Revision-Date: 2025-10-12 20:10+0200\n"
 "Last-Translator: Julián Villodre <jvillodrede@gmail.com>\n"
 "Language-Team: es_ES\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Gtranslator 49.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
@@ -57,11 +57,11 @@ msgstr ""
 "los símbolos. Hieroglyphic le permite buscar entre más de 1000 símbolos "
 "LaTeX diferentes mediante bocetos."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "Ventana principal"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "Marcador de posición"
 
@@ -81,6 +81,16 @@ msgstr "Contribuya con nuevos símbolos"
 #: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Envíe trazos familiares al conjunto de datos de Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"No se recopila ninguna información personal identificable. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Política de "
+"privacidad</a>"
 
 #: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
