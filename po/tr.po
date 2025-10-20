@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.finefindus.Hieroglyphic\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-05-11 15:26+0000\n"
-"PO-Revision-Date: 2025-05-18 00:26+0300\n"
+"POT-Creation-Date: 2025-10-07 03:30+0000\n"
+"PO-Revision-Date: 2025-10-07 13:39+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
@@ -18,20 +18,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 msgid "Search through over 1000 different LaTeX symbols by sketching"
 msgstr "Çizerek 1000ʼden çok LaTeX simgesi arasında arama yap"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "Hieroglyphic;GTK;Tools;LaTeX;TeX;Symbols;Araçlar;Simgeler;Hiyeroglif;"
 
@@ -58,33 +58,43 @@ msgstr ""
 "bilirsiniz. Hiyeroglif, 1000ʼden çok LaTeX simgesi arasında çizim yaparak "
 "arama yapmanızı sağlar."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "Ana Pencere"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "Yer Tutucu"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Hieroglyphic’i İyileştir"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr ""
 "Herkesin simgeleri daha iyi tanımlaması için Hieroglyphic’e yardımcı olun"
 
-#: data/resources/ui/contribution-dialog.ui:61
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "Simgelere Katkı Ver"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Tanınan çizimleri Hieroglyphic veri kümesine gönderin"
 
-#: data/resources/ui/symbol-item.ui:44
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"Hiçbir kişisel tanımlanabilir bilgi toplanmamaktadır. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Gizlilik "
+"ilkesi</a>"
+
+#: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
 msgstr "Kopyala"
 
