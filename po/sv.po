@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-05-11 15:26+0000\n"
-"PO-Revision-Date: 2025-06-18 22:09+0200\n"
+"POT-Creation-Date: 2025-10-05 15:30+0000\n"
+"PO-Revision-Date: 2025-10-21 22:47+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -16,20 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 msgid "Search through over 1000 different LaTeX symbols by sketching"
 msgstr "Sök genom över 1000 olika LaTeX-symboler genom att skissa"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;Verktyg;LaTeX;TeX;Symboler;"
 
@@ -56,33 +56,43 @@ msgstr ""
 "alla symboler. Hieroglyphic låter dig söka genom över 1000 olika LaTeX-"
 "symboler genom att skissa."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "Huvudfönster"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "Platshållare"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Förbättra Hieroglyphic"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr ""
 "Hjälp till att göra Hieroglyphic bättre på att känna igen symboler för alla"
 
-#: data/resources/ui/contribution-dialog.ui:61
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "Bidra med symboler"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Skicka in igenkända teckningar till Hieroglyphics datamängd"
 
-#: data/resources/ui/symbol-item.ui:44
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"Ingen personligt identifierbar information samlas in. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/"
+"PRIVACY_POLICY.md\">Sekretesspolicy</a>"
+
+#: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
 msgstr "Kopiera"
 
