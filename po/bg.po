@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-07-29 08:47+0000\n"
-"PO-Revision-Date: 2025-07-29 13:37+0200\n"
+"POT-Creation-Date: 2025-10-25 03:31+0000\n"
+"PO-Revision-Date: 2025-10-25 15:53+0200\n"
 "Last-Translator: twlvnn kraftwerk <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <dict-notifications@fsa-bg.org>\n"
 "Language: bg\n"
@@ -16,10 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Йероглиф"
@@ -48,24 +48,24 @@ msgstr "Търсене на знаци в „LaTeX“"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX, you know it's difficult to memorize the names of all the "
+"symbols. Hieroglyphic allows you to search through over 1000 different LaTeX symbols "
+"by sketching."
 msgstr ""
-"Ако работите с „LaTeX“, знаете, че е трудно да се запомнят имената на всички "
-"знаци. „Йероглиф“ ви позволява да търсите в над 1000 различни знака на "
-"„LaTeX“ чрез изчертаване."
+"Ако работите с „LaTeX“, знаете, че е трудно да се запомнят имената на всички знаци. "
+"„Йероглиф“ ви позволява да търсите в над 1000 различни знака на „LaTeX“ чрез "
+"изчертаване."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "Основен прозорец"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "Заместител"
 
-#: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:6 data/resources/ui/contribution-dialog.ui:40
+#: data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Допринасяне към „Йероглиф“"
 
@@ -80,6 +80,15 @@ msgstr "Допринасяне със знаци"
 #: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Подайте разпознати рисунки към базата от данни на „Йероглиф“"
+
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://github.com/"
+"FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy policy</a>"
+msgstr ""
+"Не се събира лична информация, която може да идентифицира потребителя. <a "
+"href=\"https://github.com/FineFindus/Hieroglyphic/blob/main/"
+"PRIVACY_POLICY.md\">Настройки за лични данни</a>"
 
 #: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
@@ -109,13 +118,12 @@ msgstr "Относно „Йероглиф“"
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr ""
-"Twlvnn Kraftwerk &lt;<a "
-"href='mailto:kraft_werk@tutanota.com'>kraft_werk@tutanota.com</a>&gt;\n"
+"Twlvnn Kraftwerk &lt;<a href='mailto:kraft_werk@tutanota.com'>kraft_werk@tutanota.com</"
+"a>&gt;\n"
 "\n"
 "\n"
 "Проектът за превод на GNOME има нужда от подкрепа.\n"
-"Научете повече за нас на <a href='https://fsa-bg.org/project/gtp'>уеб сайта</"
-"a> ни.\n"
+"Научете повече за нас на <a href='https://fsa-bg.org/project/gtp'>уеб сайта</a> ни.\n"
 "Докладвайте за грешки в превода в <a href='https://fsa-bg.org/project/gtp/"
 "newticket'>съответния раздел</a>."
 
