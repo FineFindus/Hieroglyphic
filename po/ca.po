@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-03-04 15:28+0000\n"
-"PO-Revision-Date: 2025-03-04 23:27+0100\n"
+"POT-Creation-Date: 2025-10-27 03:30+0000\n"
+"PO-Revision-Date: 2025-10-27 12:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -16,21 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.6\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Jeroglífic"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 msgid "Search through over 1000 different LaTeX symbols by sketching"
 msgstr ""
 "Cerqueu entre més de 1000 símbols diferents de LaTeX a través de dibuixos"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;Eines;LaTeX;TeX;Símbols;"
 
@@ -57,53 +57,71 @@ msgstr ""
 "símbols. El Jeroglífic us permet cercar més de 1000 símbols diferents de "
 "LaTeX dibuixant."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "Finestra principal"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "Marcador"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "Milloreu el Jeroglífic"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr ""
 "Ajudeu a fer que el Jeroglífic sigui millor identificant símbols per a tothom"
 
-#: data/resources/ui/contribution-dialog.ui:61
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "Aporteu símbols"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Envieu els dibuixos reconeguts al conjunt de dades del Jeroglífic"
 
-#: data/resources/ui/window.ui:36
-msgid "About Hieroglyphic"
-msgstr "Quant al Jeroglífic"
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"No es recull cap informació personal identificable. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Política de "
+"privadesa</a>"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Copia"
+
+#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
 msgid "No Symbols"
 msgstr "Sense símbols"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
 msgid "Start by drawing a symbol"
 msgstr "Comenceu dibuixant un símbol"
 
-#: data/resources/ui/window.ui:108
+#: data/resources/ui/window.ui:162
+msgid "All Symbols"
+msgstr "Tots els símbols"
+
+#: data/resources/ui/window.ui:197
 msgid "_Clear"
 msgstr "_Neteja"
+
+#: data/resources/ui/window.ui:275
+msgid "About Hieroglyphic"
+msgstr "Quant al Jeroglífic"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Victor Dargallo <victordargallo@disroot.org>"
 
-#: src/window.rs:283
+#: src/window.rs:315
 msgid "Copied “{}”"
 msgstr "S'ha copiat «{}»"
