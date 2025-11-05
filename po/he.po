@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-05-11 15:26+0000\n"
-"PO-Revision-Date: 2025-05-13 10:11+0300\n"
+"POT-Creation-Date: 2025-11-05 03:30+0000\n"
+"PO-Revision-Date: 2025-11-05 08:46+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
 "2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "הירוגליפי"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 msgid "Search through over 1000 different LaTeX symbols by sketching"
 msgstr "חיפוש מתוך למעלה מ־1000 סמלי LaTeX שונים באמצעות רישום בכתב יד"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "GTK;כלים;לאטך;לטקס;לטך;LaTeX;TeX;סמלים;מתמטיקה;"
 
@@ -57,32 +57,41 @@ msgstr ""
 "היישום הירוגליפי מאפשר לך לחפש מתוך למעלה מ־1000 סמלי LaTeX באמצעות רישום "
 "בכתב יד."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "חלון ראשי"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "ממלא מקום"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
 msgid "Improve Hieroglyphic"
 msgstr "שיפור הירוגליפי"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr "אפשר לסייע בשיפור הירוגליפי בזיהוי סמלים לכולם"
 
-#: data/resources/ui/contribution-dialog.ui:61
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "תרומת סמלים"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "הגשת הציורים המזוהים לערכת הנתונים של הירוגליפי"
 
-#: data/resources/ui/symbol-item.ui:44
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"לא נאספים פרטים שעלולים לחשוף את זהותך. <a href=\"https://github.com/"
+"FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">מדיניות פרטיות</a>"
+
+#: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
 msgstr "העתקה"
 
