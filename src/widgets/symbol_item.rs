@@ -6,6 +6,7 @@ use gtk::subclass::prelude::*;
 use gtk::{glib, prelude::ObjectExt};
 
 use crate::classify;
+use crate::window::MarkupLanguageMode;
 
 mod imp {
     use super::*;
@@ -19,12 +20,12 @@ mod imp {
         pub(super) id: RefCell<String>,
         #[property(construct_only, get)]
         pub(super) icon: RefCell<String>,
+        #[property(construct_only, get, nullable)]
+        pub(super) package: RefCell<Option<String>>,
         #[property(construct_only, get)]
-        pub(super) tex_package_and_mode: RefCell<String>,
-        #[property(construct_only, get)]
-        pub(super) tex_command: RefCell<String>,
-        #[property(construct_only, get)]
-        pub(super) typst_command: RefCell<String>,
+        pub(super) command: RefCell<String>,
+        #[property(construct_only, get, nullable)]
+        pub(super) mode: RefCell<Option<String>>,
     }
 
     #[glib::object_subclass]
@@ -62,7 +63,7 @@ glib::wrapper! {
 
 #[gtk::template_callbacks]
 impl SymbolItem {
-    pub fn new(symbol: classify::Symbol) -> Self {
+    pub fn new(symbol: classify::Symbol, language: &MarkupLanguageMode) -> Self {
         Object::builder()
             .property("id", symbol.id())
             .property(
@@ -70,40 +71,27 @@ impl SymbolItem {
                 // icon filenames do not contain ending '='
                 format!("{}-symbolic", symbol.id().trim_end_matches('=')),
             )
-            .property("tex-command", symbol.command)
-            .property(
-                "tex-package-and-mode",
-                format!("{} ({})", symbol.package, symbol.mode_description()),
-            )
-            .property(
-                "typst-command",
-                symbol
-                    .typst_command
-                    .map(|cmd| format!("Typst: {cmd}"))
-                    .unwrap_or_default(),
-            )
+            .property("command", symbol.command(&language))
+            .property("package", symbol.package(&language))
+            .property("mode", symbol.mode_description(&language))
             .build()
     }
 
     /// Sets the displayed symbol to the given symbol.
-    pub fn set_symbol(&self, symbol: classify::Symbol) {
+    pub fn set_symbol(&self, symbol: classify::Symbol, language: &MarkupLanguageMode) {
         let imp = self.imp();
         imp.id.replace(symbol.id().to_string());
         imp.icon
             // icon filenames do not contain ending '='
             .set(format!("{}-symbolic", symbol.id().trim_end_matches('=')));
-        imp.tex_command.set(symbol.command.to_string());
-        imp.tex_package_and_mode.set(format!(
-            "{} ({})",
-            symbol.package,
-            symbol.mode_description()
-        ));
-        imp.typst_command.set(
+        imp.command
+            .set(symbol.command(&language).unwrap().to_string());
+        imp.package
+            .set(symbol.package(&language).map(|package| package.to_string()));
+        imp.mode.set(
             symbol
-                .typst_command
-                .map(|cmd| format!("Typst: {cmd}"))
-                .unwrap_or_default()
-                .to_string(),
+                .mode_description(&language)
+                .map(|desc| desc.to_string()),
         );
 
         for property_name in ["id", "icon", "command", "package", "mode"] {

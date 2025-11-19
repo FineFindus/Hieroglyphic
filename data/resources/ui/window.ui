@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
+	<menu id="primary-menu">
+    <section>
+      <attribute translatable="yes" name="label">Markup language</attribute>
+      <item>
+        <attribute translatable="yes" name="label">LaTeX</attribute>
+        <attribute name="action">win.markup-language-mode</attribute>
+        <attribute name="target">latex</attribute>
+      </item>
+      <item>
+        <attribute translatable="yes" name="label">Typst</attribute>
+        <attribute name="action">win.markup-language-mode</attribute>
+        <attribute name="target">typst</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="action">app.about</attribute>
+        <attribute name="label" translatable="yes">About Hieroglyphic</attribute>
+      </item>
+    </section>
+  </menu>
 	<template class="HieroglyphicWindow" parent="AdwApplicationWindow">
 		<property name="default_width">700</property>
 		<property name="default_height">400</property>
@@ -152,9 +173,9 @@
 																	<object class="SymbolItem" id="preview_symbol">
 																		<property name="icon">bGF0ZXgyZS1PVDEtX2JpZ2N1cA-symbolic</property>
 																		<property name="id">bGF0ZXgyZS1PVDEtX2JpZ2N1cA==</property>
-																		<property name="tex-command">\bigcup</property>
-																		<property name="tex-package-and-mode">latex2e</property>
-																		<property name="typst-command">\^</property>
+																		<property name="command">\bigcup</property>
+																		<property name="package">latex2e</property>
+																		<property name="mode">mathmode</property>
 																	</object>
 																</child>
 																<child type="end">
@@ -269,10 +290,12 @@
 									</object>
 								</property>
 								<child type="end">
-									<object class="GtkButton">
-										<property name="action-name">app.about</property>
-										<property name="icon-name">info-outline-symbolic</property>
-										<property name="tooltip-text" translatable="yes">About Hieroglyphic</property>
+									<object class="GtkMenuButton">
+										<property name="tooltip-text" translatable="yes">Main Menu</property>
+										<property name="valign">center</property>
+										<property name="menu_model">primary-menu</property>
+										<property name="icon_name">open-menu-symbolic</property>
+										<property name="primary">true</property>
 									</object>
 								</child>
 							</object>

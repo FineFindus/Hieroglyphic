@@ -18,12 +18,12 @@
                 <property name="hexpand">true</property>
                 <child>
                     <object class="GtkInscription">
-                        <property name="text" bind-source="SymbolItem" bind-property="tex-package-and-mode" bind-flags="sync-create"/>
+                        <property name="text" bind-source="SymbolItem" bind-property="package" bind-flags="sync-create"/>
                     </object>
                 </child>
                 <child>
                     <object class="GtkInscription">
-                        <property name="text" bind-source="SymbolItem" bind-property="tex-command" bind-flags="sync-create"/>
+                        <property name="text" bind-source="SymbolItem" bind-property="command" bind-flags="sync-create"/>
                         <style>
                             <class name="title-3"/>
                         </style>
@@ -31,7 +31,7 @@
                 </child>
                 <child>
                     <object class="GtkInscription">
-                        <property name="text" bind-source="SymbolItem" bind-property="typst-command" bind-flags="sync-create"/>
+                        <property name="text" bind-source="SymbolItem" bind-property="mode" bind-flags="sync-create"/>
                         <style>
                             <class name="caption"/>
                         </style>

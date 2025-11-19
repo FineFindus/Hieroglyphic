@@ -1,6 +1,5 @@
 use base64::Engine;
 use mitex::CommandSpecItem;
-use scraper::{Html, Selector};
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufWriter, Write};
@@ -34,6 +33,7 @@ impl Symbol {
 
 fn main() {
     println!("cargo:rerun-if-changed=symbols.yaml");
+    println!("cargo:rerun-if-changed=typst-aliases.yaml");
     println!("cargo:rustc-link-search=native=/app/lib");
 
     let out_dir = std::env::var("OUT_DIR").unwrap();
@@ -69,30 +69,19 @@ fn main() {
 }
 
 fn get_typst_aliases() -> HashMap<String, String> {
-    let body: String = ureq::get("https://typst.app/docs/reference/symbols/sym/")
-        .call()
-        .expect("failed to connect to typst.app.")
-        .body_mut()
-        .read_to_string()
-        .expect("failed to parse typst.app response.");
-
-    let doc = Html::parse_document(&body);
-
-    let mut commands: HashMap<String, String> = HashMap::new();
-    for li in doc.select(&Selector::parse(".symbol-grid li[id^=symbol-]").unwrap()) {
-        let Some(latex_command) = li.attr("data-latex-name") else {
-            continue;
-        };
-
-        let command = li
-            .value()
-            .id()
-            .expect("unreachable")
-            .strip_prefix("symbol-")
-            .expect("unreachable");
-
-        commands.insert(latex_command.to_string(), command.to_string());
-    }
+    let mut docs = YamlLoader::load_from_str(include_str!("typst-aliases.yaml")).unwrap();
+    let doc = docs.pop().unwrap();
+    let mut commands: HashMap<_, _> = doc
+        .as_hash()
+        .unwrap()
+        .iter()
+        .map(|(latex_command, typst_command)| {
+            (
+                latex_command.as_str().unwrap().to_string(),
+                typst_command.as_str().unwrap().to_string(),
+            )
+        })
+        .collect();
 
     for (latex_cmd, typst_cmd) in mitex_spec_gen::DEFAULT_SPEC.clone().items() {
         if let CommandSpecItem::Cmd(cmd) = typst_cmd {

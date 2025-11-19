@@ -42,10 +42,8 @@ phf_codegen = "0.13"
 yaml-rust2 = "0.10"
 base64 = "0.22"
 # mitex doesn't have any tagged versions unfortunately
-mitex = { git = "https://github.com/mitex-rs/mitex", branch = "main" }
+mitex = { git = "https://github.com/mitex-rs/mitex", ref = "0680e50" }
 # we can't use the precompiled lib here because we need the typst code
 # in the 'packages' dir of mitex to build the default command spec
-mitex-spec-gen = { git = "https://github.com/mitex-rs/mitex", branch = "main" }
-ureq = "3.1"
-scraper = "0.24"
+mitex-spec-gen = { git = "https://github.com/mitex-rs/mitex", ref = "0680e50" }
 regex = "1.11"
