@@ -1,5 +1,7 @@
 use base64::Engine;
 
+use crate::window::MarkupLanguageMode;
+
 include!(concat!(env!("OUT_DIR"), "/symbol_table.rs"));
 
 /// Amount of available symbols
@@ -12,17 +14,17 @@ pub static SYMBOL_COUNT: usize = SYMBOL_TABLE.len();
 #[derive(Debug, Clone, PartialEq)]
 pub struct Symbol {
     /// Command to display the symbol.
-    pub command: &'static str,
+    command: &'static str,
     /// Package which the symbol belongs to.
-    pub package: &'static str,
+    package: &'static str,
     /// Font encoding used for the symbol.
     font_encoding: &'static str,
     /// Whether the symbol is available in text mode.
-    pub text_mode: bool,
+    text_mode: bool,
     /// Whether the symbol is available in math mode.
-    pub math_mode: bool,
+    math_mode: bool,
     /// Equivalent typst command (if available).
-    pub typst_command: Option<&'static str>,
+    typst_command: Option<&'static str>,
 }
 
 impl Symbol {
@@ -45,15 +47,35 @@ impl Symbol {
         SYMBOL_TABLE.get_key(&key).unwrap()
     }
 
+    /// Command to use the symbol in the specified markup language.
+    pub fn command(&self, language: &MarkupLanguageMode) -> Option<&'static str> {
+        match language {
+            MarkupLanguageMode::Latex => Some(self.command),
+            MarkupLanguageMode::Typst => self.typst_command,
+        }
+    }
+
+    /// Package which provides the symbol for the specified markup language.
+    pub fn package(&self, language: &MarkupLanguageMode) -> Option<&'static str> {
+        match language {
+            MarkupLanguageMode::Latex => Some(self.package),
+            MarkupLanguageMode::Typst => None,
+        }
+    }
+
     /// Textual representation of the mode in which the symbol can be used.
     ///
     /// # Examples
     /// ```rust
     /// let symbol = Symbol::from_id("bGF0ZXgyZS1PVDEtX2JpZ2N1cA==").unwrap();
-    /// assert_eq!("mathmode", symbol.mode());
+    /// assert_eq!("mathmode", symbol.mode_description(&MarkupLanguage::Latex));
     /// ```
-    pub fn mode_description(&self) -> &'static str {
-        match (self.math_mode, self.text_mode) {
+    pub fn mode_description(&self, language: &MarkupLanguageMode) -> Option<&'static str> {
+        if matches!(language, MarkupLanguageMode::Typst) {
+            return None;
+        }
+
+        Some(match (self.math_mode, self.text_mode) {
             (true, true) => "mathmode & textmode",
             (false, true) => "textmode",
             (true, false) => "mathmode",
@@ -61,7 +83,7 @@ impl Symbol {
                 // a symbol has to be either math mode or textmode
                 unreachable!("Symbol {} is neither math nor textmode", self.id())
             }
-        }
+        })
     }
 }
 

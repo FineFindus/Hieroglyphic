@@ -14,6 +14,26 @@ thread_local! {
     static SETTINGS: gio::Settings = gio::Settings::new(config::APP_ID);
 }
 
+#[derive(Default, Debug, Clone, Copy)]
+pub enum MarkupLanguageMode {
+    #[default]
+    Latex,
+    Typst,
+}
+
+impl MarkupLanguageMode {
+    fn from_settings() -> Self {
+        let language_value = SETTINGS.with(|settings| settings.string("markup-language-mode"));
+
+        // see the gschema file for the value definitions
+        match language_value.as_str() {
+            "latex" => MarkupLanguageMode::Latex,
+            "typst" => MarkupLanguageMode::Typst,
+            _ => unreachable!(),
+        }
+    }
+}
+
 mod imp {
     use std::{
         cell::{OnceCell, RefCell},
@@ -21,6 +41,7 @@ mod imp {
     };
 
     use adw::subclass::application_window::AdwApplicationWindowImpl;
+    use gio::ActionEntry;
 
     use crate::{
         classify::Symbol,
@@ -93,7 +114,10 @@ mod imp {
                         return;
                     };
 
-                    win.copy_symbol(&SymbolItem::new(symbol));
+                    win.copy_symbol(&SymbolItem::new(
+                        symbol,
+                        &MarkupLanguageMode::from_settings(),
+                    ));
                 },
             );
         }
@@ -129,6 +153,25 @@ mod imp {
                     "show-indicator",
                 )
                 .build();
+
+            let current_language_mode = settings.string("markup-language-mode");
+            let language_mode_action = ActionEntry::builder("markup-language-mode")
+                .parameter_type(Some(&String::static_variant_type()))
+                .state(current_language_mode.to_variant())
+                .activate(move |_: &Self::Type, action, var| {
+                    let Some(mode) = var.and_then(|v| v.get::<String>()) else {
+                        return;
+                    };
+
+                    action.set_state(&mode.to_variant());
+                    SETTINGS.with(|settings| {
+                        settings
+                            .set_string("markup-language-mode", &mode)
+                            .expect("Failed to set `markup-language-mode`");
+                    });
+                })
+                .build();
+            obj.add_action_entries([language_mode_action]);
 
             obj.setup_symbol_list();
             obj.setup_classifier();
@@ -188,6 +231,7 @@ impl HieroglyphicWindow {
                 let symbol_item = SymbolItem::new(
                     classify::Symbol::from_id(&symbol_object.string())
                         .expect("`symbol_object` should be a valid symbol id"),
+                    &MarkupLanguageMode::from_settings(),
                 );
                 symbol_item.upcast()
             });
@@ -256,13 +300,14 @@ impl HieroglyphicWindow {
                         classifications = filter_symbols.clone();
                     }
 
+                    let language_mode = MarkupLanguageMode::from_settings();
                     // use the first symbol as the symbol displayed in the bottom bar in
                     // bottom-sheet mode
                     if let Some(symbol) = classifications
                         .first()
                         .and_then(|id| classify::Symbol::from_id(id))
                     {
-                        imp.preview_symbol.set_symbol(symbol);
+                        imp.preview_symbol.set_symbol(symbol, &language_mode);
                     }
 
                     symbols.remove_all();
@@ -271,6 +316,13 @@ impl HieroglyphicWindow {
                         classifications
                             .into_iter()
                             .take(25)
+                            .filter(|s| {
+                                // only display symbols supported by the current language
+                                classify::Symbol::from_id(s)
+                                    .unwrap()
+                                    .command(&language_mode)
+                                    .is_some()
+                            })
                             .map(&gtk::StringObject::new),
                     );
                     // scroll to top after updating symbols, so that the most likely symbols are
@@ -309,7 +361,8 @@ impl HieroglyphicWindow {
 
     #[template_callback]
     pub fn copy_symbol(&self, symbol: &SymbolItem) {
-        let command = symbol.tex_command();
+        let command = symbol.command();
+
         self.clipboard().set_text(&command);
         tracing::debug!("Selected: {} ({})", &command, symbol.id());
         self.show_toast(gettext("Copied “{}”").replace("{}", &command));
