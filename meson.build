@@ -14,6 +14,7 @@ dependency('glib-2.0', version: '>= 2.70')
 dependency('gio-2.0', version: '>= 2.70')
 dependency('gtk4', version: '>= 4.20.0')
 dependency('libadwaita-1', version: '>= 1.8')
+dependency('libonnxruntime', version: '>= 1.23')
 
 find_program('glib-compile-resources', required: true)
 glib_compile_schemas = find_program('glib-compile-schemas', required: true)
