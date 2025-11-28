@@ -27,10 +27,7 @@
             "CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_LINKER": "clang",
             "CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUSTFLAGS": "-C link-arg=-fuse-ld=/usr/lib/sdk/rust-stable/bin/mold",
             "CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER": "clang",
-            "CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_RUSTFLAGS": "-C link-arg=-fuse-ld=/usr/lib/sdk/rust-stable/bin/mold",
-            "ORT_STRATEGY": "system",
-            "ORT_LIB_LOCATION": "/app/lib/",
-            "RUSTFLAGS": "-L /app/lib"
+            "CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_RUSTFLAGS": "-C link-arg=-fuse-ld=/usr/lib/sdk/rust-stable/bin/mold"
         },
         "test-args": [
             "--socket=x11",
@@ -42,8 +39,7 @@
             "name": "onnxruntime",
             "buildsystem": "simple",
             "build-commands": [
-                "cp -r --no-target-directory lib/ /app/lib/",
-                "cp -r --no-target-directory include/ /app/include/"
+                "cp -r --no-target-directory lib/ /app/lib/"
             ],
             "sources": [
                 {

@@ -30,6 +30,8 @@ impl Symbol {
 
 fn main() {
     println!("cargo:rerun-if-changed=symbols.yaml");
+    println!("cargo:rustc-link-search=native=/app/lib");
+
     let out_dir = std::env::var("OUT_DIR").unwrap();
     let path = Path::new(&out_dir).join("symbol_table.rs");
     let mut file = BufWriter::new(File::create(path).unwrap());
