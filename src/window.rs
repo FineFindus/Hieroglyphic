@@ -158,7 +158,7 @@ mod imp {
             let language_mode_action = ActionEntry::builder("markup-language-mode")
                 .parameter_type(Some(&String::static_variant_type()))
                 .state(current_language_mode.to_variant())
-                .activate(move |_: &Self::Type, action, var| {
+                .activate(move |window: &Self::Type, action, var| {
                     let Some(mode) = var.and_then(|v| v.get::<String>()) else {
                         return;
                     };
@@ -169,6 +169,22 @@ mod imp {
                             .set_string("markup-language-mode", &mode)
                             .expect("Failed to set `markup-language-mode`");
                     });
+
+                    let symbols = window.imp().symbols.get().unwrap();
+                    let ids = symbols
+                        .snapshot()
+                        .iter()
+                        .filter_map(|obj| obj.downcast_ref::<gtk::StringObject>())
+                        .map(|obj| obj.string())
+                        .collect::<Vec<_>>();
+
+                    if ids.is_empty() {
+                        return;
+                    }
+
+                    symbols.remove_all();
+                    let classifications = ids.iter().map(|id| id.as_str()).collect::<Vec<_>>();
+                    window.display_symbols(classifications);
                 })
                 .build();
             obj.add_action_entries([language_mode_action]);
@@ -282,58 +298,64 @@ impl HieroglyphicWindow {
             #[weak(rename_to = window)]
             self,
             async move {
-                let imp = window.imp();
                 tracing::debug!("Listening for classifications");
-                while let Ok(Some(mut classifications)) = res_rx.recv().await {
-                    window.set_stack_page("symbols");
-                    let mut symbols = imp
-                        .symbols
-                        .get()
-                        .cloned()
-                        .expect("`symbols` should be initialized in `setup_symbol_list`");
-
-                    let filter_symbols = imp.symbol_filter.borrow();
-                    if !filter_symbols.is_empty() {
-                        // if `--show-only` symbols are set, show only those symbols
-                        // this is intended, for development/debug to directly improve new/less recognized
-                        // symbols
-                        classifications = filter_symbols.clone();
-                    }
-
-                    let language_mode = MarkupLanguageMode::from_settings();
-                    // use the first symbol as the symbol displayed in the bottom bar in
-                    // bottom-sheet mode
-                    if let Some(symbol) = classifications
-                        .first()
-                        .and_then(|id| classify::Symbol::from_id(id))
-                    {
-                        imp.preview_symbol.set_symbol(symbol, &language_mode);
-                    }
-
-                    symbols.remove_all();
-                    // switching out all 1k symbols takes too long, so only display the first 25
-                    symbols.extend(
-                        classifications
-                            .into_iter()
-                            .take(25)
-                            .filter(|s| {
-                                // only display symbols supported by the current language
-                                classify::Symbol::from_id(s)
-                                    .unwrap()
-                                    .command(&language_mode)
-                                    .is_some()
-                            })
-                            .map(&gtk::StringObject::new),
-                    );
-                    // scroll to top after updating symbols, so that the most likely symbols are
-                    // visible first
-                    imp.symbol_list
-                        .adjustment()
-                        .expect("Failed to get symbol list adjustment")
-                        .set_value(0.0);
+                while let Ok(Some(classifications)) = res_rx.recv().await {
+                    window.display_symbols(classifications);
                 }
             }
         ));
+    }
+
+    fn display_symbols(&self, mut classifications: Vec<&str>) {
+        self.set_stack_page("symbols");
+        let imp = self.imp();
+
+        let mut symbols = imp
+            .symbols
+            .get()
+            .cloned()
+            .expect("`symbols` should be initialized in `setup_symbol_list`");
+
+        let filter_symbols = imp.symbol_filter.borrow();
+        if !filter_symbols.is_empty() {
+            // if `--show-only` symbols are set, show only those symbols
+            // this is intended, for development/debug to directly improve new/less recognized
+            // symbols
+            classifications = filter_symbols.clone();
+        }
+
+        let language_mode = MarkupLanguageMode::from_settings();
+        // use the first symbol as the symbol displayed in the bottom bar in
+        // bottom-sheet mode
+        if let Some(symbol) = classifications
+            .iter()
+            .filter_map(|id| classify::Symbol::from_id(id))
+            .find(|sym| sym.command(&language_mode).is_some())
+        {
+            imp.preview_symbol.set_symbol(symbol, &language_mode);
+        }
+
+        symbols.remove_all();
+        // switching out all 1k symbols takes too long, so only display the first 25
+        symbols.extend(
+            classifications
+                .into_iter()
+                .take(25)
+                .filter(|s| {
+                    // only display symbols supported by the current language
+                    classify::Symbol::from_id(s)
+                        .unwrap()
+                        .command(&language_mode)
+                        .is_some()
+                })
+                .map(&gtk::StringObject::new),
+        );
+        // scroll to top after updating symbols, so that the most likely symbols are
+        // visible first
+        imp.symbol_list
+            .adjustment()
+            .expect("Failed to get symbol list adjustment")
+            .set_value(0.0);
     }
 
     /// Classify the given strokes.
