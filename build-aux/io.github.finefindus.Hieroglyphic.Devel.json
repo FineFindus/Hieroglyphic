@@ -41,6 +41,11 @@
             "build-commands": [
                 "cp -r --no-target-directory lib/ /app/lib/"
             ],
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/lib/cmake"
+            ],
             "sources": [
                 {
                     "only-arches": [
