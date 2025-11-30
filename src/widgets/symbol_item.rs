@@ -71,9 +71,9 @@ impl SymbolItem {
                 // icon filenames do not contain ending '='
                 format!("{}-symbolic", symbol.id().trim_end_matches('=')),
             )
-            .property("command", symbol.command(&language))
-            .property("package", symbol.package(&language))
-            .property("mode", symbol.mode_description(&language))
+            .property("command", symbol.command(language))
+            .property("package", symbol.package(language))
+            .property("mode", symbol.mode_description(language))
             .build()
     }
 
@@ -85,12 +85,12 @@ impl SymbolItem {
             // icon filenames do not contain ending '='
             .set(format!("{}-symbolic", symbol.id().trim_end_matches('=')));
         imp.command
-            .set(symbol.command(&language).unwrap().to_string());
+            .set(symbol.command(language).unwrap().to_string());
         imp.package
-            .set(symbol.package(&language).map(|package| package.to_string()));
+            .set(symbol.package(language).map(|package| package.to_string()));
         imp.mode.set(
             symbol
-                .mode_description(&language)
+                .mode_description(language)
                 .map(|desc| desc.to_string()),
         );
 
