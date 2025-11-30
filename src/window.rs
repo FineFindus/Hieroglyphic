@@ -14,6 +14,26 @@ thread_local! {
     static SETTINGS: gio::Settings = gio::Settings::new(config::APP_ID);
 }
 
+#[derive(Default, Debug, Clone, Copy)]
+pub enum MarkupLanguageMode {
+    #[default]
+    Latex,
+    Typst,
+}
+
+impl MarkupLanguageMode {
+    fn from_settings() -> Self {
+        let language_value = SETTINGS.with(|settings| settings.string("markup-language-mode"));
+
+        // see the gschema file for the value definitions
+        match language_value.as_str() {
+            "latex" => MarkupLanguageMode::Latex,
+            "typst" => MarkupLanguageMode::Typst,
+            _ => unreachable!(),
+        }
+    }
+}
+
 mod imp {
     use std::{
         cell::{OnceCell, RefCell},
@@ -21,6 +41,7 @@ mod imp {
     };
 
     use adw::subclass::application_window::AdwApplicationWindowImpl;
+    use gio::ActionEntry;
 
     use crate::{
         classify::Symbol,
@@ -93,7 +114,10 @@ mod imp {
                         return;
                     };
 
-                    win.copy_symbol(&SymbolItem::new(symbol));
+                    win.copy_symbol(&SymbolItem::new(
+                        symbol,
+                        &MarkupLanguageMode::from_settings(),
+                    ));
                 },
             );
         }
@@ -129,6 +153,41 @@ mod imp {
                     "show-indicator",
                 )
                 .build();
+
+            let current_language_mode = settings.string("markup-language-mode");
+            let language_mode_action = ActionEntry::builder("markup-language-mode")
+                .parameter_type(Some(&String::static_variant_type()))
+                .state(current_language_mode.to_variant())
+                .activate(move |window: &Self::Type, action, var| {
+                    let Some(mode) = var.and_then(|v| v.get::<String>()) else {
+                        return;
+                    };
+
+                    action.set_state(&mode.to_variant());
+                    SETTINGS.with(|settings| {
+                        settings
+                            .set_string("markup-language-mode", &mode)
+                            .expect("Failed to set `markup-language-mode`");
+                    });
+
+                    let symbols = window.imp().symbols.get().unwrap();
+                    let ids = symbols
+                        .snapshot()
+                        .iter()
+                        .filter_map(|obj| obj.downcast_ref::<gtk::StringObject>())
+                        .map(|obj| obj.string())
+                        .collect::<Vec<_>>();
+
+                    if ids.is_empty() {
+                        return;
+                    }
+
+                    symbols.remove_all();
+                    let classifications = ids.iter().map(|id| id.as_str()).collect::<Vec<_>>();
+                    window.display_symbols(classifications);
+                })
+                .build();
+            obj.add_action_entries([language_mode_action]);
 
             obj.setup_symbol_list();
             obj.setup_classifier();
@@ -188,6 +247,7 @@ impl HieroglyphicWindow {
                 let symbol_item = SymbolItem::new(
                     classify::Symbol::from_id(&symbol_object.string())
                         .expect("`symbol_object` should be a valid symbol id"),
+                    &MarkupLanguageMode::from_settings(),
                 );
                 symbol_item.upcast()
             });
@@ -238,50 +298,64 @@ impl HieroglyphicWindow {
             #[weak(rename_to = window)]
             self,
             async move {
-                let imp = window.imp();
                 tracing::debug!("Listening for classifications");
-                while let Ok(Some(mut classifications)) = res_rx.recv().await {
-                    window.set_stack_page("symbols");
-                    let mut symbols = imp
-                        .symbols
-                        .get()
-                        .cloned()
-                        .expect("`symbols` should be initialized in `setup_symbol_list`");
-
-                    let filter_symbols = imp.symbol_filter.borrow();
-                    if !filter_symbols.is_empty() {
-                        // if `--show-only` symbols are set, show only those symbols
-                        // this is intended, for development/debug to directly improve new/less recognized
-                        // symbols
-                        classifications = filter_symbols.clone();
-                    }
-
-                    // use the first symbol as the symbol displayed in the bottom bar in
-                    // bottom-sheet mode
-                    if let Some(symbol) = classifications
-                        .first()
-                        .and_then(|id| classify::Symbol::from_id(id))
-                    {
-                        imp.preview_symbol.set_symbol(symbol);
-                    }
-
-                    symbols.remove_all();
-                    // switching out all 1k symbols takes too long, so only display the first 25
-                    symbols.extend(
-                        classifications
-                            .into_iter()
-                            .take(25)
-                            .map(&gtk::StringObject::new),
-                    );
-                    // scroll to top after updating symbols, so that the most likely symbols are
-                    // visible first
-                    imp.symbol_list
-                        .adjustment()
-                        .expect("Failed to get symbol list adjustment")
-                        .set_value(0.0);
+                while let Ok(Some(classifications)) = res_rx.recv().await {
+                    window.display_symbols(classifications);
                 }
             }
         ));
+    }
+
+    fn display_symbols(&self, mut classifications: Vec<&str>) {
+        self.set_stack_page("symbols");
+        let imp = self.imp();
+
+        let mut symbols = imp
+            .symbols
+            .get()
+            .cloned()
+            .expect("`symbols` should be initialized in `setup_symbol_list`");
+
+        let filter_symbols = imp.symbol_filter.borrow();
+        if !filter_symbols.is_empty() {
+            // if `--show-only` symbols are set, show only those symbols
+            // this is intended, for development/debug to directly improve new/less recognized
+            // symbols
+            classifications = filter_symbols.clone();
+        }
+
+        let language_mode = MarkupLanguageMode::from_settings();
+        // use the first symbol as the symbol displayed in the bottom bar in
+        // bottom-sheet mode
+        if let Some(symbol) = classifications
+            .iter()
+            .filter_map(|id| classify::Symbol::from_id(id))
+            .find(|sym| sym.command(&language_mode).is_some())
+        {
+            imp.preview_symbol.set_symbol(symbol, &language_mode);
+        }
+
+        symbols.remove_all();
+        // switching out all 1k symbols takes too long, so only display the first 25
+        symbols.extend(
+            classifications
+                .into_iter()
+                .take(25)
+                .filter(|s| {
+                    // only display symbols supported by the current language
+                    classify::Symbol::from_id(s)
+                        .unwrap()
+                        .command(&language_mode)
+                        .is_some()
+                })
+                .map(&gtk::StringObject::new),
+        );
+        // scroll to top after updating symbols, so that the most likely symbols are
+        // visible first
+        imp.symbol_list
+            .adjustment()
+            .expect("Failed to get symbol list adjustment")
+            .set_value(0.0);
     }
 
     /// Classify the given strokes.
@@ -310,6 +384,7 @@ impl HieroglyphicWindow {
     #[template_callback]
     pub fn copy_symbol(&self, symbol: &SymbolItem) {
         let command = symbol.command();
+
         self.clipboard().set_text(&command);
         tracing::debug!("Selected: {} ({})", &command, symbol.id());
         self.show_toast(gettext("Copied “{}”").replace("{}", &command));

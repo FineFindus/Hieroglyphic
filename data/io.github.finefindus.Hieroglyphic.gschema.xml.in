@@ -10,6 +10,15 @@
             <default>false</default>
             <summary>Whether to contribute recognized strokes</summary>
         </key>
+
+        <key name="markup-language-mode" type="s">
+            <choices>
+                <choice value='latex'/>
+                <choice value='typst'/>
+            </choices>
+            <default>"latex"</default>
+            <summary>Markup language to suggest symbols for</summary>
+        </key>
     </schema>
 </schemalist>
 
