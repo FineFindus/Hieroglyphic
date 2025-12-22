@@ -6,7 +6,7 @@ use gtk::glib;
 use gtk::subclass::prelude::*;
 
 use crate::application::HieroglyphicApplication;
-use crate::widgets::{BoxedStrokes, SymbolItem};
+use crate::widgets::{BoxedStrokes, SymbolItem, SymbolObject};
 use crate::{classify, config};
 
 // GTK is single-threaded
@@ -115,7 +115,7 @@ mod imp {
                     };
 
                     win.copy_symbol(&SymbolItem::new(
-                        symbol,
+                        &symbol,
                         &MarkupLanguageMode::from_settings(),
                     ));
                 },
@@ -171,20 +171,13 @@ mod imp {
                     });
 
                     let symbols = window.imp().symbols.get().unwrap();
-                    let ids = symbols
+                    let objects = symbols
                         .snapshot()
                         .iter()
-                        .filter_map(|obj| obj.downcast_ref::<gtk::StringObject>())
-                        .map(|obj| obj.string())
+                        .filter_map(|obj| obj.downcast_ref::<SymbolObject>())
+                        .map(|sym| sym.symbol().id())
                         .collect::<Vec<_>>();
-
-                    if ids.is_empty() {
-                        return;
-                    }
-
-                    symbols.remove_all();
-                    let classifications = ids.iter().map(|id| id.as_str()).collect::<Vec<_>>();
-                    window.display_symbols(classifications);
+                    window.display_symbols(objects);
                 })
                 .build();
             obj.add_action_entries([language_mode_action]);
@@ -230,7 +223,7 @@ impl HieroglyphicWindow {
     }
 
     fn setup_symbol_list(&self) {
-        let model = gio::ListStore::new::<gtk::StringObject>();
+        let model = gio::ListStore::new::<SymbolObject>();
 
         self.imp()
             .symbols
@@ -242,13 +235,11 @@ impl HieroglyphicWindow {
             .symbol_list
             .bind_model(Some(&selection_model), move |obj| {
                 let symbol_object = obj
-                    .downcast_ref::<gtk::StringObject>()
-                    .expect("Object should be of type `StringObject`");
-                let symbol_item = SymbolItem::new(
-                    classify::Symbol::from_id(&symbol_object.string())
-                        .expect("`symbol_object` should be a valid symbol id"),
-                    &MarkupLanguageMode::from_settings(),
-                );
+                    .downcast_ref::<SymbolObject>()
+                    .expect("Object should be of type `SymbolObject`");
+                let symbol_item =
+                    SymbolItem::new(symbol_object.symbol(), &MarkupLanguageMode::from_settings());
+
                 symbol_item.upcast()
             });
     }
@@ -340,15 +331,11 @@ impl HieroglyphicWindow {
         symbols.extend(
             classifications
                 .into_iter()
-                .take(25)
-                .filter(|s| {
-                    // only display symbols supported by the current language
-                    classify::Symbol::from_id(s)
-                        .unwrap()
-                        .command(&language_mode)
-                        .is_some()
-                })
-                .map(&gtk::StringObject::new),
+                .filter_map(classify::Symbol::from_id)
+                // only display symbols supported by the current language
+                .filter(|symbol| symbol.command(&language_mode).is_some())
+                .map(SymbolObject::new)
+                .take(25),
         );
         // scroll to top after updating symbols, so that the most likely symbols are
         // visible first
