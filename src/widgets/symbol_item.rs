@@ -63,7 +63,7 @@ glib::wrapper! {
 
 #[gtk::template_callbacks]
 impl SymbolItem {
-    pub fn new(symbol: classify::Symbol, language: &MarkupLanguageMode) -> Self {
+    pub fn new(symbol: &classify::Symbol, language: &MarkupLanguageMode) -> Self {
         Object::builder()
             .property("id", symbol.id())
             .property(
