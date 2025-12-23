@@ -1131,7 +1131,7 @@ dependencies = [
 [[package]]
 name = "mitex"
 version = "0.2.6"
-source = "git+https://github.com/mitex-rs/mitex#0680e50c6e768f99ffe382801a4d7316af75b42f"
+source = "git+https://github.com/mitex-rs/mitex?rev=0680e50#0680e50c6e768f99ffe382801a4d7316af75b42f"
 dependencies = [
  "mitex-parser",
  "mitex-spec-gen",
@@ -1141,12 +1141,12 @@ dependencies = [
 [[package]]
 name = "mitex-glob"
 version = "0.2.6"
-source = "git+https://github.com/mitex-rs/mitex#0680e50c6e768f99ffe382801a4d7316af75b42f"
+source = "git+https://github.com/mitex-rs/mitex?rev=0680e50#0680e50c6e768f99ffe382801a4d7316af75b42f"
 
 [[package]]
 name = "mitex-lexer"
 version = "0.2.6"
-source = "git+https://github.com/mitex-rs/mitex#0680e50c6e768f99ffe382801a4d7316af75b42f"
+source = "git+https://github.com/mitex-rs/mitex?rev=0680e50#0680e50c6e768f99ffe382801a4d7316af75b42f"
 dependencies = [
  "ecow",
  "ena",
@@ -1159,7 +1159,7 @@ dependencies = [
 [[package]]
 name = "mitex-parser"
 version = "0.2.6"
-source = "git+https://github.com/mitex-rs/mitex#0680e50c6e768f99ffe382801a4d7316af75b42f"
+source = "git+https://github.com/mitex-rs/mitex?rev=0680e50#0680e50c6e768f99ffe382801a4d7316af75b42f"
 dependencies = [
  "mitex-glob",
  "mitex-lexer",
@@ -1170,7 +1170,7 @@ dependencies = [
 [[package]]
 name = "mitex-spec"
 version = "0.2.6"
-source = "git+https://github.com/mitex-rs/mitex#0680e50c6e768f99ffe382801a4d7316af75b42f"
+source = "git+https://github.com/mitex-rs/mitex?rev=0680e50#0680e50c6e768f99ffe382801a4d7316af75b42f"
 dependencies = [
  "rkyv",
  "rustc-hash 2.1.1",
@@ -1181,7 +1181,7 @@ dependencies = [
 [[package]]
 name = "mitex-spec-gen"
 version = "0.2.6"
-source = "git+https://github.com/mitex-rs/mitex#0680e50c6e768f99ffe382801a4d7316af75b42f"
+source = "git+https://github.com/mitex-rs/mitex?rev=0680e50#0680e50c6e768f99ffe382801a4d7316af75b42f"
 dependencies = [
  "anyhow",
  "mitex-spec",

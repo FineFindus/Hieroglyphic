@@ -154,7 +154,8 @@ mod imp {
                     "show-indicator",
                 )
                 .build();
-            self.markup_language.set(MarkupLanguageMode::from_settings());
+            self.markup_language
+                .set(MarkupLanguageMode::from_settings());
 
             let current_language_mode = settings.string("markup-language-mode");
             let language_mode_action = ActionEntry::builder("markup-language-mode")
