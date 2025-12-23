@@ -36,7 +36,7 @@ impl MarkupLanguageMode {
 
 mod imp {
     use std::{
-        cell::{OnceCell, RefCell},
+        cell::{Cell, OnceCell, RefCell},
         sync::mpsc::Sender,
     };
 
@@ -67,6 +67,7 @@ mod imp {
         pub preview_symbol: TemplateChild<SymbolItem>,
         #[property(get, set)]
         pub stack_page: RefCell<String>,
+        pub markup_language: Cell<MarkupLanguageMode>,
         pub symbols: OnceCell<gio::ListStore>,
         pub symbol_strokes: RefCell<Option<Vec<classify::Stroke>>>,
         pub classifier: OnceCell<Sender<Vec<classify::Stroke>>>,
@@ -153,6 +154,7 @@ mod imp {
                     "show-indicator",
                 )
                 .build();
+            self.markup_language.set(MarkupLanguageMode::from_settings());
 
             let current_language_mode = settings.string("markup-language-mode");
             let language_mode_action = ActionEntry::builder("markup-language-mode")
@@ -169,6 +171,10 @@ mod imp {
                             .set_string("markup-language-mode", &mode)
                             .expect("Failed to set `markup-language-mode`");
                     });
+                    window
+                        .imp()
+                        .markup_language
+                        .set(MarkupLanguageMode::from_settings());
 
                     let symbols = window.imp().symbols.get().unwrap();
                     let objects = symbols
@@ -231,17 +237,25 @@ impl HieroglyphicWindow {
             .expect("Failed to set symbol model");
 
         let selection_model = gtk::NoSelection::new(Some(model));
-        self.imp()
-            .symbol_list
-            .bind_model(Some(&selection_model), move |obj| {
-                let symbol_object = obj
-                    .downcast_ref::<SymbolObject>()
-                    .expect("Object should be of type `SymbolObject`");
-                let symbol_item =
-                    SymbolItem::new(symbol_object.symbol(), &MarkupLanguageMode::from_settings());
+        self.imp().symbol_list.bind_model(
+            Some(&selection_model),
+            glib::clone!(
+                #[weak(rename_to = window)]
+                self,
+                #[upgrade_or_panic]
+                move |obj| {
+                    let symbol_object = obj
+                        .downcast_ref::<SymbolObject>()
+                        .expect("Object should be of type `SymbolObject`");
+                    let symbol_item = SymbolItem::new(
+                        symbol_object.symbol(),
+                        &window.imp().markup_language.get(),
+                    );
 
-                symbol_item.upcast()
-            });
+                    symbol_item.upcast()
+                }
+            ),
+        );
     }
 
     fn setup_classifier(&self) {
