@@ -423,7 +423,7 @@ impl HieroglyphicWindow {
         // spawn a new thread to avoid blocking the UI thread while uploading
         std::thread::spawn(move || {
             match ureq::post(&format!(
-                "https://hieroglyphic-server-6g7a.shuttle.app/v1/upload/{}",
+                "https://hieroglyphic-server.apps.openshift.gnome.org/v1/upload/{}",
                 label
             ))
             .header("User-Agent", format!("Hieroglyphic/{}", config::VERSION))
