@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-12-23 20:48+0000\n"
-"PO-Revision-Date: 2025-12-24 08:56+0100\n"
+"POT-Creation-Date: 2025-12-24 11:35+0000\n"
+"PO-Revision-Date: 2025-12-24 23:42+0100\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <Slovenian>\n"
 "Language: sl\n"
@@ -48,24 +48,28 @@ msgid "Markup language to suggest symbols for"
 msgstr "Označevalni jezik, za katerega bodo predlagani simboli"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Iskanje simbolov LaTeX-a"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Iskanje simbolov LaTeX in Typst"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"Če delate z LaTeXom, veste, da si je težko zapomniti imena vseh simbolov. "
-"Hieroglifik vam omogoča iskanje po več kot 1000 različnih simbolih LaTeX-a s "
-"skiciranjem."
+"Če delate z LaTeXom ali Typstom, veste, da si je težko zapomniti imena vseh "
+"simbolov. Hieroglifik vam omogoča iskanje po več kot 1000 različnih simbolih "
+"s skiciranjem."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
-msgid "Main Window"
-msgstr "Glavno okno"
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Izbor simbolov za simbole LaTeX"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Izbor simbolov za simbole Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "Ograda"
 
