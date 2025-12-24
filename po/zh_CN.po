@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-10-01 15:28+0000\n"
-"PO-Revision-Date: 2025-10-02 07:26+0800\n"
+"POT-Creation-Date: 2025-12-24 11:35+0000\n"
+"PO-Revision-Date: 2025-12-25 07:52+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -42,29 +42,37 @@ msgstr "是否显示指向贡献对话框的小提示"
 msgid "Whether to contribute recognized strokes"
 msgstr "是否贡献已识别的笔画"
 
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "建议用于标记语言的符号"
+
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "查找 LaTeX 符号"
+msgid "Find LaTeX and Typst symbols"
+msgstr "查找 LaTeX 和 Typst 符号"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"如果您使用 LaTeX 则应知道记忆所有符号的名称非常困难。Hieroglyphic 可让您通过"
-"画草图来搜索 1000 多种不同的 LaTeX 符号。"
+"如果您使用 LaTeX 或 Typst 则应知道记忆所有符号的名称非常困难。Hieroglyphic 可"
+"让您通过画草图来搜索 1000 多种不同的符号。"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
-msgid "Main Window"
-msgstr "主窗口"
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+msgid "Symbol selection for LaTeX symbols"
+msgstr "用于 LaTeX 符号的选区"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "用于 Typst 符号的选区"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "占位符"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "提升 Hieroglyphic"
 
@@ -93,32 +101,49 @@ msgstr ""
 msgid "Copy"
 msgstr "复制"
 
-#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "标记语言"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "关于 Hieroglyphic"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "无符号"
 
-#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "开始绘制符号"
 
-#: data/resources/ui/window.ui:162
+#: data/resources/ui/window.ui:183
 msgid "All Symbols"
 msgstr "所有符号"
 
-#: data/resources/ui/window.ui:197
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "清除(_C)"
 
-#: data/resources/ui/window.ui:275
-msgid "About Hieroglyphic"
-msgstr "关于 Hieroglyphic"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "主菜单"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "lumingzh <lumingzh@qq.com>, 2024-2025."
 
-#: src/window.rs:315
+#: src/window.rs:392
+#, rust-format
 msgid "Copied “{}”"
 msgstr "已复制“{}”"
 
