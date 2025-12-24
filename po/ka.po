@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-10-04 03:29+0000\n"
-"PO-Revision-Date: 2025-10-04 07:13+0200\n"
+"POT-Creation-Date: 2025-12-23 20:48+0000\n"
+"PO-Revision-Date: 2025-12-24 04:51+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -41,6 +41,10 @@ msgstr "პატარა მითითების ჩვენება შ
 msgid "Whether to contribute recognized strokes"
 msgstr "იქნება თუ არა შეიწირული ამოცნობილი დაჭერები"
 
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "მარკირების ენა სიმბოლოების შეთავაზებისთვის"
+
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX symbols"
 msgstr "იპოვეთ LaTeX სიმბოლოები"
@@ -55,16 +59,16 @@ msgstr ""
 "დამახსოვრება. Hieroglyphic საშუალებას გაძლევთ მოძებნოთ 1000-ზე მეტი "
 "სხვადასხვა LaTeX სიმბოლო ესკიზით."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "მთავარი ფანჯარა"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "ადგილმჭერი"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "გააუმჯობესეთ Hieroglyphic"
 
@@ -94,32 +98,49 @@ msgstr ""
 msgid "Copy"
 msgstr "კოპირება"
 
-#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "მარკირების ენა"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "Hieroglyphic-ის შესახებ"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "სიმბოლოების გარეშე"
 
-#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "დაიწყეთ სიმბოლოს ხატვით"
 
-#: data/resources/ui/window.ui:162
+#: data/resources/ui/window.ui:183
 msgid "All Symbols"
 msgstr "ყველა სიმბოლო"
 
-#: data/resources/ui/window.ui:197
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "_გასუფთავება"
 
-#: data/resources/ui/window.ui:275
-msgid "About Hieroglyphic"
-msgstr "Hieroglyphic-ის შესახებ"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "მთავარი მენიუ"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "თემური დოღონაძე"
 
-#: src/window.rs:315
+#: src/window.rs:392
+#, rust-format
 msgid "Copied “{}”"
 msgstr "“{}” დაკოპირდა"
 
