@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-10-02 03:30+0000\n"
-"PO-Revision-Date: 2025-10-02 10:47+0300\n"
+"POT-Creation-Date: 2025-12-23 20:48+0000\n"
+"PO-Revision-Date: 2025-12-24 09:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -45,6 +45,10 @@ msgstr "Визначає, чи слід показувати невеличке 
 msgid "Whether to contribute recognized strokes"
 msgstr "Визначає, чи слід надсилати розпізнані риски"
 
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Мова розмітки для пропозицій символів"
+
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX symbols"
 msgstr "Пошук символів LaTeX"
@@ -59,16 +63,16 @@ msgstr ""
 "усіх символів. За допомогою «Ієрогліфік» ви зможете виконувати пошук за "
 "ескізом серед понад 1000 різних символів LaTeX."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Main Window"
 msgstr "Головне вікно"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
 msgid "Placeholder"
 msgstr "Замінник"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Удосконалити «Ієрогліфік»"
 
@@ -90,40 +94,58 @@ msgid ""
 "github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
 "policy</a>"
 msgstr ""
-"Жодних особистих даних не буде зібрано. <a href=\"https://"
-"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Правила"
-" конфіденційності</a>"
+"Жодних особистих даних не буде зібрано. <a href=\"https://github.com/"
+"FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Правила "
+"конфіденційності</a>"
 
 #: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
 msgstr "Копіювати"
 
-#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Мова розмітки"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "Про «Ієрогліфік»"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "Немає символів"
 
-#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "Розпочніть з малювання символу"
 
-#: data/resources/ui/window.ui:162
+#: data/resources/ui/window.ui:183
 msgid "All Symbols"
 msgstr "Усі символи"
 
-#: data/resources/ui/window.ui:197
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "О_чистити"
 
-#: data/resources/ui/window.ui:275
-msgid "About Hieroglyphic"
-msgstr "Про «Ієрогліфік»"
+#: data/resources/ui/window.ui:294
+#| msgid "Main Window"
+msgid "Main Menu"
+msgstr "Головне меню"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2024"
 
-#: src/window.rs:315
+#: src/window.rs:392
+#, rust-format
 msgid "Copied “{}”"
 msgstr "Скопійовано «{}»"
 
