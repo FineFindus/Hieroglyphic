@@ -7,7 +7,7 @@ Hieroglyphic is powered by a machine learning model, trained on a modified versi
 
 
 
-![Main Page](data/resources/screenshots/window.png)
+![Main Page](data/resources/screenshots/window_latex.png)
 
 <details>
   <summary>More screenshots</summary>
