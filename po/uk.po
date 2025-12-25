@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-12-23 20:48+0000\n"
-"PO-Revision-Date: 2025-12-24 09:56+0200\n"
+"POT-Creation-Date: 2025-12-24 11:35+0000\n"
+"PO-Revision-Date: 2025-12-25 21:10+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -50,24 +50,35 @@ msgid "Markup language to suggest symbols for"
 msgstr "Мова розмітки для пропозицій символів"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Пошук символів LaTeX"
+#| msgid "Find LaTeX symbols"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Пошук символів LaTeX або Typst"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+#| msgid ""
+#| "If you work with LaTeX, you know it's difficult to memorize the names of "
+#| "all the symbols. Hieroglyphic allows you to search through over 1000 "
+#| "different LaTeX symbols by sketching."
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"Якщо ви працювали з LaTeX, вам відомі ці проблеми із запам'ятовуванням назв "
+"Якщо ви працювали з LaTeX або Typst, вам відомі ці проблеми із"
+" запам'ятовуванням назв "
 "усіх символів. За допомогою «Ієрогліфік» ви зможете виконувати пошук за "
-"ескізом серед понад 1000 різних символів LaTeX."
+"ескізом серед понад 1000 різних символів."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
-msgid "Main Window"
-msgstr "Головне вікно"
+#| msgid "Find LaTeX symbols"
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Вибір символів для символів LaTeX"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Вибір символів для символів Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "Замінник"
 
@@ -135,7 +146,6 @@ msgid "_Clear"
 msgstr "О_чистити"
 
 #: data/resources/ui/window.ui:294
-#| msgid "Main Window"
 msgid "Main Menu"
 msgstr "Головне меню"
 
@@ -148,6 +158,9 @@ msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2024"
 #, rust-format
 msgid "Copied “{}”"
 msgstr "Скопійовано «{}»"
+
+#~ msgid "Main Window"
+#~ msgstr "Головне вікно"
 
 #~ msgid ""
 #~ "Help improve Hieroglyphic by automatically contributing recognized symbols"
