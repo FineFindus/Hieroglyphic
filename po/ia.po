@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-10-16 15:30+0000\n"
-"PO-Revision-Date: 2025-10-16 17:50-0300\n"
+"POT-Creation-Date: 2025-12-24 11:35+0000\n"
+"PO-Revision-Date: 2025-12-24 21:37-0300\n"
 "Last-Translator: Emilio Sepúlveda <emism.translations@gmail.com>\n"
 "Language-Team: Interlingua <softinterlingua@gmail.com>\n"
 "Language: ia\n"
@@ -22,8 +22,9 @@ msgstr ""
 "X-DL-Branch: main\n"
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Gtranslator 49.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-DL-VCS-Web: https://github.com/FineFindus/Hieroglyphic\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -49,30 +50,38 @@ msgstr "Si monstrar un parve susurration verso le dialogo de contribution"
 msgid "Whether to contribute recognized strokes"
 msgstr "Si contribuer designos recognoscite"
 
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Linguage de marcation a suggerer symbolos pro"
+
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Cerca symbolos LaTeX"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Cerca symbolos LaTeX e Typst"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"Si tu travalia con LaTeX, tu sape le difficultate de memorisar le nomine de "
-"tote le symbolos. Hieroglyphic te permitte cercar per plus de 1000 symbolos "
-"LaTeX differente facente designos"
+"Si tu travalia con LaTeX o Typst, tu sape le difficultate de memorisar le "
+"nomine de tote le symbolos. Hieroglyphic te permitte cercar per plus de 1000 "
+"symbolos differente facente designos"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
-msgid "Main Window"
-msgstr "Fenestra principal"
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Selection de symbolos pro symbolos LaTeX"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Selection de symbolo pro symbolos Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "Marcator de position"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Meliorar Hieroglyphic"
 
@@ -103,31 +112,48 @@ msgstr ""
 msgid "Copy"
 msgstr "Copiar"
 
-#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Linguage de marcation"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "A proposito de Hieroglyphic"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "Necun symbolos"
 
-#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "Comencia con le designo de un symbolo"
 
-#: data/resources/ui/window.ui:162
+#: data/resources/ui/window.ui:183
 msgid "All Symbols"
 msgstr "Tote le symbolos"
 
-#: data/resources/ui/window.ui:197
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "_Rader"
 
-#: data/resources/ui/window.ui:275
-msgid "About Hieroglyphic"
-msgstr "A proposito de Hieroglyphic"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Menu principal"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Emilio Sepúlveda <emism.translations@gmail.com>"
 
-#: src/window.rs:315
+#: src/window.rs:392
+#, rust-format
 msgid "Copied “{}”"
 msgstr "Copiate “{}”"
