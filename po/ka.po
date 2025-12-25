@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-12-23 20:48+0000\n"
-"PO-Revision-Date: 2025-12-24 04:51+0100\n"
+"POT-Creation-Date: 2025-12-24 11:35+0000\n"
+"PO-Revision-Date: 2025-12-25 03:39+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "Language: ka\n"
@@ -46,24 +46,28 @@ msgid "Markup language to suggest symbols for"
 msgstr "მარკირების ენა სიმბოლოების შეთავაზებისთვის"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "იპოვეთ LaTeX სიმბოლოები"
+msgid "Find LaTeX and Typst symbols"
+msgstr "იპოვეთ LaTeX და Typst სიმბოლოები"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"თუ LaTeX– თან მუშაობთ, იცით, რომ ძნელია ყველა სიმბოლოს სახელების "
+"თუ LaTeX–თან, ან Typst მუშაობთ, იცით, რომ ძნელია ყველა სიმბოლოს სახელების "
 "დამახსოვრება. Hieroglyphic საშუალებას გაძლევთ მოძებნოთ 1000-ზე მეტი "
-"სხვადასხვა LaTeX სიმბოლო ესკიზით."
+"სხვადასხვა სიმბოლო ესკიზით."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
-msgid "Main Window"
-msgstr "მთავარი ფანჯარა"
+msgid "Symbol selection for LaTeX symbols"
+msgstr "სიმბოლოს არჩევანი LaTeX სიმბოლოებისთვის"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "სიმბოლოს არჩევანი Typst სიმბოლოებისთვის"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "ადგილმჭერი"
 
@@ -143,6 +147,9 @@ msgstr "თემური დოღონაძე"
 #, rust-format
 msgid "Copied “{}”"
 msgstr "“{}” დაკოპირდა"
+
+#~ msgid "Main Window"
+#~ msgstr "მთავარი ფანჯარა"
 
 #~ msgid ""
 #~ "Help improve Hieroglyphic by automatically contributing recognized symbols"
