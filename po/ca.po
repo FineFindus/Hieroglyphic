@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-10-27 03:30+0000\n"
-"PO-Revision-Date: 2025-10-27 12:58+0100\n"
+"POT-Creation-Date: 2025-12-23 20:48+0000\n"
+"PO-Revision-Date: 2025-12-24 11:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-DamnedLies-Scope: partial\n"
 "X-Generator: Poedit 3.6\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
@@ -66,7 +67,7 @@ msgid "Placeholder"
 msgstr "Marcador"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Milloreu el Jeroglífic"
 
@@ -97,31 +98,47 @@ msgstr ""
 msgid "Copy"
 msgstr "Copia"
 
-#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Llenguatge de marques"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "Quant al Jeroglífic"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "Sense símbols"
 
-#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "Comenceu dibuixant un símbol"
 
-#: data/resources/ui/window.ui:162
+#: data/resources/ui/window.ui:183
 msgid "All Symbols"
 msgstr "Tots els símbols"
 
-#: data/resources/ui/window.ui:197
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "_Neteja"
 
-#: data/resources/ui/window.ui:275
-msgid "About Hieroglyphic"
-msgstr "Quant al Jeroglífic"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Menú principal"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Victor Dargallo <victordargallo@disroot.org>"
 
-#: src/window.rs:315
+#: src/window.rs:392
 msgid "Copied “{}”"
 msgstr "S'ha copiat «{}»"
