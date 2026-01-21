@@ -1,0 +1,156 @@
+# Cornish translation for hieroglyphic.
+# Copyright (C) 2026 hieroglyphic's COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Flynn Peck <cirilla@tuta.io>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2025-12-24 11:35+0000\n"
+"PO-Revision-Date: 2026-01-21 16:07+0000\n"
+"Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
+"Language-Team: kw\n"
+"Language: kw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-DL-VCS-Web: https://github.com/FineFindus/Hieroglyphic\n"
+"X-DL-Lang: kw\n"
+"X-DL-Module: hieroglyphic\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 49.0\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
+#: src/widgets/about.rs:20
+msgid "Hieroglyphic"
+msgstr "Hiroglyfek"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Hwilas dres moy ages 1000 arwodhyow LaTeX gans ow linenna"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Toulys;LaTeX;TeX;Arwodhyow;"
+
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "Mar diskwedhes unn hynt byghan rag an fenester argevrohow"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
+msgid "Whether to contribute recognized strokes"
+msgstr "Mar kevri tavaow aswonys"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Yeth markup rag profya arwodhyow"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX and Typst symbols"
+msgstr "Kavos arwodhyow LaTeX ha Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
+msgstr ""
+"Mar ty oberi gans LaTeX po Typst, ty aswon yth yw kales dhe kevenna an "
+"henwyn oll an arwodhyow. Hiroglyfek gasa ty hwilas dres moy es 1000 "
+"arwodhyow gans ow linenna."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Dewis arwodh rag arwodhyow LaTeX"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Dewis arwodh rag arwodhyow Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
+msgid "Placeholder"
+msgstr "Ensampel"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
+msgid "Improve Hieroglyphic"
+msgstr "Gwellhe Hiroglyfek"
+
+#: data/resources/ui/contribution-dialog.ui:51
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr "Gweres gwellhe an aswonans Hiroglyfek arwodhyow rag oll"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Contribute Symbols"
+msgstr "Kevri Arwodhyow"
+
+#: data/resources/ui/contribution-dialog.ui:63
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Danvon delinyansow aswonys dhe an sel dherivadow Hiroglyfek"
+
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"Kudhlow privedh vyth yw kuntelys. <a href=\"https://github.com/FineFindus/"
+"Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Polici privetter</a>"
+
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Kopia"
+
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Yeth markup"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "A-dro Hiroglyfek"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
+msgid "No Symbols"
+msgstr "Arwodhyow Vyth"
+
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
+msgid "Start by drawing a symbol"
+msgstr "Dalleth gans ow delinya unn arwodhyow"
+
+#: data/resources/ui/window.ui:183
+msgid "All Symbols"
+msgstr "Oll Arwodhyow"
+
+#: data/resources/ui/window.ui:218
+msgid "_Clear"
+msgstr "_Dilea"
+
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Rol Chif"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr "Flynn"
+
+#: src/window.rs:392
+#, rust-format
+msgid "Copied “{}”"
+msgstr "Kopys “{}”"
