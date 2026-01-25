@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
 "POT-Creation-Date: 2025-12-24 11:35+0000\n"
-"PO-Revision-Date: 2026-01-25 11:10-0300\n"
+"PO-Revision-Date: 2026-01-25 17:47-0300\n"
 "Last-Translator: Juliano de Souza Camargo <julianosc@pm.me>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao/>\n"
 "Language: pt_BR\n"
@@ -45,6 +45,10 @@ msgstr ""
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
 msgid "Whether to contribute recognized strokes"
 msgstr "Se deve contribuir com traços reconhecidos"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Linguagem de marcação para onde sugerir símbolos"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX and Typst symbols"
