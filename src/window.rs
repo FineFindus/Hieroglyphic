@@ -143,6 +143,7 @@ mod imp {
                         .expect("Failed to set `show-contribution-nudge`");
                 });
             }
+            obj.settings().set_gtk_icon_theme_name(Some("Adwaita"));
 
             tracing::debug!("Loaded {} symbols", classify::SYMBOL_COUNT);
 
