@@ -1,14 +1,14 @@
 # Swedish translation for hieroglyphic.
-# Copyright © 2024-2025 hieroglyphic's COPYRIGHT HOLDER
+# Copyright © 2024-2026 hieroglyphic's COPYRIGHT HOLDER
 # This file is distributed under the same license as the hieroglyphic package.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>,  2024, 2025.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>,  2024, 2025, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-10-05 15:30+0000\n"
-"PO-Revision-Date: 2025-10-21 22:47+0200\n"
+"POT-Creation-Date: 2026-01-28 13:35+0000\n"
+"PO-Revision-Date: 2026-02-03 01:04+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -16,7 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
+"X-DamnedLies-Scope: partial\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -43,29 +44,33 @@ msgid "Whether to contribute recognized strokes"
 msgstr "Huruvida du ska bidra med igenkända streck"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Hitta LaTeX-symboler"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Hitta LaTeX- och Typst-symboler"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"Om du arbetar med LaTeX så vet du att det är svårt att komma ihåg namnen på "
-"alla symboler. Hieroglyphic låter dig söka genom över 1000 olika LaTeX-"
-"symboler genom att skissa."
+"Om du arbetar med LaTeX eller Typst så vet du att det är svårt att komma "
+"ihåg namnen på alla symboler. Hieroglyphic låter dig söka genom över 1000 "
+"olika symboler genom att skissa."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
-msgid "Main Window"
-msgstr "Huvudfönster"
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Symbolval för LaTeX-symboler"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Symbolval för Typst-symboler"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "Platshållare"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Förbättra Hieroglyphic"
 
@@ -96,31 +101,50 @@ msgstr ""
 msgid "Copy"
 msgstr "Kopiera"
 
-#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Märkspråk"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "Om Hieroglyphic"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "Inga symboler"
 
-#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "Starta genom att rita en symbol"
 
-#: data/resources/ui/window.ui:162
+#: data/resources/ui/window.ui:183
 msgid "All Symbols"
 msgstr "Alla symboler"
 
-#: data/resources/ui/window.ui:197
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "_Töm"
 
-#: data/resources/ui/window.ui:275
-msgid "About Hieroglyphic"
-msgstr "Om Hieroglyphic"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Huvudmeny"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Anders Jonsson <anders.jonsson@norsjovallen.se>, 2024"
 
-#: src/window.rs:315
+#: src/window.rs:393
 msgid "Copied “{}”"
 msgstr "Kopierade ”{}”"
+
+#~ msgid "Main Window"
+#~ msgstr "Huvudfönster"
