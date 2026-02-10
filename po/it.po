@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the hieroglyphic
 # package.
 # Albano Battistella <albanobattistella@gmail.com>, 2024
-# Davide Ferracin <davide.ferracin@protonmail.com>, 2024-2025
+# Davide Ferracin <davide.ferracin@protonmail.com>, 2024-2026
 #
 msgid ""
 msgstr ""
 "Project-Id-Version:  hieroglyphic\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-10-07 15:31+0000\n"
-"PO-Revision-Date: 2025-10-07 22:44+0200\n"
+"POT-Creation-Date: 2026-01-28 13:35+0000\n"
+"PO-Revision-Date: 2026-02-10 10:00+0100\n"
 "Last-Translator: Davide Ferracin <davide.ferracin@protonmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -46,30 +46,38 @@ msgstr ""
 msgid "Whether to contribute recognized strokes"
 msgstr "Se contribuire inviando i disegni riconosciuti"
 
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Linguaggio markup di cui suggerire i simboli"
+
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Trova simboli di LaTeX"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Ricerca di simboli di LaTeX e Typst"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"Lavorando con LaTeX, si sa, è difficile memorizzare i nomi di tutti i "
+"Lavorando con LaTeX o Typst, si sa, è difficile memorizzare i nomi di tutti i "
 "simboli. Geroglifico permette di cercare tra oltre 1000 diversi simboli "
 "LaTeX con uno schizzo."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
-msgid "Main Window"
-msgstr "Finestra principale"
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Selezione di simboli di LaTeX"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Selezione di simboli di Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "Segnaposto"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Contribuire a Geroglifico"
 
@@ -92,33 +100,49 @@ msgid ""
 "github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
 "policy</a>"
 msgstr ""
-"Non vengono raccolte informazioni personali identificabili. "
-"<a href=\"https://github.com/FineFindus/Hieroglyphic/blob/main/"
+"Non vengono raccolte informazioni personali identificabili. <a "
+"href=\"https://github.com/FineFindus/Hieroglyphic/blob/main/"
 "PRIVACY_POLICY.md\">Politica sulla privacy</a>"
 
 #: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
 msgstr "Copia"
 
-#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Linguaggio markup"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "Informazioni su Geroglifico"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "Nessun simbolo"
 
-#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "Disegnare un simbolo per iniziare"
 
-#: data/resources/ui/window.ui:162
+#: data/resources/ui/window.ui:183
 msgid "All Symbols"
 msgstr "Tutti i simboli"
 
-#: data/resources/ui/window.ui:197
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "_Pulisci"
 
-#: data/resources/ui/window.ui:275
-msgid "About Hieroglyphic"
-msgstr "Informazioni su Geroglifico"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Menù principale"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
@@ -127,6 +151,7 @@ msgstr ""
 "Albano Battistella\n"
 "Davide Ferracin <davide.ferracin@protonmail.com>"
 
-#: src/window.rs:315
+#: src/window.rs:393
+#, rust-format
 msgid "Copied “{}”"
 msgstr "“{}” copiato"
