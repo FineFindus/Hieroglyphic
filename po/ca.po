@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-12-23 20:48+0000\n"
-"PO-Revision-Date: 2025-12-24 11:18+0100\n"
+"POT-Creation-Date: 2026-01-28 13:35+0000\n"
+"PO-Revision-Date: 2026-02-13 11:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-DamnedLies-Scope: partial\n"
 "X-Generator: Poedit 3.6\n"
+"X-DamnedLies-Scope: partial\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -45,24 +45,28 @@ msgid "Whether to contribute recognized strokes"
 msgstr "Si s'han de contribuir els traços reconeguts"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Trobeu símbols de LaTeX"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Trobeu símbols de LaTeX i Typst"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"Si treballeu amb LaTeX, sabeu que és difícil memoritzar els noms de tots els "
-"símbols. El Jeroglífic us permet cercar més de 1000 símbols diferents de "
-"LaTeX dibuixant."
+"Si treballeu amb LaTeX o Typst, sabeu que és difícil memoritzar els noms de "
+"tots els símbols. El Jeroglífic us permet cercar més de 1000 símbols "
+"diferents dibuixant."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
-msgid "Main Window"
-msgstr "Finestra principal"
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Selecció de símbols per als símbols de LaTeX"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Selecció de símbols per als símbols de Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "Marcador"
 
@@ -139,6 +143,9 @@ msgstr "Menú principal"
 msgid "translator-credits"
 msgstr "Victor Dargallo <victordargallo@disroot.org>"
 
-#: src/window.rs:392
+#: src/window.rs:393
 msgid "Copied “{}”"
 msgstr "S'ha copiat «{}»"
+
+#~ msgid "Main Window"
+#~ msgstr "Finestra principal"
