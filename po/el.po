@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2024-10-30 23:30+0000\n"
+"POT-Creation-Date: 2026-01-28 13:35+0000\n"
 "PO-Revision-Date: 2024-10-30 23:30+0000\n"
 "Last-Translator: Giannis Antypas <gianni.antypas@gmail.com>\n"
 "Language-Team: Greek <Greek>\n"
@@ -17,89 +17,125 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:25
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
+#: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
-msgid "Search through over 1000 different LaTeX symbols by sketching"
-msgstr "Αναζήτηση ανάμεσα από περισσότερα από 1000 διαφορετικά σύμβολα LaTeX σχεδιάζοντας."
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;Εργαλεία;LaTeX;TeX;Σύμβολα;"
-
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
-msgid "Whether to show a small nudge towards the contribution dialog"
-msgstr "Εάν θα εμφανίζεται μια μικρή ώθηση προς το παράθυρο διαλόγου συνεισφοράς"
-
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
-msgid "Whether to contribute recognized strokes"
-msgstr "Εάν θα συνεισφέρονται αναγνωρισμένες μολυβιές"
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Γλώσσα σήμανσης για την οποία θα προτείνονται σύμβολα"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Εύρεση συμβόλων LaTeX"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Εύρεση συμβόλων LaTeX και Typst"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"Αν εργάζεστε με το LaTeX, γνωρίζετε πως είναι δύσκολο να απομνημονεύσετε "
-"τα ονόματα όλων των συμβόλων. Το Hieroglyphic σάς επιτρέπει να κάνετε αναζήτηση "
-"ανάμεσα από περισσότερα από 1000 διαφορετικά σύμβολα LaTeX σχεδιάζοντας."
+"Αν εργάζεστε με το LaTeX ή το Typst, γνωρίζετε πως είναι δύσκολο να "
+"απομνημονεύσετε τα ονόματα όλων των συμβόλων. Το Hieroglyphic σάς επιτρέπει "
+"να κάνετε αναζήτηση ανάμεσα από περισσότερα από 1000 διαφορετικά σύμβολα "
+"σχεδιάζοντας."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
-msgid "Main Window"
-msgstr "Κύριο παράθυρο"
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Επιλογή συμβόλων για σύμβολα LaTeX"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Επιλογή συμβόλων για σύμβολα Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "Σύμβολο κράτησης θέσης"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Βελτίωση Hieroglyphic"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
-msgstr "Βοήθεια για να γίνει το Hieroglyphic καλύτερο στην αναγνώριση συμβόλων για τον καθένα"
+msgstr ""
+"Βοήθεια για να γίνει το Hieroglyphic καλύτερο στην αναγνώριση συμβόλων για "
+"τον καθένα"
 
-#: data/resources/ui/contribution-dialog.ui:61
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "Συνεισφορά συμβόλων"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Υποβολή αναγνωρισμένων σχεδίων στη συλλογή δεδομένων του Hieroglyphic"
 
-#: data/resources/ui/window.ui:36
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"Δεν συλλέγονται προσωπικές πληροφορίες ταυτοποίησης. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Πολιτική "
+"απορρήτου</a>"
+
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Γλώσσα σήμανσης"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
 msgid "About Hieroglyphic"
-msgstr "Σχετικά με το Hieroglyphic"
+msgstr "Περί του Hieroglyphic"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
-msgstr "Χωρίς σύμβολα"
+msgstr "Δεν βρέθηκαν σύμβολα"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
-msgstr "Ξεκίνημα σχεδιάζοντας ένα σύμβολο"
+msgstr "Ξεκινήστε σχεδιάζοντας ένα σύμβολο"
 
-#: data/resources/ui/window.ui:118
+#: data/resources/ui/window.ui:183
+msgid "All Symbols"
+msgstr "Όλα τα σύμβολα"
+
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "_Εκκαθάριση"
 
-#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
-#: src/about.rs:26
-msgid "translator-credits"
-msgstr "Μνεία μεταφραστών: Giannis Antypas <gianni.antypas@gmail.com>"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Κύριο μενού"
 
-#: src/window.rs:378
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr ""
+"Ελληνική μεταφραστική ομάδα GNOME\n"
+" Giannis Antypas <gianni.antypas@gmail.com>\n"
+" Ευστάθιος Ιωσηφίδης <iosifidis@opensuse.org>\n"
+"\n"
+"Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
+"https://gr.gnome.org/"
+
+
+#: src/window.rs:393
+#, rust-format
 msgid "Copied “{}”"
 msgstr "Αντιγράφηκαν «{}»"
