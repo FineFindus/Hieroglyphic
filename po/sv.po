@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
 "POT-Creation-Date: 2026-01-28 13:35+0000\n"
-"PO-Revision-Date: 2026-02-03 01:04+0100\n"
+"PO-Revision-Date: 2026-02-22 12:10+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -42,6 +42,10 @@ msgstr "Huruvida en liten antydan till bidragsdialogen ska visas"
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
 msgid "Whether to contribute recognized strokes"
 msgstr "Huruvida du ska bidra med igenkända streck"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Märkspråk att föreslå symboler för"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX and Typst symbols"
