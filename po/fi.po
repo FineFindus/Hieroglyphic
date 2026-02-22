@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-08-24 03:28+0000\n"
-"PO-Revision-Date: 2025-08-24 14:25+0300\n"
+"POT-Creation-Date: 2026-01-28 13:35+0000\n"
+"PO-Revision-Date: 2026-02-22 19:57+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: Finnish <Finnish>\n"
 "Language: fi\n"
@@ -16,10 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:23
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
 #: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Hieroglyphic"
@@ -42,30 +42,38 @@ msgstr ""
 msgid "Whether to contribute recognized strokes"
 msgstr ""
 
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Merkintäkieli, jolle symboleja ehdotetaan"
+
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Löydä LaTeX-symboleja"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Löydä LaTeX- ja Typst-symboleja"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
 msgstr ""
-"Jos työskentelet käyttäen LaTeXia, tiedät että kaikkien symbolien nimien "
-"muistaminen on vaikeaa. Hieroglyphic mahdollistaa hakemisen yli 1000 eri "
-"LaTeX-symbolin joukosta piirtämällä."
+"Jos työskentelet käyttäen LaTeXia tai Typstia, tiedät että kaikkien "
+"symbolien nimien muistaminen on vaikeaa. Hieroglyphic mahdollistaa "
+"hakemisen yli 1000 eri symbolin joukosta piirtämällä."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
-msgid "Main Window"
-msgstr "Pääikkuna"
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+msgid "Symbol selection for LaTeX symbols"
+msgstr "LaTeX-symbolien valinta"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Typst-symbolien valinta"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr ""
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:263
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Auta parantamaan Hieroglyphicia"
 
@@ -82,35 +90,61 @@ msgstr "Avusta symbolien kanssa"
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Lähetä tunnistetut piirrokset Hieroglyphicin tietojoukkoon"
 
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"Henkilöön yhdistettävää tietoa ei kerätä. <a href=\"https://github.com/"
+"FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Tietosuojakäytäntö</a>"
+
 #: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
 msgstr "Kopioi"
 
-#: data/resources/ui/window.ui:122 data/resources/ui/window.ui:221
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Merkintäkieli"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "Tietoja - Hieroglyphic"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "Ei symboleja"
 
-#: data/resources/ui/window.ui:130 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "Aloita piirtämällä symboli"
 
-#: data/resources/ui/window.ui:162
+#: data/resources/ui/window.ui:183
 msgid "All Symbols"
 msgstr "Kaikki symbolit"
 
-#: data/resources/ui/window.ui:197
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "_Tyhjennä"
 
-#: data/resources/ui/window.ui:275
-msgid "About Hieroglyphic"
-msgstr "Tietoja - Hieroglyphic"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Päävalikko"
 
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr "Jiri Grönroos"
 
-#: src/window.rs:315
+#: src/window.rs:393
+#, rust-format
 msgid "Copied “{}”"
 msgstr "Kopioitu “{}”"
