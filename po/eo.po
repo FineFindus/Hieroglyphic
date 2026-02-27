@@ -1,0 +1,151 @@
+# Esperanto translations for PACKAGE package.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2026.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2026-01-28 13:35+0000\n"
+"PO-Revision-Date: 2026-02-27 15:30+0100\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 49.0\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
+#: src/widgets/about.rs:20
+msgid "Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Serĉi pli ol 1000 malsamajn LaTeX-simbolojn per skizado"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
+msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgstr "GTK;Tools;LaTeX;TeX;Symbols;"
+
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "Ĉu montri malgrandan puŝon al la kontribua dialogo"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
+msgid "Whether to contribute recognized strokes"
+msgstr "Ĉu kontribui rekognisitajn trazajn"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Markilingvo por proponi simbolojn"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX and Typst symbols"
+msgstr "Trovi LaTeX- kaj Typst-simbolojn"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"\"\"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"\"\"names of all the symbols. Hieroglyphic allows you to search through over "
+"\"\"1000 different symbols by sketching."
+msgstr ""
+"Se vi laboras kun LaTeX aŭ Typst, vi scias ke estas malfacile memori la "
+"nomojn de ĉiuj simboloj. Hieroglyphic ebligas serĉi pli ol 1000 malsamajn "
+"simbolojn per skizado."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Simbola elekto por LaTeX-simboloj"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Simbola elekto por Typst-simboloj"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
+msgid "Placeholder"
+msgstr "Loktenilo"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
+msgid "Improve Hieroglyphic"
+msgstr "Plibonigi Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:51
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr ""
+"Helpu fari Hieroglyphic-on pli bonan ĉe identigado de simboloj por ĉiuj"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Contribute Symbols"
+msgstr "Kontribui simbolojn"
+
+#: data/resources/ui/contribution-dialog.ui:63
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Sendi rekognisitaĵojn desegnaĵojn al Hieroglyphic-a datumaro"
+
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"\"\"No personal identifiable information is collected. <a href=\"https://"
+"\"\"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"\"\"policy</a>"
+msgstr ""
+"Neniaj personaj identigaj informoj estas kolektitaj. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privatec-"
+"politiko</a>"
+
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Kopii"
+
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Markilingvo"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "Pri Hieroglyphic"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
+msgid "No Symbols"
+msgstr "Neniaj simboloj"
+
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
+msgid "Start by drawing a symbol"
+msgstr "Komencu per desegnado de simbolo"
+
+#: data/resources/ui/window.ui:183
+msgid "All Symbols"
+msgstr "Ĉiuj simboloj"
+
+#: data/resources/ui/window.ui:218
+msgid "_Clear"
+msgstr "_Viŝi"
+
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Ĉefa menuo"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr "Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>"
+
+#: src/window.rs:393
+msgid "Copied “{}”"
+msgstr "Kopiita ”{}”"
