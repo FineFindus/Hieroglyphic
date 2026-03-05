@@ -19,8 +19,8 @@ strip = true
 
 [dependencies]
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
-gtk = { version = "0.10", package = "gtk4", features = ["v4_20"] }
-adw = { package = "libadwaita", version = "0.8", features = ["v1_8"] }
+gtk = { version = "0.11", package = "gtk4", features = ["v4_20"] }
+adw = { package = "libadwaita", version = "0.9", features = ["v1_8"] }
 tracing = "0.1"
 tracing-subscriber = "0.3"
 itertools = "0.14"
@@ -35,15 +35,15 @@ phf = "0.13"
 ureq = { version = "3.0", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-gio = { version = "0.21", features = ["v2_70"] }
+gio = { version = "0.22", features = ["v2_70"] }
 
 [build-dependencies]
 phf_codegen = "0.13"
-yaml-rust2 = "0.10"
+yaml-rust2 = "0.11"
 base64 = "0.22"
 # mitex doesn't have any tagged versions unfortunately
 mitex = { git = "https://github.com/mitex-rs/mitex", rev = "0680e50" }
 # we can't use the precompiled lib here because we need the typst code
 # in the 'packages' dir of mitex to build the default command spec
 mitex-spec-gen = { git = "https://github.com/mitex-rs/mitex", rev = "0680e50" }
-regex = "1.11"
+regex = "1.12"
