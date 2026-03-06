@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
 "POT-Creation-Date: 2026-01-28 13:35+0000\n"
-"PO-Revision-Date: 2026-02-13 11:09+0100\n"
+"PO-Revision-Date: 2026-02-26 22:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -43,6 +43,10 @@ msgstr "Si s'ha de mostrar un petit moviment cap al diàleg de contribució"
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
 msgid "Whether to contribute recognized strokes"
 msgstr "Si s'han de contribuir els traços reconeguts"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+msgid "Markup language to suggest symbols for"
+msgstr "Llenguatge de marques per suggerir símbols"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX and Typst symbols"
