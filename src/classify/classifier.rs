@@ -23,6 +23,7 @@ impl Classifier {
             .expect("# CPU cores should be available")
             .get();
         let model = ort::session::Session::builder()?
+            .with_auto_device(ort::session::builder::AutoDevicePolicy::PreferNPU)?
             .with_optimization_level(ort::session::builder::GraphOptimizationLevel::Level3)?
             .with_intra_threads(num_cpus)?
             .commit_from_memory_directly(&include_bytes!("../../data/model.onnx")[..])?;
