@@ -17,6 +17,7 @@
                 <choice value='typst'/>
             </choices>
             <default>"latex"</default>
+            <!-- Translators: the name of the markup language (latex, typst) for which symbols are suggested -->
             <summary>Markup language to suggest symbols for</summary>
         </key>
     </schema>
