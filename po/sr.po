@@ -2,14 +2,15 @@
 # Copyright (©) 2025 hieroglyphic's COPYRIGHT HOLDER
 # This file is distributed under the same license as the hieroglyphic package.
 # Мирослав Николић <miroslavnikolic@rocketmail.com>,  2025.
+# Марко Костић <marko.m.kostic@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-01-13 01:37+0000\n"
-"PO-Revision-Date: 2025-01-18 14:40+0100\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"POT-Creation-Date: 2026-03-15 20:26+0000\n"
+"PO-Revision-Date: 2026-03-21 12:23+0100\n"
+"Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <Serbian>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -17,91 +18,138 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/about.rs:20
-#: src/main.rs:25
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
+#: src/widgets/about.rs:20
 msgid "Hieroglyphic"
 msgstr "Хијероглифик"
 
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:4
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
 msgid "Search through over 1000 different LaTeX symbols by sketching"
 msgstr "Скицирањем тражите у преко 1000 различитих LaTeX симбола"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:10
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
 msgid "GTK;Tools;LaTeX;TeX;Symbols;"
 msgstr "Гтк;алати;ЛаТеХ;ТеХ;симболи;GTK;Tools;LaTeX;TeX;Symbols;"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:6
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
 msgid "Whether to show a small nudge towards the contribution dialog"
 msgstr "Да ли ће да покаже мали помак ка прозорчету доприношења"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:10
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
 msgid "Whether to contribute recognized strokes"
 msgstr "Да ли ће да допринесе препознате потезе"
 
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
+msgid "Markup language to suggest symbols for"
+msgstr "Језик означавања за који се предлажу симболи"
+
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-msgid "Find LaTeX symbols"
-msgstr "Нађите LaTeX симболе"
+msgid "Find LaTeX and Typst symbols"
+msgstr "Нађите LaTeX и Typst симболе"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+#| msgid ""
+#| "If you work with LaTeX, you know it's difficult to memorize the names of "
+#| "all the symbols. Hieroglyphic allows you to search through over 1000 "
+#| "different LaTeX symbols by sketching."
 msgid ""
-"If you work with LaTeX, you know it's difficult to memorize the names of all "
-"the symbols. Hieroglyphic allows you to search through over 1000 different "
-"LaTeX symbols by sketching."
-msgstr ""
-"Ако радите са LaTeX-ом, знате да је тешко запамтити називе свих симбола. "
-"Хијероглифик вам омогућава да цртањем тражите у преко 1000 различитих LaTeX "
-"симбола."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
+msgstr "Ако радите са ЛаТеКсом или Типстом, знате да је тешко запамтити називе свих симбола. Хијероглифик вам омогућава да претражујете преко 1000 различитих симбола цртањем."
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:24
-msgid "Main Window"
-msgstr "Главни прозор"
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+#| msgid "Find LaTeX symbols"
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Избор симбола за ЛаТеКс симболе"
 
-#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:28
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Избор симбола за Типст симболе"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
 msgid "Placeholder"
 msgstr "Чувар места"
 
 #: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:39 data/resources/ui/window.ui:24
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Побољшајте Хијероглифик"
 
-#: data/resources/ui/contribution-dialog.ui:50
+#: data/resources/ui/contribution-dialog.ui:51
 msgid "Help make Hieroglyphic better at identifying symbols for everyone"
 msgstr "Помозите да Хијероглифик буде бољи у препознавању симбола"
 
-#: data/resources/ui/contribution-dialog.ui:61
+#: data/resources/ui/contribution-dialog.ui:62
 msgid "Contribute Symbols"
 msgstr "Допринесите симболима"
 
-#: data/resources/ui/contribution-dialog.ui:62
+#: data/resources/ui/contribution-dialog.ui:63
 msgid "Submit recognized drawings to Hieroglyphic’s dataset"
 msgstr "Предајте препознате цртеже у скуп података Хијероглифика"
 
-#: data/resources/ui/window.ui:36
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr "Лични подаци који се могу идентификовати се не прикупљају. <a href=\"https://github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Политика приватности</a>"
+
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Умножи"
+
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Језик означавања"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "ЛаТеКс"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Типст"
+
+#: data/resources/ui/window.ui:20
 msgid "About Hieroglyphic"
 msgstr "О Хијероглифику"
 
-#: data/resources/ui/window.ui:50
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
 msgid "No Symbols"
 msgstr "Нема симбола"
 
-#: data/resources/ui/window.ui:51
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
 msgid "Start by drawing a symbol"
 msgstr "Почните да цртате симбол"
 
-#: data/resources/ui/window.ui:118
+#: data/resources/ui/window.ui:183
+msgid "All Symbols"
+msgstr "Сви симболи"
+
+#: data/resources/ui/window.ui:218
 msgid "_Clear"
 msgstr "_Очисти"
 
-#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
-#: src/about.rs:26
-msgid "translator-credits"
-msgstr "Мирослав Николић"
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Главни мени"
 
-#: src/window.rs:378
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr ""
+"Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Марко Костић <marko.m.kostic@gmail.com>\n"
+"Превод на српски језик https://гном.срб"
+
+#: src/window.rs:393
+#, rust-format
 msgid "Copied “{}”"
 msgstr "Умножен „{}“"
