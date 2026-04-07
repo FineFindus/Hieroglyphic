@@ -353,7 +353,7 @@ impl HieroglyphicWindow {
                 .map(SymbolObject::new)
                 .take(25),
         );
-        // scroll to top after updating symbols, so that the most likely symbols are
+        // scroll to top after updating symbols, so that the likeliest symbols are
         // visible first
         imp.symbol_list
             .adjustment()
