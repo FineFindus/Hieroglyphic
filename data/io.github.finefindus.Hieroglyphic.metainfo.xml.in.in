@@ -49,6 +49,15 @@
   <content_rating type="oars-1.1" />
 
   <releases>
+    <release version="2.3.0" date="2026-04-07">
+      <description>
+        <ul>
+          <li>Support Typst symbols</li>
+          <li>Use hardware-acceleration (NPUs) when available</li>
+          <li>Updated to newest GNOME styling</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.2.0" date="2025-10-01">
       <description>
         <p>This update brings a adaptive redesign, improving the app on mobile devices.</p>
