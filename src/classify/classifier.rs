@@ -33,7 +33,7 @@ impl Classifier {
 
     /// Tries to classify the given strokes into a symbol.
     pub fn classify(&mut self, sample: Vec<Stroke>) -> Option<Vec<&'static str>> {
-        let input_tensor = self.prepate_input(sample);
+        let input_tensor = self.prepare_input(sample);
 
         let result = self
             .model
@@ -53,7 +53,7 @@ impl Classifier {
     ///
     /// This is equivalent to drawing the strokes onto an image and
     /// than converting the image data into an array.
-    fn prepate_input(&self, sample: Vec<Stroke>) -> Array4<f32> {
+    fn prepare_input(&self, sample: Vec<Stroke>) -> Array4<f32> {
         let mut array = Array4::<f32>::zeros((1, 3, 32, 32));
 
         let strokes = sample
