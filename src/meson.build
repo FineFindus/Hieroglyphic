@@ -32,6 +32,14 @@ endif
 
 cargo_env = [ 'CARGO_HOME=' + meson.project_build_root() / 'cargo-home' ]
 
+# On macOS, ort-sys needs help finding the ONNX Runtime dynamic library
+if host_machine.system() == 'darwin'
+  onnxruntime_dep = dependency('libonnxruntime')
+  ort_lib_dir = onnxruntime_dep.get_variable(pkgconfig: 'libdir')
+  cargo_env += [ 'ORT_LIB_PATH=' + ort_lib_dir ]
+  cargo_env += [ 'ORT_PREFER_DYNAMIC_LINK=1' ]
+endif
+
 cargo_build = custom_target(
   'cargo-build',
   build_by_default: true,
