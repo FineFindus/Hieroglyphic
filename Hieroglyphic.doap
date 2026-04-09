@@ -5,7 +5,7 @@
     xmlns="http://usefulinc.com/ns/doap#">
 
     <name xml:lang="en">Hieroglyphic</name>
-    <shortdesc xml:lang="en">Find LaTeX symbols</shortdesc>
+    <shortdesc xml:lang="en">Find LaTeX and Typst symbols</shortdesc>
     <homepage rdf:resource="https://github.com/FineFindus/Hieroglyphic" />
     <download-page rdf:resource="https://github.com/FineFindus/Hieroglyphic/releases" />
     <bug-database rdf:resource="https://github.com/FineFindus/Hieroglyphic/issues" />
