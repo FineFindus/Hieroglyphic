@@ -1,14 +1,14 @@
 # Chinese (China) translation for hieroglyphic.
 # Copyright (C) 2024 hieroglyphic's COPYRIGHT HOLDER
 # This file is distributed under the same license as the hieroglyphic package.
-# lumingzh <lumingzh@qq.com>, 2024-2025.
+# lumingzh <lumingzh@qq.com>, 2024-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-12-24 11:35+0000\n"
-"PO-Revision-Date: 2025-12-25 07:52+0800\n"
+"POT-Creation-Date: 2026-04-09 08:26+0000\n"
+"PO-Revision-Date: 2026-04-12 15:23+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -30,8 +30,8 @@ msgstr "通过草图搜索 1000 多种不同的 LaTeX 符号"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;Tools;LaTeX;TeX;Symbols;工具;符号;"
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;工具;符号;数学;"
 
 #. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
@@ -42,7 +42,8 @@ msgstr "是否显示指向贡献对话框的小提示"
 msgid "Whether to contribute recognized strokes"
 msgstr "是否贡献已识别的笔画"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
 msgid "Markup language to suggest symbols for"
 msgstr "建议用于标记语言的符号"
 
@@ -140,9 +141,9 @@ msgstr "主菜单"
 #. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
 #: src/widgets/about.rs:26
 msgid "translator-credits"
-msgstr "lumingzh <lumingzh@qq.com>, 2024-2025."
+msgstr "lumingzh <lumingzh@qq.com>, 2024-2026"
 
-#: src/window.rs:392
+#: src/window.rs:393
 #, rust-format
 msgid "Copied “{}”"
 msgstr "已复制“{}”"
