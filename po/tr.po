@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the io.github.finefindus.Hieroglyphic package.
 #
 # Sabri Ünal <yakushabb@gmail.com>, 2024.
-# Emin Tufa Çetin <etcetin@gmail.com>, 2024.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2024, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.finefindus.Hieroglyphic\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-12-24 11:35+0000\n"
-"PO-Revision-Date: 2025-12-27 17:59+0300\n"
-"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"POT-Creation-Date: 2026-04-09 08:26+0000\n"
+"PO-Revision-Date: 2026-04-13 08:00+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -32,8 +32,8 @@ msgstr "Çizerek 1000ʼden çok LaTeX simgesi arasında arama yap"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "Hieroglyphic;GTK;Tools;LaTeX;TeX;Symbols;Araçlar;Simgeler;Hiyeroglif;"
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "Hieroglyphic;GTK;Tools;LaTeX;TeX;Symbols;Araçlar;Simgeler;Hiyeroglif;Typst;Math;Matematik;"
 
 #. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
@@ -44,7 +44,8 @@ msgstr "Katkı iletişim penceresine küçük bir bağ gösterilmesi"
 msgid "Whether to contribute recognized strokes"
 msgstr "Tanınan vuruşların katkı olarak iletilmesi"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
 msgid "Markup language to suggest symbols for"
 msgstr "Simgeleri önermek için kullanılan işaretleme dili"
 
@@ -98,7 +99,7 @@ msgid ""
 "github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
 "policy</a>"
 msgstr ""
-"Hiçbir kişisel tanımlanabilir bilgi toplanmamaktadır. <a href=\"https://"
+"Kişisel tanımlanabilir bilgi toplanmamaktadır. <a href=\"https://"
 "github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Gizlilik "
 "ilkesi</a>"
 
@@ -147,7 +148,7 @@ msgstr "Ana Menü"
 msgid "translator-credits"
 msgstr "Sabri Ünal <yakushabb@gmail.com>"
 
-#: src/window.rs:392
+#: src/window.rs:393
 #, rust-format
 msgid "Copied “{}”"
 msgstr "“{}” kopyalandı!"
