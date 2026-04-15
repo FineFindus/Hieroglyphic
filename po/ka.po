@@ -1,21 +1,21 @@
 # Georgian translation for hieroglyphic.
 # Copyright (C) 2024 hieroglyphic's authors.
 # This file is distributed under the same license as the hieroglyphic package.
-# Ekaterine Papava <papava.e@gtu.ge>, 2024-2025.
+# Ekaterine Papava <papava.e@gtu.ge>, 2024-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-12-24 11:35+0000\n"
-"PO-Revision-Date: 2025-12-25 03:39+0100\n"
+"POT-Creation-Date: 2026-04-09 08:26+0000\n"
+"PO-Revision-Date: 2026-04-15 04:43+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -29,8 +29,8 @@ msgstr "ეძებეთ LaTeX-ის 1000 სიმბოლოს შორ�
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;Tools;LaTeX;TeX;Symbols;სიმბოლოები;ხელსაწყოები;"
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "GTK;Tools;LaTeX;TeX;Symbols;სიმბოლოები;ხელსაწყოები;Typst;Math;მათემატიკა;"
 
 #. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
@@ -41,7 +41,8 @@ msgstr "პატარა მითითების ჩვენება შ
 msgid "Whether to contribute recognized strokes"
 msgstr "იქნება თუ არა შეიწირული ამოცნობილი დაჭერები"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
 msgid "Markup language to suggest symbols for"
 msgstr "მარკირების ენა სიმბოლოების შეთავაზებისთვის"
 
@@ -143,7 +144,7 @@ msgstr "მთავარი მენიუ"
 msgid "translator-credits"
 msgstr "თემური დოღონაძე"
 
-#: src/window.rs:392
+#: src/window.rs:393
 #, rust-format
 msgid "Copied “{}”"
 msgstr "“{}” დაკოპირდა"
