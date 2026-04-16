@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2025-12-24 11:35+0000\n"
-"PO-Revision-Date: 2026-01-25 21:10+0500\n"
+"POT-Creation-Date: 2026-04-09 08:26+0000\n"
+"PO-Revision-Date: 2026-04-16 07:10+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <Kazakh>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -30,8 +30,8 @@ msgstr "1000-нан астам әртүрлі LaTeX таңбаларын сур�
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;Саймандар;LaTeX;TeX;Таңбалар;"
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;Саймандар;Таңбалар;Математика;"
 
 #. Translators: nudge means here a gentle prompt, i.e. the colored dot on the
 #. button
@@ -43,7 +43,9 @@ msgstr "Үлес қосу сұхбат терезесіне шағын нұсқ�
 msgid "Whether to contribute recognized strokes"
 msgstr "Танылған штрихтармен бөлісу не бөліспеу"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+#. Translators: the name of the markup language (latex, typst) for which
+#. symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
 msgid "Markup language to suggest symbols for"
 msgstr "Таңбалар ұсынылатын белгілеу тілі"
 
@@ -147,7 +149,7 @@ msgstr "Басты мәзір"
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
-#: src/window.rs:392
+#: src/window.rs:393
 #, rust-format
 msgid "Copied “{}”"
 msgstr "“{}” көшірілді"
