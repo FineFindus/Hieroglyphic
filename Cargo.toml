@@ -24,7 +24,7 @@ adw = { package = "libadwaita", version = "0.9", features = ["v1_9"] }
 tracing = "0.1"
 tracing-subscriber = "0.3"
 itertools = "0.14"
-async-channel = "2.2"
+async-channel = "2.5"
 ort = { version = "2.0.0-rc.12", default-features = false, features = [
     "std",
     "ndarray",
