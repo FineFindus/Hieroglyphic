@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2026-01-28 13:35+0000\n"
-"PO-Revision-Date: 2026-02-26 22:15+0100\n"
+"POT-Creation-Date: 2026-04-09 08:26+0000\n"
+"PO-Revision-Date: 2026-04-20 16:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -32,8 +32,8 @@ msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;Eines;LaTeX;TeX;Símbols;"
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "GTK;Eines;LaTeX;TeX;Símbols;Typst;Metemàtiques;"
 
 #. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
@@ -44,7 +44,8 @@ msgstr "Si s'ha de mostrar un petit moviment cap al diàleg de contribució"
 msgid "Whether to contribute recognized strokes"
 msgstr "Si s'han de contribuir els traços reconeguts"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
 msgid "Markup language to suggest symbols for"
 msgstr "Llenguatge de marques per suggerir símbols"
 
