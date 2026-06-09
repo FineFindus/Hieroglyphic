@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2026-01-28 13:35+0000\n"
-"PO-Revision-Date: 2026-02-22 12:10+0100\n"
+"POT-Creation-Date: 2026-04-09 08:26+0000\n"
+"PO-Revision-Date: 2026-04-09 18:06+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-DamnedLies-Scope: partial\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
@@ -31,8 +31,8 @@ msgstr "Sök genom över 1000 olika LaTeX-symboler genom att skissa"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;Verktyg;LaTeX;TeX;Symboler;"
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "GTK;Verktyg;LaTeX;TeX;Symboler;Typst;Matematik;"
 
 #. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
@@ -43,7 +43,8 @@ msgstr "Huruvida en liten antydan till bidragsdialogen ska visas"
 msgid "Whether to contribute recognized strokes"
 msgstr "Huruvida du ska bidra med igenkända streck"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
 msgid "Markup language to suggest symbols for"
 msgstr "Märkspråk att föreslå symboler för"
 
