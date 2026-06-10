@@ -11,3 +11,4 @@
 /.flatpak-builder/
 /vendor
 /.vscode
+/.foundry
