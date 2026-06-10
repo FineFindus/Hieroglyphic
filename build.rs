@@ -31,6 +31,7 @@ impl Symbol {
     }
 }
 
+//TODO: integrate https://github.com/QuarticCat/detypify-data into the dataset
 fn main() {
     println!("cargo:rerun-if-changed=build.rs");
     println!("cargo:rerun-if-changed=symbols.yaml");
