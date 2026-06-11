@@ -1,4 +1,3 @@
-use base64::Engine;
 use mitex::CommandSpecItem;
 use std::collections::HashMap;
 use std::fs::File;
@@ -27,7 +26,7 @@ impl Symbol {
             self.font_encoding,
             self.command.replace('\\', "_")
         );
-        base64::prelude::BASE64_STANDARD.encode(id)
+        hex::encode(id)
     }
 }
 

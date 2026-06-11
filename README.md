@@ -49,7 +49,29 @@ If you want to learn more, visit the [GNOME Translation Project Wiki](https://wi
 
 ## Building
 
+### Linux
+
 See this [general guide](https://wiki.gnome.org/Newcomers/BuildProject) for building the project using GNOME Builder.
+
+### macOS
+
+Install dependencies using [Homebrew](https://brew.sh/):
+
+```sh
+brew install gtk4 libadwaita onnxruntime meson desktop-file-utils
+```
+
+Build the `.app` bundle:
+
+```sh
+./scripts/build-macos-app.sh
+```
+
+This creates `Hieroglyphic.app` in the project root. You can open it from Finder or run:
+
+```sh
+open Hieroglyphic.app
+```
 
 ## Credits
 

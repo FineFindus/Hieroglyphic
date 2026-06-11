@@ -125,9 +125,15 @@ impl HieroglyphicApplication {
 
     // Sets up keyboard shortcuts
     fn setup_accels(&self) {
-        self.set_accels_for_action("app.quit", &["<Control>q"]);
-        self.set_accels_for_action("window.close", &["<Control>w"]);
-        self.set_accels_for_action("win.clear", &["<Control>n", "Delete"]);
+        // On macOS, use Command (Meta) instead of Control for standard shortcuts
+        let modifier = if cfg!(target_os = "macos") {
+            "Meta"
+        } else {
+            "Control"
+        };
+        self.set_accels_for_action("app.quit", &[&format!("<{modifier}>q")]);
+        self.set_accels_for_action("window.close", &[&format!("<{modifier}>w")]);
+        self.set_accels_for_action("win.clear", &[&format!("<{modifier}>n"), "Delete"]);
     }
 
     fn setup_css(&self) {
