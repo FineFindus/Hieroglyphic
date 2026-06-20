@@ -7,7 +7,7 @@ import os
 
 
 scripts_folder = os.path.dirname(os.path.abspath(__file__))
-symbols_file = os.path.join(scripts_folder, "../symbols.yaml")
+typst_aliases_file = os.path.join(scripts_folder, "../typst-aliases.yaml")
 
 resp = requests.get("https://typst.app/docs/reference/symbols/sym/")
 if not resp.ok:
@@ -25,5 +25,5 @@ for li in parsed_html.select(".symbol-grid li[id^=symbol-]"):
     typst_cmd = str(typst_cmd).removeprefix("symbol-")
     commands[latex_cmd] = typst_cmd
 
-with open('../typst-aliases.yaml', 'w') as outfile:
+with open(typst_aliases_file, 'w') as outfile:
     yaml.dump(commands, outfile, default_flow_style=False)
