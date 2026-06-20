@@ -32,6 +32,7 @@ impl Symbol {
 }
 
 fn main() {
+    println!("cargo:rerun-if-changed=build.rs");
     println!("cargo:rerun-if-changed=symbols.yaml");
     println!("cargo:rerun-if-changed=typst-aliases.yaml");
 
@@ -68,20 +69,12 @@ fn main() {
 }
 
 fn get_typst_aliases() -> HashMap<String, String> {
+    // load typst to latex mappings from the Typst website (generated in scripts/load_typst_aliases.py)
     let mut docs = YamlLoader::load_from_str(include_str!("typst-aliases.yaml")).unwrap();
     let doc = docs.pop().unwrap();
-    let mut commands: HashMap<_, _> = doc
-        .as_hash()
-        .unwrap()
-        .iter()
-        .map(|(latex_command, typst_command)| {
-            (
-                latex_command.as_str().unwrap().to_string(),
-                typst_command.as_str().unwrap().to_string(),
-            )
-        })
-        .collect();
+    let mut commands: HashMap<_, _> = collect_yaml_hash_map(doc);
 
+    // load typst to latex mappings from mitex
     for (latex_cmd, typst_cmd) in mitex_spec_gen::DEFAULT_SPEC.clone().items() {
         if let CommandSpecItem::Cmd(cmd) = typst_cmd {
             let latex_command = format!("\\{latex_cmd}");
@@ -91,7 +84,54 @@ fn get_typst_aliases() -> HashMap<String, String> {
         };
     }
 
+    // load typst to latex mappings from Typst's codex crate
+    let mut docs = YamlLoader::load_from_str(include_str!("unicode_to_latex.yaml")).unwrap();
+    let doc = docs.pop().unwrap();
+    let unicode_to_latex = collect_yaml_hash_map(doc);
+
+    let mut typst_to_unicode = HashMap::new();
+    collect_codex_symbols(&codex::SYM, &mut typst_to_unicode);
+
+    for (typst_cmd, unicode_symbol) in typst_to_unicode {
+        let unicode_symbol_hex = format!("U{:05X}", unicode_symbol as u32);
+        if let Some(latex_cmd) = unicode_to_latex.get(&unicode_symbol_hex) {
+            commands.entry(latex_cmd.clone()).or_insert(typst_cmd);
+        }
+    }
+
     commands
+}
+
+fn collect_yaml_hash_map(doc: Yaml) -> HashMap<String, String> {
+    doc.as_hash()
+        .unwrap()
+        .iter()
+        .map(|(key, value)| {
+            (
+                key.as_str().unwrap().to_string(),
+                value.as_str().unwrap().to_string(),
+            )
+        })
+        .collect()
+}
+
+fn collect_codex_symbols(module: &codex::Module, target_map: &mut HashMap<String, char>) {
+    for (_, binding) in module.iter() {
+        match binding.def {
+            codex::Def::Symbol(symbol) => {
+                for (modifiers, value, _) in symbol.variants() {
+                    let typst_command = modifiers.as_str();
+                    // we only care about the first symbol - for emojis, there sometimes is an additional
+                    // emoji variation selector like "\u{fe0f}"
+                    let unicode_symbol = value.chars().next().unwrap();
+                    target_map.insert(typst_command.to_string(), unicode_symbol);
+                }
+            }
+            codex::Def::Module(module) => {
+                collect_codex_symbols(&module, target_map);
+            }
+        }
+    }
 }
 
 fn get_equiv_typst_command(
