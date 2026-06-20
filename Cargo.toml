@@ -47,4 +47,5 @@ mitex = { git = "https://github.com/mitex-rs/mitex", rev = "0680e50" }
 # we can't use the precompiled lib here because we need the typst code
 # in the 'packages' dir of mitex to build the default command spec
 mitex-spec-gen = { git = "https://github.com/mitex-rs/mitex", rev = "0680e50" }
+codex = "0.3.0"
 regex = "1.12"
