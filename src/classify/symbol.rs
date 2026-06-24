@@ -1,4 +1,3 @@
-use base64::Engine;
 
 use crate::window::MarkupLanguageMode;
 
@@ -41,7 +40,7 @@ impl Symbol {
             self.font_encoding,
             self.command.replace('\\', "_")
         );
-        let key = base64::prelude::BASE64_STANDARD.encode(id);
+        let key = hex::encode(id);
         // SAFETY: safe to unwrap, since key must be valid, as it is only possible to get a Symbol
         // from the symbol table
         SYMBOL_TABLE.get_key(&key).unwrap()
@@ -67,7 +66,7 @@ impl Symbol {
     ///
     /// # Examples
     /// ```rust
-    /// let symbol = Symbol::from_id("bGF0ZXgyZS1PVDEtX2JpZ2N1cA==").unwrap();
+    /// let symbol = Symbol::from_id("6c6174657832652d4f54312d5f626967637570").unwrap();
     /// assert_eq!("mathmode", symbol.mode_description(&MarkupLanguage::Latex));
     /// ```
     pub fn mode_description(&self, language: &MarkupLanguageMode) -> Option<&'static str> {
@@ -95,7 +94,7 @@ mod tests {
 
     #[test]
     fn test_from_id() {
-        let symbol = Symbol::from_id("bGF0ZXgyZS1PVDEtX3RleHRhc2NpaWNpcmN1bQ==");
+        let symbol = Symbol::from_id("6c6174657832652d4f54312d5f74657874617363696963697263756d");
 
         assert_eq!(
             symbol,

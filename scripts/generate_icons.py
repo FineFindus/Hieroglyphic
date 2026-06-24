@@ -2,7 +2,6 @@
 
 import yaml
 import os
-import base64
 import tempfile
 
 scripts_folder = os.path.dirname(os.path.abspath(__file__))
@@ -81,9 +80,7 @@ for (symbol, package, fontenc, textmode, mathmode) in parsed_symbols:
     os.system("sed -i 's/width\=\\\"[0-9]*.[0-9]*pt\\\"/width=\\\"64px\\\"/g' temp2.svg")
 
     id = package + "-" + fontenc + "-" + symbol.replace("\\", "_")
-    id = base64.b64encode(id.encode("utf-8"))
-    id = str(id, "utf-8")
-    id = id.rstrip("=")
+    id = id.encode("utf-8").hex()
 
     os.system(f"mv temp2.svg {temp_dir}/{id}.svg")
 
