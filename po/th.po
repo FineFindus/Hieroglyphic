@@ -1,0 +1,148 @@
+# Thai translation for hieroglyphic.
+# Copyright (C) 2026 hieroglyphic's COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# Aefgh Threenine <aefgh39622@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2026-04-09 08:26+0000\n"
+"PO-Revision-Date: 2026-07-19 22:49+0700\n"
+"Last-Translator: \n"
+"Language-Team: Thai <th@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
+#: src/widgets/about.rs:20
+msgid "Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "ค้นหาสัญลักษณ์ LaTeX ต่าง ๆ กว่า 1000 ตัวด้วยการวาด"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "GTK;เครื่องมือ;LaTeX;TeX;สัญลักษณ์;Typst;คณิตศาสตร์;Tools;Symbols;Math;"
+
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "กำหนดว่าจะแสดงตัวเตือนเล็ก ๆ สำหรับกล่องโต้ตอบการมีส่วนร่วมหรือไม่"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
+msgid "Whether to contribute recognized strokes"
+msgstr "กำหนดว่าจะร่วมให้ข้อมูลเส้นขีดที่รับรู้ได้หรือไม่"
+
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
+msgid "Markup language to suggest symbols for"
+msgstr "ภาษามาร์กอัปที่จะให้แนะนำสัญลักษณ์"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX and Typst symbols"
+msgstr "ค้นหาสัญลักษณ์ LaTeX และ Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
+msgstr ""
+"ถ้าคุณทำงานกับ LaTeX หรือ Typst คุณจะรู้ว่ามันยากที่จะจดจำชื่อของสัญลักษณ์ทั้งหมด "
+"Hieroglyphic ให้คุณค้นหาสัญลักษณ์ต่าง ๆ กว่า 1000 ตัวได้ด้วยการวาด"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+msgid "Symbol selection for LaTeX symbols"
+msgstr "การเลือกสัญลักษณ์สำหรับสัญลักษณ์ LaTeX"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "การเลือกสัญลักษณ์สำหรับสัญลักษณ์ Typst"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
+msgid "Placeholder"
+msgstr "ตัวยึดตำแหน่ง"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
+msgid "Improve Hieroglyphic"
+msgstr "ร่วมปรับปรุง Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:51
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr "ช่วยทำให้ Hieroglyphic ดีขึ้นด้วยการระบุสัญลักษณ์สำหรับทุกคน"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Contribute Symbols"
+msgstr "มีส่วนร่วมเกี่ยวกับสัญลักษณ์"
+
+#: data/resources/ui/contribution-dialog.ui:63
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "ส่งเส้นวาดที่รับรู้ได้ไปยังชุดข้อมูลของ Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://"
+"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
+"policy</a>"
+msgstr ""
+"จะไม่มีการรวบรวมข้อมูลที่ระบุตัวบุคคลได้ <a href=\"https://github.com/FineFindus/"
+"Hieroglyphic/blob/main/PRIVACY_POLICY.md\">นโยบายความเป็นส่วนตัว</a>"
+
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "คัดลอก"
+
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "ภาษามาร์กอัป"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "เกี่ยวกับ Hieroglyphic"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
+msgid "No Symbols"
+msgstr "ไม่มีสัญลักษณ์"
+
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
+msgid "Start by drawing a symbol"
+msgstr "เริ่มด้วยการวาดสัญลักษณ์"
+
+#: data/resources/ui/window.ui:183
+msgid "All Symbols"
+msgstr "สัญลักษณ์ทั้งหมด"
+
+#: data/resources/ui/window.ui:218
+msgid "_Clear"
+msgstr "_ล้าง"
+
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "เมนูหลัก"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr "Aefgh Threenine <aefgh39622@gmail.com>"
+
+#: src/window.rs:393
+#, rust-format
+msgid "Copied “{}”"
+msgstr "คัดลอก “{}” แล้ว"
