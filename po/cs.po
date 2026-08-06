@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: hieroglyphic main\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
 "POT-Creation-Date: 2026-04-09 08:26+0000\n"
-"PO-Revision-Date: 2026-07-08 23:54+0200\n"
+"PO-Revision-Date: 2026-08-06 19:32+0200\n"
 "Last-Translator: Patrik Sivek <sivekpatrik@gmail.com>\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
@@ -51,6 +51,12 @@ msgstr "Značkovací jazyk, pro který se budou navrhovat symboly"
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
 msgid "Find LaTeX and Typst symbols"
 msgstr "Najděte symboly Latex a Typst"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:11
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:13
+msgid "FineFindus"
+msgstr "FineFindus"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
