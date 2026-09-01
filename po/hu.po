@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2026-01-28 13:35+0000\n"
-"PO-Revision-Date: 2026-03-05 22:16+0100\n"
+"POT-Creation-Date: 2026-08-08 10:24+0000\n"
+"PO-Revision-Date: 2026-09-01 22:29+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -32,8 +32,9 @@ msgstr "Keressen több mint 1000 különböző LaTeX-szimbólum között skiccel
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "GTK;eszközök;LaTeX;TeX;szimbólumok;"
+#| msgid "GTK;Tools;LaTeX;TeX;Symbols;"
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "GTK;eszközök;LaTeX;TeX;szimbólumok;Typst;matematika;"
 
 #. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
@@ -44,31 +45,26 @@ msgstr "Megjelenítsen-e egy apró felhívást a közreműködési párbeszédab
 msgid "Whether to contribute recognized strokes"
 msgstr "Közre legyenek-e adva a felismert vonalrajzolatok"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
 msgid "Markup language to suggest symbols for"
 msgstr "Jelölőnyelv szimbólumok javaslatához"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
-#| msgid "Find LaTeX symbols"
 msgid "Find LaTeX and Typst symbols"
 msgstr "LaTeX- és Typst-szimbólumok keresése"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
-#| msgid ""
-#| "If you work with LaTeX, you know it's difficult to memorize the names of "
-#| "all the symbols. Hieroglyphic allows you to search through over 1000 "
-#| "different LaTeX symbols by sketching."
 msgid ""
 "If you work with LaTeX or Typst, you know it's difficult to memorize the "
 "names of all the symbols. Hieroglyphic allows you to search through over "
 "1000 different symbols by sketching."
 msgstr ""
-"Ha LaTeX vagy Typst használatával dolgozik, akkor tudhatja, hogy milyen nehéz "
-"megjegyezni az összes szimbólum nevét. A Hieroglifák segítségével több mint 10"
-"00 különböző szimbólum között kereshet skicceléssel."
+"Ha LaTeX vagy Typst használatával dolgozik, akkor tudhatja, hogy milyen "
+"nehéz megjegyezni az összes szimbólum nevét. A Hieroglifák segítségével több "
+"mint 1000 különböző szimbólum között kereshet skicceléssel."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
-#| msgid "Find LaTeX symbols"
 msgid "Symbol selection for LaTeX symbols"
 msgstr "Szimbólumkiválasztás LaTeX-szimbólumokhoz"
 
@@ -105,9 +101,9 @@ msgid ""
 "github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
 "policy</a>"
 msgstr ""
-"Személyes azonosításra alkalmas információk nem kerülnek gyűjtésre. <a href=\""
-"https://github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Adatv"
-"édelmi irányelv</a>"
+"Személyes azonosításra alkalmas információk nem kerülnek gyűjtésre. <a "
+"href=\"https://github.com/FineFindus/Hieroglyphic/blob/main/"
+"PRIVACY_POLICY.md\">Adatvédelmi irányelv</a>"
 
 #: data/resources/ui/symbol-item.ui:45
 msgid "Copy"
@@ -146,7 +142,6 @@ msgid "_Clear"
 msgstr "_Törlés"
 
 #: data/resources/ui/window.ui:294
-#| msgid "Main Window"
 msgid "Main Menu"
 msgstr "Főmenü"
 
