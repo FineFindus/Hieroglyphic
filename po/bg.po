@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hieroglyphic\n"
 "Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
-"POT-Creation-Date: 2026-01-28 13:35+0000\n"
-"PO-Revision-Date: 2026-03-01 19:25+0100\n"
+"POT-Creation-Date: 2026-08-08 10:24+0000\n"
+"PO-Revision-Date: 2026-09-04 09:57+0200\n"
 "Last-Translator: twlvnn kraftwerk <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <dict-notifications@fsa-bg.org>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
@@ -30,8 +30,8 @@ msgstr "Търсете в над 1000 различни знака на „LaTeX�
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
-msgid "GTK;Tools;LaTeX;TeX;Symbols;"
-msgstr "гтк;инструменти;знаци;символи;тех;текс;латех;латекс;gtk;tools;latex;tex;symbols;"
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "гтк;инструменти;знаци;символи;тех;текс;математика;латех;латекс;gtk;tools;latex;tex;symbols;typst;math;"
 
 #. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
 #: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
@@ -42,7 +42,8 @@ msgstr "Дали да се подканя към прозорчето за до�
 msgid "Whether to contribute recognized strokes"
 msgstr "Дали да се допринася с разпознатите знаци"
 
-#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:20
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
 msgid "Markup language to suggest symbols for"
 msgstr "Маркиращ език за предлагане на знаци за"
 
@@ -52,13 +53,13 @@ msgstr "Търсене на знаци в „LaTeX“ и „Typst“"
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
 msgid ""
-"If you work with LaTeX or Typst, you know it's difficult to memorize the "
-"names of all the symbols. Hieroglyphic allows you to search through over "
-"1000 different symbols by sketching."
+"If you work with LaTeX or Typst, you know it's difficult to memorize the names of all "
+"the symbols. Hieroglyphic allows you to search through over 1000 different symbols by "
+"sketching."
 msgstr ""
-"Ако работите с „LaTeX“ или „Typst“, знаете, че е трудно да се запомнят "
-"имената на всички знаци. „Йероглиф“ ви позволява да търсите в над 1000 "
-"различни знака чрез изчертаване."
+"Ако работите с „LaTeX“ или „Typst“, знаете, че е трудно да се запомнят имената на "
+"всички знаци. „Йероглиф“ ви позволява да търсите в над 1000 различни знака чрез "
+"изчертаване."
 
 #: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
 msgid "Symbol selection for LaTeX symbols"
@@ -72,8 +73,8 @@ msgstr "Избор на знаци в „Typst“"
 msgid "Placeholder"
 msgstr "Заместител"
 
-#: data/resources/ui/contribution-dialog.ui:6
-#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
+#: data/resources/ui/contribution-dialog.ui:6 data/resources/ui/contribution-dialog.ui:40
+#: data/resources/ui/window.ui:284
 msgid "Improve Hieroglyphic"
 msgstr "Допринасяне към „Йероглиф“"
 
@@ -91,9 +92,8 @@ msgstr "Подайте разпознати рисунки към базата �
 
 #: data/resources/ui/contribution-dialog.ui:71
 msgid ""
-"No personal identifiable information is collected. <a href=\"https://"
-"github.com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy "
-"policy</a>"
+"No personal identifiable information is collected. <a href=\"https://github.com/"
+"FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy policy</a>"
 msgstr ""
 "Не се събира лична информация, която може да идентифицира потребителя. <a "
 "href='https://github.com/FineFindus/Hieroglyphic/blob/main/"
@@ -143,13 +143,12 @@ msgstr "Основно меню"
 #: src/widgets/about.rs:26
 msgid "translator-credits"
 msgstr ""
-"Twlvnn Kraftwerk &lt;<a "
-"href='mailto:kraft_werk@tutanota.com'>kraft_werk@tutanota.com</a>&gt;\n"
+"Twlvnn Kraftwerk &lt;<a href='mailto:kraft_werk@tutanota.com'>kraft_werk@tutanota.com</"
+"a>&gt;\n"
 "\n"
 "\n"
 "Проектът за превод на GNOME има нужда от подкрепа.\n"
-"Научете повече за нас на <a href='https://fsa-bg.org/project/gtp'>уеб сайта</"
-"a> ни.\n"
+"Научете повече за нас на <a href='https://fsa-bg.org/project/gtp'>уеб сайта</a> ни.\n"
 "Докладвайте за грешки в превода в <a href='https://fsa-bg.org/project/gtp/"
 "newticket'>съответния раздел</a>."
 
