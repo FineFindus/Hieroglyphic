@@ -1,0 +1,153 @@
+# Danish translation for hieroglyphic.
+# Copyright (C) 2026 hieroglyphic's COPYRIGHT HOLDER
+# This file is distributed under the same license as the hieroglyphic package.
+# Alan Mortensen <over.tackiness223@passinbox.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hieroglyphic main\n"
+"Report-Msgid-Bugs-To: https://github.com/FineFindus/Hieroglyphic/issues\n"
+"POT-Creation-Date: 2026-08-08 10:24+0000\n"
+"PO-Revision-Date: 2026-09-09 17:11+0200\n"
+"Last-Translator: Alan Mortensen <over.tackiness223@passinbox.com>\n"
+"Language-Team: Danish <danskgruppen@groups.io>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:2
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:8 src/main.rs:28
+#: src/widgets/about.rs:20
+msgid "Hieroglyphic"
+msgstr "Hieroglyphic"
+
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:3
+msgid "Search through over 1000 different LaTeX symbols by sketching"
+msgstr "Søg blandt mere end 1000 forskellige LaTex-symboler ved at tegne dem"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.finefindus.Hieroglyphic.desktop.in.in:9
+msgid "GTK;Tools;LaTeX;TeX;Symbols;Typst;Math;"
+msgstr "GTK;Værktøjer;LaTeX;TeX;Symboler;Typst;Mat;Matematik;Formler;"
+
+#. Translators: nudge means here a gentle prompt, i.e. the colored dot on the button
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:7
+msgid "Whether to show a small nudge towards the contribution dialog"
+msgstr "Om der skal vises et lille vink mod bidragsdialogen"
+
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:11
+msgid "Whether to contribute recognized strokes"
+msgstr "Om der skal bidrages med genkendte strøg"
+
+#. Translators: the name of the markup language (latex, typst) for which symbols are suggested
+#: data/io.github.finefindus.Hieroglyphic.gschema.xml.in:21
+msgid "Markup language to suggest symbols for"
+msgstr "Markup-sprog der skal foreslås symboler til"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:9
+msgid "Find LaTeX and Typst symbols"
+msgstr "Find LaTeX- og Typst-symboler"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:18
+msgid ""
+"If you work with LaTeX or Typst, you know it's difficult to memorize the "
+"names of all the symbols. Hieroglyphic allows you to search through over "
+"1000 different symbols by sketching."
+msgstr ""
+"Hvis du arbejder med LaTeX eller Typst, ved du, at det er svært at huske "
+"navnene på alle symbolerne. Med Hieroglyphic kan du søge blandt over 1000 "
+"forskellige symboler ved at tegne dem."
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:30
+msgid "Symbol selection for LaTeX symbols"
+msgstr "Valg af symboler til LaTeX-symboler"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:34
+msgid "Symbol selection for Typst symbols"
+msgstr "Valg af symboler til Typst-symboler"
+
+#: data/io.github.finefindus.Hieroglyphic.metainfo.xml.in.in:38
+msgid "Placeholder"
+msgstr "Pladsholder"
+
+#: data/resources/ui/contribution-dialog.ui:6
+#: data/resources/ui/contribution-dialog.ui:40 data/resources/ui/window.ui:284
+msgid "Improve Hieroglyphic"
+msgstr "Forbedr Hieroglyphic"
+
+#: data/resources/ui/contribution-dialog.ui:51
+msgid "Help make Hieroglyphic better at identifying symbols for everyone"
+msgstr "Gør Hieroglyphic bedre til at identificere symboler for alle"
+
+#: data/resources/ui/contribution-dialog.ui:62
+msgid "Contribute Symbols"
+msgstr "Bidrag med symboler"
+
+#: data/resources/ui/contribution-dialog.ui:63
+msgid "Submit recognized drawings to Hieroglyphic’s dataset"
+msgstr "Indsend genkendte tegninger til Hieroglyphic datasæt"
+
+#: data/resources/ui/contribution-dialog.ui:71
+msgid ""
+"No personal identifiable information is collected. <a href=\"https://github."
+"com/FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privacy policy</a>"
+msgstr ""
+"Der indsamles ikke personlige oplysninger. <a href=\"https://github.com/"
+"FineFindus/Hieroglyphic/blob/main/PRIVACY_POLICY.md\">Privatlivspolitik</a>"
+
+#: data/resources/ui/symbol-item.ui:45
+msgid "Copy"
+msgstr "Kopiér"
+
+#: data/resources/ui/window.ui:5
+msgid "Markup language"
+msgstr "Markup-sprog"
+
+#: data/resources/ui/window.ui:7
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: data/resources/ui/window.ui:12
+msgid "Typst"
+msgstr "Typst"
+
+#: data/resources/ui/window.ui:20
+msgid "About Hieroglyphic"
+msgstr "Om Hieroglyphic"
+
+#: data/resources/ui/window.ui:143 data/resources/ui/window.ui:242
+msgid "No Symbols"
+msgstr "Ingen symboler"
+
+#: data/resources/ui/window.ui:151 data/resources/ui/window.ui:243
+msgid "Start by drawing a symbol"
+msgstr "Begynd at tegne et symbol"
+
+#: data/resources/ui/window.ui:183
+msgid "All Symbols"
+msgstr "Alle symboler"
+
+#: data/resources/ui/window.ui:218
+msgid "_Clear"
+msgstr "_Ryd"
+
+#: data/resources/ui/window.ui:294
+msgid "Main Menu"
+msgstr "Hovedmenu"
+
+#. Translators: This should not be translate, Please enter your credits here instead (format: "Name https://example.com" or "Name <email@example.com>", no quotes)
+#: src/widgets/about.rs:26
+msgid "translator-credits"
+msgstr ""
+"Alan Mortensen\n"
+"\n"
+"Dansk-gruppen\n"
+"Websted https://l10n.gnome.org/teams/da/\n"
+"E-mail <danskgruppen@groups.io>"
+
+#: src/window.rs:393
+msgid "Copied “{}”"
+msgstr "Kopierede “{}”"
